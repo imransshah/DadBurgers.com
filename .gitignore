@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local env — real keys and URLs live here, never in git.
+.env
+.env.local
+.env.*.local
+worker/.dev.vars
+
+# Wrangler
+worker/.wrangler/
+.wrangler/
+
+*.log
+npm-debug.log*

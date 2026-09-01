@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* The page ground is set on the app root, but paint it here too so that
+   over-scroll on iOS shows indigo rather than white. */
+html,
+body {
+  background: #1b2a5b;
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Kids tap fast and repeatedly — kill the double-tap zoom delay and the
+   grey flash on iOS. */
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

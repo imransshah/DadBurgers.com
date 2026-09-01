@@ -1,0 +1,22 @@
+name = "decolonized-chat"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# The Anthropic SDK needs Node built-ins (streams, buffer) on Workers.
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Comma-separated list of sites allowed to call this worker. Leave empty and
+# any origin can use it — set this before the site is public.
+ALLOWED_ORIGINS = "https://decolonized.therealdadburgers.com,http://localhost:5173"
+
+# Per-IP rate limit: 20 questions a minute. Delete this whole block if you
+# would rather not use it — the worker checks for the binding before using it.
+[[unsafe.bindings]]
+name = "RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 20, period = 60 }
+
+# ANTHROPIC_API_KEY is a SECRET, not a var. Never put it in this file.
+# Set it with:  npx wrangler secret put ANTHROPIC_API_KEY

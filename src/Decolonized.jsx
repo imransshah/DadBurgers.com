@@ -4,9 +4,14 @@ import { PLACES, CONNECTIONS } from "./lib/content.js";
 import ChatPanel from "./components/ChatPanel.jsx";
 
 /**
- * DECOLONIZED — decolonized.therealdadburgers.com
+ * DECOLONIZED HISTORY — decolonized.therealdadburgers.com
  *
  * A world-history explorer for kids roughly ages 5–10.
+ *
+ * The voice matters as much as the facts. Read the editorial rules in
+ * src/lib/content.js before touching any copy. Short version: name who did
+ * what, never use a universal "we", and always pair an erasure with
+ * whoever saved it.
  *
  * DESIGN NOTES FOR WHOEVER EXTENDS THIS (incl. Claude Code):
  *
@@ -81,17 +86,39 @@ function PlaceCard({ place }) {
         ))}
       </ul>
 
-      <div
-        className="mt-7 rounded-2xl p-4"
-        style={{ background: `${place.color}1A` }}
-      >
-        <p style={{ ...body, fontWeight: 800 }} className="text-sm">
-          Something we still do not know
-        </p>
-        <p style={body} className="mt-1 text-base leading-relaxed max-w-prose">
-          {place.stillUnknown}
-        </p>
-      </div>
+      {place.erased && (
+        <div
+          className="mt-7 rounded-2xl p-5"
+          style={{ background: `${C.rose}14`, borderLeft: `6px solid ${C.rose}` }}
+        >
+          <p
+            style={{ ...body, fontWeight: 800, color: C.rose, letterSpacing: ".04em" }}
+            className="text-sm uppercase"
+          >
+            Who tried to take it
+          </p>
+          <p style={body} className="mt-2 text-base leading-relaxed max-w-prose">
+            {place.erased}
+          </p>
+        </div>
+      )}
+
+      {place.stillUnknown && (
+        <div
+          className="mt-4 rounded-2xl p-5"
+          style={{ background: `${place.color}1A` }}
+        >
+          <p
+            style={{ ...body, fontWeight: 800, letterSpacing: ".04em" }}
+            className="text-sm uppercase opacity-70"
+          >
+            Nobody knows this yet
+          </p>
+          <p style={body} className="mt-2 text-base leading-relaxed max-w-prose">
+            {place.stillUnknown}
+          </p>
+        </div>
+      )}
     </article>
   );
 }
@@ -163,17 +190,35 @@ export default function Decolonized() {
             style={{ ...display, fontWeight: 900, color: C.ivory, letterSpacing: "-.02em" }}
             className="text-5xl sm:text-7xl leading-[0.95]"
           >
-            Everybody
+            Decolonized
             <br />
-            built this
+            History
           </h1>
           <p
             style={{ ...body, color: C.marigold }}
             className="mt-5 text-lg sm:text-xl font-semibold max-w-prose"
           >
-            Nobody invented the world by themselves. Pick a place and see what
-            the people there worked out.
+            Your ancestors built the world. Here is what they made, who tried to
+            take the credit, and who fought to keep it.
           </p>
+          <figure
+            className="mt-7 pl-5"
+            style={{ borderLeft: `4px solid ${C.marigold}` }}
+          >
+            <blockquote
+              style={{ ...display, fontWeight: 600, color: C.ivory }}
+              className="text-lg sm:text-xl leading-snug max-w-prose"
+            >
+              &ldquo;Of all our studies, history is best qualified to reward our
+              research.&rdquo;
+            </blockquote>
+            <figcaption
+              style={{ ...body, color: C.marigold }}
+              className="mt-2 text-sm font-extrabold"
+            >
+              Malcolm X
+            </figcaption>
+          </figure>
         </header>
 
         {/* Map band */}
@@ -229,7 +274,8 @@ export default function Decolonized() {
         <footer className="mt-20 pb-4">
           <p style={{ ...body, color: C.ivory }} className="text-sm opacity-60 max-w-prose">
             Built for Amma and Abba's kids. Every fact here can be looked up —
-            go check us.
+            go check us. And if a grown-up tells you something different, ask
+            them who told <em>them</em>.
           </p>
         </footer>
       </div>

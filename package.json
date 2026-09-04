@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Everybody built this — a world-history explorer for kids.",
+  "description": "Decolonized History — a world-history explorer for kids.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

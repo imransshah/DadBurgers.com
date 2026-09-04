@@ -1,7 +1,7 @@
-# Everybody built this
+# Decolonized History
 
-A world-history explorer for kids roughly ages 5–10. Pick a place, see what the
-people there actually worked out.
+A world-history explorer for kids roughly ages 5–10. What your ancestors built,
+who tried to take the credit, and who fought to keep it.
 
 Live at the GitHub Pages URL for this repo, and intended for
 `decolonized.therealdadburgers.com`.
@@ -10,15 +10,27 @@ Live at the GitHub Pages URL for this repo, and intended for
 
 ## Editorial rules
 
-These are not style suggestions. Read them before adding a card.
+These are not style suggestions. They are the point of the site. Read them
+before adding a card.
 
-1. **Every civilization gets credited for what it BUILT.** This is a
-   contribution map, not a grievance leaderboard.
-2. **No atrocity content.** These are 6- and 8-year-olds. Hard history is for
-   later, in person, from their dad.
-3. **If a claim is contested among historians, say so or leave it out.**
+1. **Lead with what people BUILT.** Every place opens with what they made, not
+   what was done to them. Nobody here is only a victim.
+2. **Name who did what.** Active voice, real names, no exceptions. "A Spanish
+   priest burned the books" — not "the books were lost." Passive voice is how
+   you hide a person who is still standing there.
+3. **No false "we".** A sentence like "we still argue about the pyramids"
+   quietly seats these kids next to the people who spent a century insisting
+   Africans could not have built them. Say who argued. "We" in this house
+   means us — this family — and nobody else.
+4. **Pair every erasure with whoever saved it,** wherever that is true. The
+   Timbuktu librarians. The families with the buried trunks. These kids need
+   ancestors who fought back and won, not a list of losses.
+5. **No atrocity content** — unchanged. Naming the man who burned a library is
+   not the same as describing violence to a child. These are 6- and
+   8-year-olds. Hard history is for later, in person, from their dad.
+6. **If a claim is contested among historians, say so or leave it out.**
    Accuracy beats a good story. Every card here is checkable.
-4. **Short sentences. Concrete nouns.** No abstractions like "influence" or
+7. **Short sentences. Concrete nouns.** No abstractions like "influence" or
    "legacy" — say what the thing actually was.
 
 The same rules are restated in the chat worker's system prompt
@@ -56,7 +68,11 @@ and the map pin, the name button, and the card all appear on their own.
   built: [
     { thing: "The concrete thing", why: "Two or three short sentences." },
   ],
-  stillUnknown: "What we genuinely do not know. Say it plainly.",
+  // Who took it, hid it, or took the credit. Name them. Name whoever
+  // saved it too, when someone did. Optional.
+  erased: "In 1562 a Spanish priest named Diego de Landa burned the books…",
+  // Genuine open questions only — not erasure. Optional.
+  stillUnknown: "What nobody knows yet. Say it plainly.",
 }
 ```
 

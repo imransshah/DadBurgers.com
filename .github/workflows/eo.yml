@@ -1,0 +1,145 @@
+name: Order of Operations (eo.therealdadburgers.com)
+
+# Nightly: pull new presidential documents and guidance, draft analysis,
+# commit the data, build, deploy to Cloudflare. Also runs on every push that
+# touches sites/eo so code changes ship.
+#
+# Repository secrets (Settings → Secrets and variables → Actions → Secrets):
+#   CLOUDFLARE_API_TOKEN   required to deploy ("Edit Cloudflare Workers" template)
+#   CLOUDFLARE_ACCOUNT_ID  required to deploy
+#   EO_SITE_PASSWORD       required — the site stays locked without it
+#   ANTHROPIC_API_KEY      optional — enables AI drafts for new documents
+#   EO_DIGEST_TO           optional — your verified Email Routing address
+# Repository variables (… → Variables):
+#   EO_DIGEST_ENABLED      "true" once Email Routing is on for the domain
+#   EO_TRIAGE_LIMIT        optional — max AI drafts per run (default 40)
+#
+# Note: GitHub only runs `schedule` from the repository's default branch.
+
+on:
+  push:
+    branches:
+      - main
+      - "claude/**"
+    paths:
+      - "sites/eo/**"
+      - ".github/workflows/eo.yml"
+  schedule:
+    - cron: "17 8 * * *" # ~3–4 AM Eastern
+  workflow_dispatch:
+    inputs:
+      triage_limit:
+        description: "Max documents to AI-draft this run"
+        required: false
+        default: "40"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eo-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: sites/eo
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sites/eo/package-lock.json
+
+      - run: npm ci
+
+      - name: Federal Register sync
+        run: node scripts/sync-federal-register.mjs
+
+      - name: Watch OMB / OPM / CISA / FedRAMP
+        run: node scripts/watch-guidance.mjs
+
+      - name: Triage new documents
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TRIAGE_LIMIT: ${{ github.event.inputs.triage_limit || vars.EO_TRIAGE_LIMIT || '40' }}
+        run: node scripts/triage.mjs
+
+      - name: Validate
+        run: node scripts/validate-data.mjs
+
+      - name: Commit data
+        id: commit
+        run: |
+          git config user.name "eo-sync[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: sync presidential documents and guidance ($(date -u +%Y-%m-%d))"
+            for i in 1 2 3 4; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+              sleep $((2 ** i))
+            done
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    env:
+      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.sync.outputs.sha }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sites/eo/package-lock.json
+
+      - run: npm ci
+      - run: node scripts/validate-data.mjs
+      - run: npm run build
+
+      - name: Enable digest email binding
+        if: env.HAS_CF == 'true' && vars.EO_DIGEST_ENABLED == 'true'
+        run: node scripts/enable-digest.mjs
+
+      # Secrets ride along with the deploy (one version, no window without
+      # them). Without SITE_PASSWORD the worker answers 503 "locked": it fails
+      # closed, never open.
+      - name: Deploy worker
+        if: env.HAS_CF == 'true'
+        env:
+          EO_SITE_PASSWORD: ${{ secrets.EO_SITE_PASSWORD }}
+          EO_DIGEST_TO: ${{ secrets.EO_DIGEST_TO }}
+        run: |
+          [ -n "$EO_SITE_PASSWORD" ] || echo "::warning::EO_SITE_PASSWORD is not set — the site will stay locked."
+          SECRETS="$RUNNER_TEMP/eo-secrets.json"
+          node -e '
+            const s = {};
+            if (process.env.EO_SITE_PASSWORD) s.SITE_PASSWORD = process.env.EO_SITE_PASSWORD;
+            if (process.env.EO_DIGEST_TO) s.DIGEST_TO = process.env.EO_DIGEST_TO;
+            require("fs").writeFileSync(process.argv[1], JSON.stringify(s), { mode: 0o600 });
+          ' "$SECRETS"
+          npx wrangler deploy --secrets-file "$SECRETS"
+          rm -f "$SECRETS"
+
+      - name: Skipped deploy
+        if: env.HAS_CF != 'true'
+        run: echo "::notice::CLOUDFLARE_API_TOKEN is not set — built and validated, but did not deploy."

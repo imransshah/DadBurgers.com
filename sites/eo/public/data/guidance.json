@@ -1,0 +1,2032 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "omb-m-26-14",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-14",
+      "title": "Ensuring Effective and Efficient Agency Logging and Network Visibility to Defend Against Evolving Cyber Threats",
+      "date": "2026-05-22",
+      "dateApprox": null,
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/05/M-26-14-Ensuring-Effective-and-Efficient-Agency-Logging-and-Network-Visibility-to-Defend-Against-Evolving-Cyber-Threats.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14028"
+      ],
+      "supersedes": [
+        "omb-m-21-31"
+      ],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "logging",
+        "cyber",
+        "visibility",
+        "ot-iot"
+      ],
+      "summary": "Replaces M-21-31's 'log nearly everything' model with a risk-based one built on a CISA Logging Reference Architecture (LRA, published Aug 20, 2026). Two goals: continuous event monitoring (logs searchable for at least 6 months) and threat hunting and forensics (retrievable for at least 12 months). Agencies submit a logging plan, then climb a five-element maturity model (levels 0–4) on a fixed schedule from LRA publication. Decentralized architectures are allowed if the SOC can get the data. OT and IoT are in scope where they're part of an agency information system.",
+      "forYou": "The most urgent item on this site. The logging plan is due November 18, 2026, and IT Ops owns most of what it describes: log sources, collection pipeline, normalization, retention tiers, integrity controls and access. The CISO signs; you'll write most of it.",
+      "actions": [
+        {
+          "id": "omb-m-26-14:plan",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Submit DFC's logging plan to OMB and CISA (CyberScope, using CISA's LRA plan template): source coverage, data flow, normalization, retention, integrity protections, access controls and validation.",
+          "cite": "M-26-14 / CISA LRA",
+          "due": "2026-11-18",
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        },
+        {
+          "id": "omb-m-26-14:retention",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Configure retention: security logs actively searchable for at least 6 months and retrievable for at least 12 months.",
+          "cite": "M-26-14",
+          "due": null,
+          "dueNote": null,
+          "recurring": "continuous",
+          "verify": false
+        },
+        {
+          "id": "omb-m-26-14:l1",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Reach logging maturity Level 1 under the LRA.",
+          "cite": null,
+          "due": "2026-12-18",
+          "dueNote": "120 days after LRA publication (Aug 20, 2026)",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "omb-m-26-14:l2",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Reach logging maturity Level 2.",
+          "cite": null,
+          "due": "2027-02-16",
+          "dueNote": "180 days after LRA publication",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "omb-m-26-14:l3",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Reach logging maturity Level 3.",
+          "cite": null,
+          "due": "2027-07-06",
+          "dueNote": "320 days after LRA publication",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "omb-m-26-14:ot",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Inventory OT and IoT devices (badge readers, cameras, building controls, printers) that are part of agency information systems and decide their logging path.",
+          "cite": "M-26-14 scope",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "cisa-lra",
+        "cisa-bod-26-04",
+        "omb-m-21-31"
+      ],
+      "sources": [
+        {
+          "label": "CISA announcement",
+          "url": "https://www.cisa.gov/news-events/news/cisa-releases-foundational-flexible-guidance-help-federal-agencies-implement-effective-logging"
+        },
+        {
+          "label": "FedScoop",
+          "url": "https://fedscoop.com/agency-logging-omb-memo-deadline/"
+        },
+        {
+          "label": "Elastic (maturity timelines)",
+          "url": "https://www.elastic.co/blog/m-26-14-memorandum"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-21-31",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-21-31",
+      "title": "Improving the Federal Government's Investigative and Remediation Capabilities Related to Cybersecurity Incidents",
+      "date": "2021-08-27",
+      "dateApprox": null,
+      "url": null,
+      "status": "rescinded",
+      "statusNote": "Rescinded by M-26-14 (May 22, 2026).",
+      "implements": [
+        "eo-14028"
+      ],
+      "supersedes": [],
+      "supersededBy": [
+        "omb-m-26-14"
+      ],
+      "relevance": "low",
+      "topics": [
+        "logging",
+        "lineage"
+      ],
+      "summary": "The old event-logging maturity model (EL0–EL3) with broad log-everything retention requirements.",
+      "forYou": "Historical. If a contract SOW still cites M-21-31 retention tiers, update it to M-26-14 at the next modification.",
+      "actions": [
+        {
+          "id": "omb-m-21-31:sow",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Replace M-21-31 references in SOWs and SLAs with M-26-14 at the next modification.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per contract action",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-15",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-15",
+      "title": "Execution of the Migration to Post-Quantum Cryptography",
+      "date": "2026-06-24",
+      "dateApprox": null,
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/M-26-15-Execution-of-the-Migration-to-Post-Quantum-Cryptography.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14412"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "pqc",
+        "cryptography",
+        "cyber"
+      ],
+      "summary": "OMB's civilian playbook for EO 14412: a five-phase migration from 2026 through 2035, and an agency PQC Migration Plan to OMB and ONCD within about 120 days. The plan covers governance and named accountability, ownership and inventory, risk-based system prioritization and more (nine elements, per secondary sources).",
+      "forYou": "The plan was due about October 22, 2026, which may be past. Confirm DFC submitted it and what OIT committed to. The inventory and prioritization you supplied (or should have) become your multi-year PQC workload.",
+      "actions": [
+        {
+          "id": "omb-m-26-15:plan",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Confirm DFC submitted its PQC Migration Plan. If not, escalate. Get a copy of OIT's commitments.",
+          "cite": "M-26-15",
+          "due": "2026-10-22",
+          "dueNote": "~120 days after issuance",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "omb-m-26-15:inventory",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Keep the cryptographic inventory current and tied to system owners. It drives every later phase.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "continuous",
+          "verify": false
+        },
+        {
+          "id": "omb-m-26-15:phases",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Map OIT systems to the five-phase schedule (through 2035), with HVAs and high-impact systems first per EO 14412's 2030/2031 dates.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14412",
+        "eo-14306",
+        "nist-cmvp-140-2-sunset",
+        "nist-fips-203-204-205"
+      ],
+      "sources": [
+        {
+          "label": "HSToday",
+          "url": "https://www.hstoday.us/subject-matter-areas/cybersecurity/omb-issues-federal-roadmap-for-post-quantum-cryptography-migration/"
+        },
+        {
+          "label": "Zscaler: what the plan must contain",
+          "url": "https://www.zscaler.com/blogs/product-insights/what-omb-memorandum-m-26-15-requires-your-agency-pqc-migration-plan"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-10",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-10",
+      "title": "Reinforcing Transparency, Accountability, and Oversight of Federal Technology",
+      "date": "2026-03-31",
+      "dateApprox": null,
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/03/M-26-10-Reinforcing-Transparency-Accountability-and-Oversight-of-Federal-Technology.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-13833",
+        "eo-14243",
+        "eo-14222"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "procurement",
+        "contracts",
+        "governance"
+      ],
+      "summary": "Tightens CIO control of IT spending. CIOs review and approve IT acquisitions and send OMB's Office of the Federal CIO monthly logs of IT contracts, with pricing and utilization data shared across agencies. Reporting began spring 2026 and ramps through October 2026.",
+      "forYou": "Every OIT contract action now has a CIO gate and a reporting trail. Your contract data (vehicle, labor categories, rates, utilization) feeds the monthly log, so keep it clean and current. Lead times for options and mods just grew.",
+      "actions": [
+        {
+          "id": "omb-m-26-10:approve",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Route every OIT IT acquisition action (new award, option, mod, renewal) for CIO approval before it goes to the CO.",
+          "cite": "M-26-10",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per contract action",
+          "verify": true
+        },
+        {
+          "id": "omb-m-26-10:log",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Supply contract data (vehicle, CLINs/labor categories, rates, utilization) for DFC's monthly IT contract log to OMB.",
+          "cite": "M-26-10",
+          "due": null,
+          "dueNote": null,
+          "recurring": "monthly",
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-13833",
+        "eo-14240",
+        "eo-14222"
+      ],
+      "sources": [
+        {
+          "label": "Crowell & Moring",
+          "url": "https://www.crowell.com/en/insights/client-alerts/omb-issues-new-policy-on-federal-it-transparency-and-acquisition-oversight"
+        },
+        {
+          "label": "Federal News Network",
+          "url": "https://federalnewsnetwork.com/acquisition-policy/2026/04/new-omb-it-policy-memo-rings-familiar-but-signals-major-shifts/"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-05",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-05",
+      "title": "Adopting a Risk-based Approach to Software and Hardware Security",
+      "date": "2026-01-23",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14028",
+        "eo-14306"
+      ],
+      "supersedes": [
+        "omb-m-22-18",
+        "omb-m-23-16"
+      ],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "software-supply-chain",
+        "procurement"
+      ],
+      "summary": "Rescinds the requirement that agencies collect CISA's 'Common Form' secure-software self-attestation from software producers. In its place, agencies take a risk-based approach to software and hardware security.",
+      "forYou": "Check whether DFC's acquisition templates and your intake checklist still require the Common Form. If they do, that's paperwork nobody requires anymore. Replace it with the agency's risk-based SCRM criteria.",
+      "actions": [
+        {
+          "id": "omb-m-26-05:templates",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Update OIT's software intake checklist: drop the mandatory Common Form and apply DFC's risk-based software/hardware criteria.",
+          "cite": "M-26-05",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [],
+      "sources": [
+        {
+          "label": "Covington",
+          "url": "https://www.insidegovernmentcontracts.com/2026/02/omb-rescinds-the-common-form-secure-software-attestation-requirement/"
+        },
+        {
+          "label": "Wiley",
+          "url": "https://www.wiley.law/alert-OMB-Rescinds-Secure-Software-Development-Mandate-in-Favor-of-a-Risk-Based-Approach"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-22-18",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-22-18",
+      "title": "Enhancing the Security of the Software Supply Chain through Secure Software Development Practices",
+      "date": "2022-09-14",
+      "dateApprox": null,
+      "url": null,
+      "status": "rescinded",
+      "statusNote": "Rescinded by M-26-05 (Jan 23, 2026).",
+      "implements": [
+        "eo-14028"
+      ],
+      "supersedes": [],
+      "supersededBy": [
+        "omb-m-26-05"
+      ],
+      "relevance": "low",
+      "topics": [
+        "software-supply-chain",
+        "lineage"
+      ],
+      "summary": "The original secure-software attestation requirement.",
+      "forYou": "Historical.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-23-16",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-23-16",
+      "title": "Update to Memorandum M-22-18",
+      "date": "2023-06-09",
+      "dateApprox": null,
+      "url": null,
+      "status": "rescinded",
+      "statusNote": "Rescinded by M-26-05 (Jan 23, 2026).",
+      "implements": [
+        "eo-14028"
+      ],
+      "supersedes": [],
+      "supersededBy": [
+        "omb-m-26-05"
+      ],
+      "relevance": "low",
+      "topics": [
+        "software-supply-chain",
+        "lineage"
+      ],
+      "summary": "Extended and clarified M-22-18's attestation timelines.",
+      "forYou": "Historical.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-04",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-04",
+      "title": "Increasing Public Trust in Artificial Intelligence Through Unbiased AI Principles",
+      "date": "2025-12-11",
+      "dateApprox": null,
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2025/12/M-26-04-Increasing-Public-Trust-in-Artificial-Intelligence-Through-Unbiased-AI-Principles-1.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14319"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "ai",
+        "procurement",
+        "contracts"
+      ],
+      "summary": "Implements EO 14319. Agencies had to update procurement policies by March 11, 2026, apply the Unbiased AI Principles to new LLM orders, and modify existing LLM contracts 'to the extent practicable' before exercising options. Contract terms address vendor-funded decommissioning if a contract is terminated for noncompliance. The memo expires December 11, 2027.",
+      "forYou": "Any OIT contract that delivers LLM capability needs these terms before its next option. That includes LLM features bundled into platforms you already license, not just standalone chatbots.",
+      "actions": [
+        {
+          "id": "omb-m-26-04:options",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Before exercising an option on any OIT contract that includes LLM capability, confirm with the CO that M-26-04 terms are in the contract.",
+          "cite": "M-26-04",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per option",
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14319",
+        "omb-m-25-22"
+      ],
+      "sources": [
+        {
+          "label": "Crowell & Moring",
+          "url": "https://www.crowell.com/en/insights/client-alerts/in-bid-to-ban-woke-ai-white-house-imposes-transparency-requirements-on-contractors"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-25-21",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-25-21",
+      "title": "Accelerating Federal Use of AI through Innovation, Governance, and Public Trust",
+      "date": "2025-04-03",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14179"
+      ],
+      "supersedes": [
+        "omb-m-24-10"
+      ],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "ai",
+        "governance",
+        "inventory"
+      ],
+      "summary": "Replaces M-24-10. Agencies keep a Chief AI Officer, publish AI compliance plans, maintain annual AI use-case inventories, and apply minimum risk practices to 'high-impact' AI. Some items, such as AI strategies, apply only to CFO Act agencies, and DFC isn't one.",
+      "forYou": "OIT runs the platforms where AI features appear. Keep a list of AI-enabled tools and features you operate, because it feeds the inventory, and flag anything that might be 'high-impact' to the CAIO early.",
+      "actions": [
+        {
+          "id": "omb-m-25-21:inventory",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Feed the annual AI use-case inventory with AI tools and features OIT operates.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "annually",
+          "verify": true
+        },
+        {
+          "id": "omb-m-25-21:high-impact",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Flag potentially high-impact AI uses to the CAIO before deployment.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per deployment",
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-m-25-22",
+        "eo-13960"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-25-22",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-25-22",
+      "title": "Driving Efficient Acquisition of Artificial Intelligence in Government",
+      "date": "2025-04-03",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14179"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "ai",
+        "procurement"
+      ],
+      "summary": "AI acquisition rules: protect government data and IP rights, avoid vendor lock-in, favor American AI, and include specific contract terms. It applies to contracts awarded or renewed after it took effect (about 180 days after issuance).",
+      "forYou": "Applies when OIT buys or renews AI capability. Bring the CO in early on data-rights and portability terms.",
+      "actions": [
+        {
+          "id": "omb-m-25-22:terms",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Include M-25-22 data-rights and anti-lock-in terms in AI acquisitions and renewals.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per acquisition",
+          "verify": true
+        }
+      ],
+      "related": [
+        "omb-m-25-21",
+        "omb-m-26-04"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-24-10",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-24-10",
+      "title": "Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial Intelligence",
+      "date": "2024-03-28",
+      "dateApprox": null,
+      "url": null,
+      "status": "rescinded",
+      "statusNote": "Replaced by M-25-21 (Apr 3, 2025).",
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [
+        "omb-m-25-21"
+      ],
+      "relevance": "low",
+      "topics": [
+        "ai",
+        "lineage"
+      ],
+      "summary": "Biden-era AI governance memo.",
+      "forYou": "Historical.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-22-09",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-22-09",
+      "title": "Moving the U.S. Government Toward Zero Trust Cybersecurity Principles",
+      "date": "2022-01-26",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": "Not known to be rescinded. Confirm.",
+      "implements": [
+        "eo-14028"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "zero-trust",
+        "identity",
+        "cyber"
+      ],
+      "summary": "The federal zero trust strategy: phishing-resistant MFA, device inventory and EDR, encrypted DNS and HTTP, application-level access, and data categorization. Its targets were set for end of FY2024.",
+      "forYou": "Past its target dates but still the yardstick FISMA metrics and auditors use. Gaps here show up in your FISMA CIO metrics.",
+      "actions": [
+        {
+          "id": "omb-m-22-09:gaps",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Keep a current zero-trust gap list (MFA coverage, device inventory, encrypted DNS/HTTP); it drives FISMA metric answers.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "quarterly",
+          "verify": false
+        }
+      ],
+      "related": [
+        "cisa-fisma-fy26-27-metrics"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-22-01",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-22-01",
+      "title": "Improving Detection of Cybersecurity Vulnerabilities and Incidents on Federal Government Systems through Endpoint Detection and Response",
+      "date": "2021-10-08",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": "Not known to be rescinded. Confirm.",
+      "implements": [
+        "eo-14028"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "endpoint",
+        "cyber"
+      ],
+      "summary": "Requires government-wide EDR deployment with CISA persistent access for threat hunting.",
+      "forYou": "EDR coverage gaps (servers, VDI, OT) are an ops problem. Keep coverage at 100% of eligible endpoints.",
+      "actions": [
+        {
+          "id": "omb-m-22-01:coverage",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Maintain EDR on all eligible endpoints, with CISA access, and track exceptions.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "continuous",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-24-15",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-24-15",
+      "title": "Modernizing the Federal Risk and Authorization Management Program (FedRAMP)",
+      "date": "2024-07-25",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "cloud",
+        "fedramp"
+      ],
+      "summary": "FedRAMP policy: cloud services that hold federal information need FedRAMP authorization, with agencies expected to reuse authorizations.",
+      "forYou": "Every SaaS/IaaS you stand up needs a FedRAMP authorization or an agency ATO path. FedRAMP 20x is changing how vendors get there.",
+      "actions": [
+        {
+          "id": "omb-m-24-15:cloud",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Confirm FedRAMP authorization status before onboarding any cloud service.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per onboarding",
+          "verify": false
+        }
+      ],
+      "related": [
+        "fedramp-20x",
+        "fedramp-ntc-0014"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-a-130",
+      "issuer": "OMB",
+      "type": "circular",
+      "number": "A-130",
+      "title": "Managing Information as a Strategic Resource",
+      "date": "2016-07-28",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "governance",
+        "lifecycle",
+        "risk-management"
+      ],
+      "summary": "The baseline federal IT management policy: information security continuous monitoring, system inventories, privacy, and phasing out unsupported systems and components.",
+      "forYou": "The authority behind the BOD 26-02 'replace unsupported edge devices' push and your EOL planning.",
+      "actions": [
+        {
+          "id": "omb-a-130:eol",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Keep an end-of-life roadmap for OIT systems and components. A-130 requires unsupported components to be phased out.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "annually",
+          "verify": false
+        }
+      ],
+      "related": [
+        "cisa-bod-26-02"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-03",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-03",
+      "title": "President's Management Agenda",
+      "date": "2025-12-08",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "low",
+      "topics": [
+        "governance"
+      ],
+      "summary": "Sets the administration's management priorities. Agency goals and data calls cascade from it.",
+      "forYou": "Awareness. Explains where some data calls come from.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-01",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-01",
+      "title": "Reopening Departments and Agencies",
+      "date": "2025-11-12",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "shutdown",
+        "continuity"
+      ],
+      "summary": "Reopening instructions after the October–November 2025 lapse in appropriations. M-26-06 (Jan 30, 2026) and M-26-07 (Feb 3, 2026) covered a second, shorter lapse.",
+      "forYou": "Two lapses in four months. Keep OIT's lapse plan ready: which IT staff are excepted, what must stay up, and which contractor work stops unless funded (your CORs need stop-work and resume language ready).",
+      "actions": [
+        {
+          "id": "omb-m-26-01:lapse-plan",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Keep OIT's lapse-in-appropriations plan current: excepted IT roles, must-run systems, contractor stop-work and resume steps.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "before each CR expiration",
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-m-26-07"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-m-26-07",
+      "issuer": "OMB",
+      "type": "memo",
+      "number": "M-26-07",
+      "title": "Reopening Departments and Agencies",
+      "date": "2026-02-03",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "low",
+      "topics": [
+        "shutdown",
+        "continuity"
+      ],
+      "summary": "Reopening instructions after the early-2026 lapse (see also M-26-06, Status of Agency Operations, Jan 30, 2026).",
+      "forYou": "See M-26-01. Same playbook.",
+      "actions": [],
+      "related": [
+        "omb-m-26-01"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "omb-opm-2025-02-26-arrp",
+      "issuer": "OMB/OPM",
+      "type": "memo",
+      "number": null,
+      "title": "Guidance on Agency RIF and Reorganization Plans Requested by Implementing the President's \"Department of Government Efficiency\" Workforce Optimization Initiative",
+      "date": "2025-02-26",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14210"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "workforce",
+        "rif"
+      ],
+      "summary": "Asked for Agency RIF and Reorganization Plans (ARRPs) in two phases, due March 13 and April 14, 2025.",
+      "forYou": "Past due dates, but the position data you gave then is the baseline for any later reorganization.",
+      "actions": [
+        {
+          "id": "omb-opm-2025-02-26-arrp:baseline",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Keep a copy of what OIT submitted for the ARRP. It's the baseline for later reorganizations.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "opm-2025-05-29-merit-hiring-plan",
+      "issuer": "OPM",
+      "type": "plan",
+      "number": null,
+      "title": "Merit Hiring Plan",
+      "date": "2025-05-29",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14170"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "hiring"
+      ],
+      "summary": "OPM's hiring overhaul: technical and SME-based assessments, short essay questions, rule-of-many referral, and less reliance on self-rating questionnaires.",
+      "forYou": "Your approved vacancies run under this. Plan for SME time from your team.",
+      "actions": [
+        {
+          "id": "opm-2025-05-29-merit-hiring-plan:sme",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Plan SME time for technical assessments on approved vacancies.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per vacancy",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "opm-2025-11-05-eo14356",
+      "issuer": "OPM/CHCO",
+      "type": "memo",
+      "number": null,
+      "title": "Guidance on Executive Order 14356, Ensuring Continued Accountability in Federal Hiring",
+      "date": "2025-11-05",
+      "dateApprox": null,
+      "url": "https://www.opm.gov/chcoc/latest-memos/guidance-on-executive-order-14356-ensuring-continued-accountability-in-federal-hiring.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14356"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "hiring"
+      ],
+      "summary": "OPM and OMB guidance: Strategic Hiring Committees established by November 17, 2025, with 5–9 members and a non-career chair. Covers committee approvals, annual staffing plans and quarterly updates.",
+      "forYou": "Tells you what the committee expects in a request. Read it before you write one.",
+      "actions": [
+        {
+          "id": "opm-2025-11-05-eo14356:read",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Read the committee request expectations before submitting a vacancy justification.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "opm-2026-02-05-schedule-pc",
+      "issuer": "OPM/CHCO",
+      "type": "memo",
+      "number": null,
+      "title": "Initial Implementing Guidance for Schedule Policy/Career Final Rule (Improving Performance, Accountability and Responsiveness in the Civil Service)",
+      "date": "2026-02-05",
+      "dateApprox": null,
+      "url": "https://www.opm.gov/chcoc/latest-memos/opm-schedule-policycareer-implementation-guidance-memorandum.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14171"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "schedule-pc",
+        "employee-rights",
+        "performance"
+      ],
+      "summary": "The final rule took effect about March 9, 2026. Agencies were to issue internal policies within 30 days (sources say April 8, 2026). The memo includes templates for hiring, pay, grievances, and performance-based and adverse actions for Schedule P/C employees, who lose MSPB adverse-action appeals.",
+      "forYou": "Read DFC's internal Schedule P/C policy. If you or a direct report was moved, it governs performance and conduct actions.",
+      "actions": [
+        {
+          "id": "opm-2026-02-05-schedule-pc:policy",
+          "tier": "know",
+          "lens": "employee",
+          "text": "Get DFC's internal Schedule P/C policy and keep a copy.",
+          "cite": null,
+          "due": "2026-04-08",
+          "dueNote": "Agency deadline, not yours",
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "opm-2026-06-08-schedule-pc-eo"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "opm-2026-06-08-schedule-pc-eo",
+      "issuer": "OPM/CHCO",
+      "type": "memo",
+      "number": null,
+      "title": "Executive Order Implementing Schedule Policy/Career in the Excepted Service",
+      "date": "2026-06-08",
+      "dateApprox": null,
+      "url": "https://www.opm.gov/chcoc/latest-memos/opm-memo-re-executive-order-implementing-schedule-policycareer-in-the-excepted-service.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14410"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "schedule-pc",
+        "employee-rights"
+      ],
+      "summary": "Tells agencies to process SF-50s, effective June 3, 2026 and within seven days, moving positions into Schedule Policy/Career.",
+      "forYou": "If your position was moved, there's an SF-50 dated June 3, 2026 in your eOPF.",
+      "actions": [
+        {
+          "id": "opm-2026-06-08-schedule-pc-eo:eopf",
+          "tier": "must",
+          "lens": "employee",
+          "text": "Check eOPF for an SF-50 effective June 3, 2026.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "opm-eo14251-faq",
+      "issuer": "OPM",
+      "type": "faq",
+      "number": null,
+      "title": "FAQs for EO 14251, Exclusions from Federal Labor-Management Relations Programs",
+      "date": "2025-04-22",
+      "dateApprox": null,
+      "url": "https://content.govdelivery.com/attachments/USOPM/2025/07/11/file_attachments/3321309/FAQs%20for%20EO14251%20Exclusions%20from%20Federal%20Labor-Management%204-22-2025.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "eo-14251"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "labor-relations"
+      ],
+      "summary": "OPM's questions and answers on how excluded agencies handle CBAs, dues and grievances.",
+      "forYou": "If DFC is excluded, this explains what happens to your CBA obligations.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "opm-rto-guidance",
+      "issuer": "OPM/OMB",
+      "type": "memo",
+      "number": null,
+      "title": "Guidance on Presidential Memorandum, Return to In-Person Work",
+      "date": null,
+      "dateApprox": "2025-01",
+      "url": null,
+      "status": "in-effect",
+      "statusNote": "Exact title and date not verified from this sandbox.",
+      "implements": [
+        "pm-2025-01-20-return-to-in-person-work"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "rto",
+        "telework"
+      ],
+      "summary": "OPM and OMB implementation guidance for the RTO memorandum, including exemptions and timelines.",
+      "forYou": "Explains the exemption categories DFC applies.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-26-04",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 26-04",
+      "title": "Prioritizing Security Updates Based on Risk",
+      "date": "2026-06-10",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [
+        "cisa-bod-22-01",
+        "cisa-bod-19-02"
+      ],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "vuln-mgmt",
+        "cyber",
+        "asset-inventory"
+      ],
+      "summary": "Replaces severity-only patch deadlines with risk-based prioritization on four factors: asset exposure, KEV status, exploit automation, and post-exploitation technical impact. The result is remediation windows of 3, 14 or 60 days, or deferral to the next system upgrade. Agency policies had to align by August 2026, and remediation on the new timelines starts December 7, 2026. CDM asset reporting expands to cover all networked assets, printers included, with every IP address, including private RFC 1918/4193 ranges.",
+      "forYou": "This rewrites your patching SLAs. Your vulnerability workflow, ticket priorities and any contractor SLA that says '15/30 days for critical/high' need to switch to BOD 26-04 windows by December 7. The printer and private-IP reporting requirement is the sleeper: plenty of CDM feeds don't do that today.",
+      "actions": [
+        {
+          "id": "cisa-bod-26-04:policy",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Confirm DFC's vulnerability-management policy was updated to BOD 26-04.",
+          "cite": null,
+          "due": "2026-08-07",
+          "dueNote": "Agency policy alignment",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-26-04:timelines",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Start evaluating and remediating on BOD 26-04 risk-based windows (3/14/60 days or next upgrade). Update ticket priorities and runbooks.",
+          "cite": null,
+          "due": "2026-12-07",
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        },
+        {
+          "id": "cisa-bod-26-04:contract-sla",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Align contractor SLAs and O&M task orders that hard-code BOD 19-02/22-01 timelines with BOD 26-04 windows.",
+          "cite": null,
+          "due": "2026-12-07",
+          "dueNote": null,
+          "recurring": "per contract action",
+          "verify": false
+        },
+        {
+          "id": "cisa-bod-26-04:cdm-assets",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Make sure CDM reporting covers all networked assets, printers included, with all associated IPs (including RFC 1918/4193).",
+          "cite": "Required action on asset reporting (reported as Req. 8)",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "fedramp-ntc-0014",
+        "omb-m-26-14",
+        "cisa-bod-23-01",
+        "cisa-bod-26-02"
+      ],
+      "sources": [
+        {
+          "label": "CISA announcement",
+          "url": "https://www.cisa.gov/news-events/news/cisa-issues-new-directive-improving-how-federal-agencies-prioritize-mitigation-cyber-vulnerabilities"
+        },
+        {
+          "label": "FedRAMP Notice 0014",
+          "url": "https://www.fedramp.gov/notices/0014/"
+        },
+        {
+          "label": "Wiley",
+          "url": "https://www.wiley.law/alert-CISA-Directive-Highlights-Risk-Based-Vulnerability-Management"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-22-01",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 22-01",
+      "title": "Reducing the Significant Risk of Known Exploited Vulnerabilities",
+      "date": "2021-11-03",
+      "dateApprox": null,
+      "url": null,
+      "status": "superseded",
+      "statusNote": "Revoked or folded into BOD 26-04 (June 10, 2026). CISA's bulletin says 'harmonizes'; several analyses say 'revokes'. The KEV catalog itself continues.",
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [
+        "cisa-bod-26-04"
+      ],
+      "relevance": "low",
+      "topics": [
+        "vuln-mgmt",
+        "lineage"
+      ],
+      "summary": "The KEV-catalog directive with fixed remediation due dates.",
+      "forYou": "KEV status still matters as one of BOD 26-04's four factors, but the fixed KEV due dates are gone.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-19-02",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 19-02",
+      "title": "Vulnerability Remediation Requirements for Internet-Accessible Systems",
+      "date": "2019-04-29",
+      "dateApprox": null,
+      "url": null,
+      "status": "superseded",
+      "statusNote": "Superseded by BOD 26-04 (June 10, 2026).",
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [
+        "cisa-bod-26-04"
+      ],
+      "relevance": "low",
+      "topics": [
+        "vuln-mgmt",
+        "lineage"
+      ],
+      "summary": "The 15-day critical / 30-day high rule for internet-facing systems.",
+      "forYou": "Retire '15/30' language from SLAs and runbooks.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-26-02",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 26-02",
+      "title": "Mitigating Risk From End-of-Support Edge Devices",
+      "date": "2026-02-05",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "omb-a-130"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "network",
+        "lifecycle",
+        "asset-inventory"
+      ],
+      "summary": "Agencies must get end-of-support (EOS) edge devices (firewalls, routers, switches, VPN concentrators, load balancers, wireless controllers) off their networks. Update supported devices running EOS software immediately. Inventory devices on CISA's EOS Edge Device List (3 months). Start removing devices that were already EOS (12 months). Finish removal (18 months). Run continuous discovery with a rolling 12-month EOS forecast (24 months).",
+      "forYou": "Squarely an IT Ops item. Network and perimeter hardware is your refresh budget. The February 5, 2027 milestone is under three months away. If removal isn't funded, raise it now, before the next budget cycle closes.",
+      "actions": [
+        {
+          "id": "cisa-bod-26-02:software",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Update vendor-supported edge devices that are running EOS software or firmware.",
+          "cite": null,
+          "due": null,
+          "dueNote": "Immediate",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-26-02:inventory",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Inventory edge devices on CISA's EOS Edge Device List and report to CISA (template).",
+          "cite": null,
+          "due": "2026-05-05",
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-26-02:begin-removal",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Begin removing and replacing devices that were EOS when the directive was issued.",
+          "cite": null,
+          "due": "2027-02-05",
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-26-02:complete",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Complete removal of all identified EOS edge devices and report to CISA.",
+          "cite": null,
+          "due": "2027-08-05",
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-26-02:continuous",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Stand up continuous edge-device discovery and a rolling inventory of devices going EOS within 12 months.",
+          "cite": null,
+          "due": "2028-02-05",
+          "dueNote": null,
+          "recurring": "continuous",
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-26-02:budget",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Put funded replacement of EOS edge devices into the FY27/FY28 budget request.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "annually",
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-a-130",
+        "cisa-bod-26-04",
+        "cisa-bod-23-01"
+      ],
+      "sources": [
+        {
+          "label": "Cisco blog",
+          "url": "https://blogs.cisco.com/?p=490913"
+        },
+        {
+          "label": "runZero",
+          "url": "https://www.runzero.com/blog/bod-26-02-compliance/"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-25-01",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 25-01",
+      "title": "Implementing Secure Practices for Cloud Services",
+      "date": "2024-12-17",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "cloud",
+        "m365",
+        "configuration"
+      ],
+      "summary": "Requires secure configuration baselines (CISA SCuBA) for in-scope cloud tenants, starting with Microsoft 365. Inventory tenants, deploy SCuBA assessment tools with continuous reporting to CISA, and implement mandatory configurations. The initial deadlines ran February–June 2025, and new baselines carry their own timelines.",
+      "forYou": "If DFC runs M365 (or Google Workspace), your tenant configs are continuously graded by CISA. Drift from a mandatory baseline is a finding, so keep SCuBA results in your weekly ops review.",
+      "actions": [
+        {
+          "id": "cisa-bod-25-01:tenants",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Keep the in-scope cloud tenant inventory current with CISA.",
+          "cite": null,
+          "due": null,
+          "dueNote": "Initial due Feb 21, 2025",
+          "recurring": "on change",
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-25-01:scuba",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Run SCuBA assessments continuously and report to CISA.",
+          "cite": null,
+          "due": null,
+          "dueNote": "Initial due Apr 25, 2025",
+          "recurring": "continuous",
+          "verify": true
+        },
+        {
+          "id": "cisa-bod-25-01:configs",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Hold mandatory SCuBA configurations and implement new mandatory baselines on CISA's timelines.",
+          "cite": null,
+          "due": null,
+          "dueNote": "Initial due Jun 20, 2025",
+          "recurring": "continuous",
+          "verify": true
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-23-01",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 23-01",
+      "title": "Improving Asset Visibility and Vulnerability Detection on Federal Networks",
+      "date": "2022-10-03",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "asset-inventory",
+        "vuln-mgmt"
+      ],
+      "summary": "Automated asset discovery every 7 days and vulnerability enumeration every 14 days across all IP-addressable networked assets, reported through CDM.",
+      "forYou": "The cadence your scanners run on. BOD 26-04's expanded asset reporting builds on it.",
+      "actions": [
+        {
+          "id": "cisa-bod-23-01:discovery",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Run automated asset discovery at least every 7 days.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "every 7 days",
+          "verify": false
+        },
+        {
+          "id": "cisa-bod-23-01:enumeration",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Run vulnerability enumeration at least every 14 days (including mobile and roaming devices).",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "every 14 days",
+          "verify": false
+        }
+      ],
+      "related": [
+        "cisa-bod-26-04"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-23-02",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 23-02",
+      "title": "Mitigating the Risk from Internet-Exposed Management Interfaces",
+      "date": "2023-06-13",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "network",
+        "configuration"
+      ],
+      "summary": "Networked management interfaces must not be reachable from the internet. Remove them or put them behind zero-trust access controls within 14 days of discovery.",
+      "forYou": "Applies to every appliance admin UI you run. A recurring CyHy finding if missed.",
+      "actions": [
+        {
+          "id": "cisa-bod-23-02:mgmt",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Remove internet exposure of management interfaces (or put them behind ZT access) within 14 days of discovery.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per discovery",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-18-01",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 18-01",
+      "title": "Enhance Email and Web Security",
+      "date": "2017-10-16",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "email",
+        "web",
+        "configuration"
+      ],
+      "summary": "DMARC at p=reject, STARTTLS, HTTPS with HSTS on all federal web services, and weak protocols and ciphers removed.",
+      "forYou": "Any new DFC domain or subdomain OIT stands up must meet this on day one.",
+      "actions": [
+        {
+          "id": "cisa-bod-18-01:domains",
+          "tier": "must",
+          "lens": "ops",
+          "text": "New domains and subdomains launch with DMARC p=reject, HTTPS-only and HSTS.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per domain",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-bod-20-01",
+      "issuer": "CISA",
+      "type": "bod",
+      "number": "BOD 20-01",
+      "title": "Develop and Publish a Vulnerability Disclosure Policy",
+      "date": "2020-09-02",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "low",
+      "topics": [
+        "vuln-mgmt"
+      ],
+      "summary": "Agencies publish a vulnerability disclosure policy and include new internet-facing systems in its scope.",
+      "forYou": "Add new internet-facing systems to VDP scope at launch.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-ed-26-03",
+      "issuer": "CISA",
+      "type": "ed",
+      "number": "ED 26-03",
+      "title": "Mitigate Vulnerabilities in Cisco SD-WAN Systems",
+      "date": "2026-02-25",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives",
+      "status": "in-effect",
+      "statusNote": "Issue date approximate (deadlines Feb 26–27, 2026).",
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "network",
+        "emergency"
+      ],
+      "summary": "Emergency directive on actively exploited Cisco SD-WAN flaws: inventory, patch, hunt and harden, then report evidence. It was updated later with more required actions.",
+      "forYou": "Applies only if DFC runs Cisco SD-WAN. If so, keep the evidence package. CISA follow-ups reference it.",
+      "actions": [
+        {
+          "id": "cisa-ed-26-03:apply",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "If DFC runs Cisco SD-WAN, confirm the ED 26-03 inventory, patch and evidence steps were completed, and keep the artifacts.",
+          "cite": null,
+          "due": "2026-03-23",
+          "dueNote": "Final evidence date per secondary sources",
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [],
+      "sources": [
+        {
+          "label": "MeriTalk",
+          "url": "https://meritalk.com/articles/cisa-calls-on-agencies-to-secure-cisco-sd-wan-systems/"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-ed-26-01",
+      "issuer": "CISA",
+      "type": "ed",
+      "number": "ED 26-01",
+      "title": "Mitigate Vulnerabilities in F5 Devices",
+      "date": "2025-10-15",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/news-events/directives/ed-26-01-mitigate-vulnerabilities-f5-devices",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "network",
+        "emergency"
+      ],
+      "summary": "After a nation-state actor stole F5 BIG-IP source code, agencies had to inventory F5 devices, check for exposed management interfaces, patch in two tiers (Oct 22 and Oct 31, 2025), and disconnect unsupported F5 hardware.",
+      "forYou": "If DFC runs F5 BIG-IP, which is likely somewhere in your TLS path, this also feeds your TLS 1.3 and BOD 26-02 planning.",
+      "actions": [
+        {
+          "id": "cisa-ed-26-01:eos",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "If DFC runs F5, confirm unsupported F5 hardware was removed and that the management plane isn't internet-exposed.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "cisa-bod-26-02",
+        "eo-14306"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-lra",
+      "issuer": "CISA",
+      "type": "reference",
+      "number": null,
+      "title": "Logging Reference Architecture",
+      "date": "2026-08-20",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/resources-tools/resources/logging-reference-architecture",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "omb-m-26-14"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "high",
+      "topics": [
+        "logging"
+      ],
+      "summary": "CISA's reference architecture and plan template for M-26-14. Its publication date starts the maturity-level clocks.",
+      "forYou": "Your logging plan follows this template. Download it first.",
+      "actions": [
+        {
+          "id": "cisa-lra:template",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Use the LRA plan template for DFC's November 18 logging plan.",
+          "cite": null,
+          "due": "2026-11-18",
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-fisma-fy26-27-metrics",
+      "issuer": "CISA",
+      "type": "metrics",
+      "number": null,
+      "title": "FY 2026 & FY 2027 CIO FISMA Metrics, Version 1.0",
+      "date": "2026-08-03",
+      "dateApprox": null,
+      "url": "https://www.cisa.gov/sites/default/files/2026-08/FY2026-FISMA-cio-metrics.pdf",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "fisma",
+        "reporting"
+      ],
+      "summary": "The CIO FISMA metric definitions for FY26–FY27, including CDM and OT/IoT system counts.",
+      "forYou": "These are the numbers your quarterly FISMA answers come from. Most are pulled from ops tooling.",
+      "actions": [
+        {
+          "id": "cisa-fisma-fy26-27-metrics:quarterly",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Supply ops data for quarterly CIO FISMA metrics.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "quarterly",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "cisa-pqc-product-list",
+      "issuer": "CISA",
+      "type": "list",
+      "number": null,
+      "title": "Product Categories Supporting Post-Quantum Cryptography",
+      "date": "2025-12-01",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": "Publication not verified from this sandbox.",
+      "implements": [
+        "eo-14306"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "pqc",
+        "procurement"
+      ],
+      "summary": "EO 14306 required CISA to publish, by December 1, 2025, a list of product categories where PQC-capable products are widely available.",
+      "forYou": "When buying in a listed category, require PQC support.",
+      "actions": [
+        {
+          "id": "cisa-pqc-product-list:specs",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Require PQC support in specifications for products in CISA-listed categories.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per acquisition",
+          "verify": true
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "fedramp-ntc-0014",
+      "issuer": "FedRAMP",
+      "type": "notice",
+      "number": "NTC-0014",
+      "title": "FedRAMP Response to CISA BOD 26-04",
+      "date": null,
+      "dateApprox": "2026-06",
+      "url": "https://www.fedramp.gov/notices/0014/",
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [
+        "cisa-bod-26-04"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "cloud",
+        "vuln-mgmt",
+        "fedramp"
+      ],
+      "summary": "Cloud providers must adopt FedRAMP's new Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 7, 2026, matching BOD 26-04.",
+      "forYou": "Your SaaS and IaaS vendors' remediation reporting changes in December. Expect new ConMon formats.",
+      "actions": [
+        {
+          "id": "fedramp-ntc-0014:conmon",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Expect changed ConMon and vulnerability reports from FedRAMP vendors from December 7, 2026.",
+          "cite": null,
+          "due": "2026-12-07",
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "fedramp-20x",
+      "issuer": "FedRAMP",
+      "type": "program",
+      "number": null,
+      "title": "FedRAMP 20x",
+      "date": "2025-03-24",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "low",
+      "topics": [
+        "cloud",
+        "fedramp"
+      ],
+      "summary": "FedRAMP's automation-first authorization path, which replaces narrative SSPs with machine-checkable key security indicators.",
+      "forYou": "Faster vendor authorizations, but different evidence formats in reviews.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "nist-fips-203-204-205",
+      "issuer": "NIST",
+      "type": "standard",
+      "number": "FIPS 203/204/205",
+      "title": "Post-Quantum Cryptography Standards (ML-KEM, ML-DSA, SLH-DSA)",
+      "date": "2024-08-13",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "pqc",
+        "cryptography"
+      ],
+      "summary": "The first three NIST PQC standards: ML-KEM for key establishment, and ML-DSA and SLH-DSA for signatures.",
+      "forYou": "What 'PQC' means in your specs and vendor questions.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "nist-cmvp-140-2-sunset",
+      "issuer": "NIST",
+      "type": "notice",
+      "number": null,
+      "title": "FIPS 140-2 certificates moved to the CMVP Historical List",
+      "date": "2026-09-21",
+      "dateApprox": null,
+      "url": null,
+      "status": "in-effect",
+      "statusNote": null,
+      "implements": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "medium",
+      "topics": [
+        "cryptography",
+        "procurement"
+      ],
+      "summary": "On September 21, 2026 all remaining FIPS 140-2 certificates moved to the CMVP Historical list. New acquisitions should require FIPS 140-3 validated modules.",
+      "forYou": "Appliances whose only validation is FIPS 140-2 now need a plan at next refresh, and every new buy should require 140-3.",
+      "actions": [
+        {
+          "id": "nist-cmvp-140-2-sunset:140-3",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Require FIPS 140-3 validated cryptographic modules in new acquisitions and refreshes.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per acquisition",
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-m-26-15"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    {
+      "id": "nist-ssdf-update",
+      "issuer": "NIST",
+      "type": "standard",
+      "number": "SP 800-218",
+      "title": "Secure Software Development Framework (SSDF) update",
+      "date": null,
+      "dateApprox": "2025-12",
+      "url": null,
+      "status": "in-effect",
+      "statusNote": "Publication status not verified.",
+      "implements": [
+        "eo-14306"
+      ],
+      "supersedes": [],
+      "supersededBy": [],
+      "relevance": "low",
+      "topics": [
+        "software-supply-chain"
+      ],
+      "summary": "EO 14306 required a preliminary SSDF update by December 1, 2025, with the final 120 days later.",
+      "forYou": "Reference material for software risk reviews under M-26-05.",
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    }
+  ]
+}

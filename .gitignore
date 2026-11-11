@@ -6,10 +6,10 @@ dist/
 .env
 .env.local
 .env.*.local
-worker/.dev.vars
+**/.dev.vars
 
 # Wrangler
-worker/.wrangler/
+**/.wrangler/
 .wrangler/
 
 *.log

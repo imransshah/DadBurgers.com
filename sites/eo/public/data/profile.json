@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "agency": "U.S. International Development Finance Corporation (DFC)",
+  "component": "Office of Information Technology (OIT)",
+  "role": "IT Operations Director",
+  "sector": "civilian",
+  "cfoActAgency": false,
+  "fceb": true,
+  "owns": [
+    "network",
+    "data center",
+    "cloud",
+    "help desk / end-user services",
+    "OT",
+    "telecom",
+    "IT contracts (COR)",
+    "FISMA systems"
+  ],
+  "supervises": {
+    "directFeds": 3,
+    "secondLineFeds": 2,
+    "contractorStaff": 29,
+    "contracts": "multiple"
+  },
+  "bargainingUnit": true,
+  "lenses": {
+    "ops": "IT Operations owner: systems, network, cloud, security operations, contracts",
+    "manager": "Supervisor of federal staff (3 direct, 2 second-line) and COR over contractor staff",
+    "employee": "You personally, as a federal employee"
+  }
+}

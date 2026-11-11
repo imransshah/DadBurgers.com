@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "seededAt": "2026-11-11",
+  "lastSync": null,
+  "lastSyncOk": null,
+  "lastError": null,
+  "sources": {},
+  "counts": {
+    "documents": 40,
+    "guidance": 44
+  }
+}

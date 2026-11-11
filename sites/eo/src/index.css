@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+/* ── Tokens ─────────────────────────────────────────────────────────────── */
+:root {
+  --c-bg: #f5f6f8;
+  --c-surface: #ffffff;
+  --c-surface-2: #eef1f5;
+  --c-ink: #141922;
+  --c-muted: #5a6475;
+  --c-faint: #8a93a3;
+  --c-line: #dfe3ea;
+  --c-accent: #1f3a68;
+  --c-accent-soft: #e6ecf6;
+  --c-accent-ink: #ffffff;
+  --c-must: #b42318;
+  --c-must-soft: #fdecea;
+  --c-feed: #a8530a;
+  --c-feed-soft: #fdf1e4;
+  --c-know: #3b5a8c;
+  --c-know-soft: #e9eef7;
+  --c-ok: #0b7a4b;
+  --c-ok-soft: #e4f4ec;
+  --c-gold: #c98a12;
+  --c-gold-soft: #fbf3df;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-bg: #0d1117;
+    --c-surface: #151b23;
+    --c-surface-2: #1b222c;
+    --c-ink: #e6e9ef;
+    --c-muted: #9aa4b5;
+    --c-faint: #6e7889;
+    --c-line: #29313d;
+    --c-accent: #93b4ec;
+    --c-accent-soft: #1c2a40;
+    --c-accent-ink: #0d1117;
+    --c-must: #f7837a;
+    --c-must-soft: #3a1d1b;
+    --c-feed: #f5b552;
+    --c-feed-soft: #36270f;
+    --c-know: #8fb0ec;
+    --c-know-soft: #1b2638;
+    --c-ok: #5fd39a;
+    --c-ok-soft: #12291f;
+    --c-gold: #f2c25b;
+    --c-gold-soft: #33280f;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --c-bg: #0d1117;
+  --c-surface: #151b23;
+  --c-surface-2: #1b222c;
+  --c-ink: #e6e9ef;
+  --c-muted: #9aa4b5;
+  --c-faint: #6e7889;
+  --c-line: #29313d;
+  --c-accent: #93b4ec;
+  --c-accent-soft: #1c2a40;
+  --c-accent-ink: #0d1117;
+  --c-must: #f7837a;
+  --c-must-soft: #3a1d1b;
+  --c-feed: #f5b552;
+  --c-feed-soft: #36270f;
+  --c-know: #8fb0ec;
+  --c-know-soft: #1b2638;
+  --c-ok: #5fd39a;
+  --c-ok-soft: #12291f;
+  --c-gold: #f2c25b;
+  --c-gold-soft: #33280f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-muted);
+  --color-faint: var(--c-faint);
+  --color-line: var(--c-line);
+  --color-accent: var(--c-accent);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-accent-ink: var(--c-accent-ink);
+  --color-must: var(--c-must);
+  --color-must-soft: var(--c-must-soft);
+  --color-feed: var(--c-feed);
+  --color-feed-soft: var(--c-feed-soft);
+  --color-know: var(--c-know);
+  --color-know-soft: var(--c-know-soft);
+  --color-ok: var(--c-ok);
+  --color-ok-soft: var(--c-ok-soft);
+  --color-gold: var(--c-gold);
+  --color-gold-soft: var(--c-gold-soft);
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────── */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+}
+::selection {
+  background: var(--c-accent-soft);
+}
+:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Small components that are clearer as classes ──────────────────────── */
+@layer components {
+  .card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-radius: 10px;
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+  }
+  .link {
+    color: var(--c-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid transparent;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--c-line);
+    background: var(--c-surface);
+    color: var(--c-ink);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    background: var(--c-surface-2);
+  }
+  .btn-primary {
+    background: var(--c-accent);
+    border-color: var(--c-accent);
+    color: var(--c-accent-ink);
+  }
+  .btn-primary:hover {
+    background: var(--c-accent);
+    filter: brightness(1.08);
+  }
+  .btn-sm {
+    height: 28px;
+    padding: 0 9px;
+    font-size: 13px;
+  }
+  .input {
+    width: 100%;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid var(--c-line);
+    background: var(--c-surface);
+    color: var(--c-ink);
+    font-size: 14px;
+  }
+  textarea.input {
+    height: auto;
+    padding: 8px 10px;
+    line-height: 1.5;
+  }
+  select.input {
+    padding-right: 28px;
+  }
+  .seg {
+    display: inline-flex;
+    border: 1px solid var(--c-line);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--c-surface);
+  }
+  .seg button {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 13px;
+    color: var(--c-muted);
+    border-right: 1px solid var(--c-line);
+    white-space: nowrap;
+  }
+  .seg button:last-child {
+    border-right: 0;
+  }
+  .seg button[aria-pressed="true"] {
+    background: var(--c-accent-soft);
+    color: var(--c-ink);
+    font-weight: 600;
+  }
+  .prose-tight p + p {
+    margin-top: 0.6em;
+  }
+  .scroll-x {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .scroll-x::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Print (one-page brief) ─────────────────────────────────────────────── */
+@media print {
+  :root,
+  :root[data-theme="dark"] {
+    --c-bg: #fff;
+    --c-surface: #fff;
+    --c-surface-2: #f3f4f6;
+    --c-ink: #000;
+    --c-muted: #333;
+    --c-line: #bbb;
+    --c-accent: #000;
+    color-scheme: light;
+  }
+  body {
+    font-size: 10.5pt;
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .card {
+    border: 0;
+  }
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+}

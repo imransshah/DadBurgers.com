@@ -1,0 +1,1806 @@
+{
+  "schema": 1,
+  "items": {
+    "eo-14028": {
+      "relevance": "high",
+      "topics": [
+        "cyber",
+        "zero-trust",
+        "logging",
+        "endpoint",
+        "software-supply-chain"
+      ],
+      "summary": "The root of most current federal cyber operations requirements: zero trust architecture, endpoint detection and response (EDR), event logging, secure software development, a standard incident-response playbook, and the Cyber Safety Review Board. The order sets direction; OMB and CISA issue the actual requirements.",
+      "forYou": "Nothing new is owed under the order itself — the work lives in its children. Zero trust (M-22-09), EDR (M-22-01) and logging (now M-26-14, which replaced M-21-31) all trace back here. When someone asks 'what authority?', this is usually the answer.",
+      "status": "amended",
+      "statusNote": "Amended by EO 14144 (Jan 16, 2025), which was itself substantially cut back by EO 14306 (June 6, 2025).",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [
+          "eo-14144",
+          "eo-14306"
+        ],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14028:children",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Track the child memos for live deadlines: M-26-14 (logging), M-22-09 (zero trust), M-22-01 (EDR), M-26-05 (software security, which rescinded the attestation form).",
+          "cite": "Secs. 3, 4, 7, 8",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-m-26-14",
+        "omb-m-22-09",
+        "omb-m-22-01",
+        "omb-m-26-05",
+        "omb-m-21-31"
+      ],
+      "sources": [
+        {
+          "label": "Federal Register (86 FR 26633)",
+          "url": "https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14144": {
+      "relevance": "medium",
+      "topics": [
+        "cyber",
+        "pqc",
+        "software-supply-chain",
+        "identity"
+      ],
+      "summary": "Late-term Biden order adding software-attestation enforcement, digital identity, PQC planning, and other cyber requirements. EO 14306 struck a large share of it five months later; what survives is mostly the PQC/TLS and AI-vulnerability provisions as rewritten by EO 14306.",
+      "forYou": "Read it only through EO 14306. If a vendor or an older internal plan cites EO 14144 for a requirement, check that the section survived the June 2025 amendments before you spend money on it.",
+      "status": "amended",
+      "statusNote": "Substantially amended by EO 14306 (June 6, 2025).",
+      "lineage": {
+        "amends": [
+          "eo-14028"
+        ],
+        "amendedBy": [
+          "eo-14306"
+        ],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14144:check-cites",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Before acting on any EO 14144 citation, confirm the section still exists after EO 14306.",
+          "cite": "EO 14306 §§2–4",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14306"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14306": {
+      "relevance": "high",
+      "topics": [
+        "cyber",
+        "pqc",
+        "tls",
+        "software-supply-chain"
+      ],
+      "summary": "Trims EO 14144 and keeps a short list of requirements: TLS 1.3 support by January 2, 2030; a CISA list of product categories that support post-quantum cryptography (due December 1, 2025); a NIST update to the Secure Software Development Framework (preliminary by December 1, 2025); and AI-vulnerability handling. It also narrows the cyber sanctions order (EO 13694) to foreign persons.",
+      "forYou": "The TLS 1.3 date is yours. Every load balancer, reverse proxy, VPN concentrator, web server and API gateway OIT runs has to support TLS 1.3 (or a successor) by January 2, 2030. That's a refresh-cycle problem, not a configuration problem, for anything that can't be upgraded.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [
+          "eo-14144",
+          "eo-13694"
+        ],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14306:tls13",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Support TLS 1.3 (or a successor) on agency systems as soon as practicable and no later than January 2, 2030. Start with an inventory of TLS termination points (F5/ADC, proxies, VPN, web/API front ends) and flag any that can't do 1.3.",
+          "cite": "EO 14144 §4 as amended by EO 14306",
+          "due": "2030-01-02",
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14306:pqc-list",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Use CISA's list of product categories that support post-quantum cryptography when you specify new hardware or software in those categories.",
+          "cite": "EO 14144 §4 as amended",
+          "due": null,
+          "dueNote": "CISA list due Dec 1, 2025",
+          "recurring": null,
+          "verify": false
+        },
+        {
+          "id": "eo-14306:ssdf",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Expect NIST's updated SSDF (SP 800-218) to flow into software acquisition language — paired with M-26-05's risk-based approach rather than a mandatory form.",
+          "cite": null,
+          "due": null,
+          "dueNote": "Preliminary update due Dec 1, 2025; final 120 days later",
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14412",
+        "omb-m-26-15",
+        "omb-m-26-05",
+        "cisa-pqc-product-list",
+        "nist-ssdf-update"
+      ],
+      "sources": [
+        {
+          "label": "Federal Register text (govinfo)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2025-06-11/html/2025-10804.htm"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14412": {
+      "relevance": "high",
+      "topics": [
+        "cyber",
+        "pqc",
+        "cryptography"
+      ],
+      "summary": "Sets the first hard federal post-quantum cryptography (PQC) deadlines. Agencies name a PQC Migration Lead within 30 days. High-value assets and high-impact systems move key establishment to PQC by December 31, 2030 and digital signatures by December 31, 2031. NIST and CISA define minimum elements of a Cryptographic Bill of Materials (CBOM), and the FAR Council proposes a rule requiring covered contractors to use FIPS-validated PQC by 2030. OMB M-26-15 turns this into a five-phase plan.",
+      "forYou": "IT Ops owns where the cryptography actually lives: TLS termination, VPN, SSH, PKI, HSMs, code signing, and every appliance with a baked-in crypto library. The inventory is the long pole, and M-26-15's migration plan depended on it.",
+      "status": "in-effect",
+      "statusNote": "Secondary sources disagree on the EO number (14409 vs 14412) and signing date (June 22 vs 23). The nightly Federal Register sync will settle it.",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14412:lead",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Confirm who DFC named as PQC Migration Lead (due within 30 days of signing) and how OIT feeds them.",
+          "cite": "Sec. 3",
+          "due": "2026-07-22",
+          "dueNote": "30 days after signing",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14412:inventory",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Build and maintain a cryptographic inventory for HVAs and high-impact systems: protocols, algorithms, key sizes, libraries and the device or service that terminates each.",
+          "cite": "Sec. 3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "continuous",
+          "verify": true
+        },
+        {
+          "id": "eo-14412:kex-2030",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Move key establishment on HVAs and high-impact systems to PQC by December 31, 2030.",
+          "cite": "Sec. 3",
+          "due": "2030-12-31",
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14412:sig-2031",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Move digital signatures on HVAs and high-impact systems to PQC by December 31, 2031.",
+          "cite": "Sec. 3",
+          "due": "2031-12-31",
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14412:far",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Watch for the FAR proposed rule requiring covered contractors to comply with FIPS PQC by December 31, 2030. It will reach your vendors' hosted services and your contractor-operated systems.",
+          "cite": "Sec. 4",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "omb-m-26-15",
+        "eo-14306",
+        "nist-fips-203-204-205",
+        "nist-cmvp-140-2-sunset"
+      ],
+      "sources": [
+        {
+          "label": "Cloudflare analysis",
+          "url": "https://blog.cloudflare.com/post-quantum-eo-2026"
+        },
+        {
+          "label": "PostQuantum.com summary",
+          "url": "https://postquantum.com/security-pqc/trump-pqc-executive-order-2030-deadline/"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14409": {
+      "relevance": "medium",
+      "topics": [
+        "ai",
+        "cyber",
+        "workforce",
+        "hiring"
+      ],
+      "summary": "An AI-and-security order with 30- and 60-day taskings. Treasury, NSA and CISA set up an AI cybersecurity clearinghouse. OPM expands 'Tech Force' cybersecurity hiring pathways within 60 days. Agencies are told to expedite and prioritize cyber defense of civilian federal systems. Frontier-model reviews are voluntary; the order says it creates no pre-clearance requirement.",
+      "forYou": "Two practical angles. As a manager, the expanded cyber hiring pathways may be your fastest legal route to backfill a cyber or IT position, if the Strategic Hiring Committee approves it. As IT Ops, expect data calls on cyber posture under the 'expedite and prioritize' language.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14409:tech-force",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Ask HR whether OPM's expanded Tech Force cybersecurity pathways are live, before you write your next justification for the Strategic Hiring Committee.",
+          "cite": "Sec. on workforce (OPM within 60 days)",
+          "due": "2026-08-01",
+          "dueNote": "60 days after signing (OPM's deadline, not yours)",
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14409:defense",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Expect CISA and OMB data calls on civilian-system defenses. Keep EDR coverage, logging status and KEV remediation metrics current.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14356",
+        "cisa-bod-26-04",
+        "omb-m-26-14"
+      ],
+      "sources": [
+        {
+          "label": "White House text",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
+        },
+        {
+          "label": "CRS In Focus IF13268",
+          "url": "https://www.everycrsreport.com/files/2026-07-09_IF13268_27c6b7744b8ad38961f4c3c00689ce5b8fe1d63c.pdf"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14390": {
+      "relevance": "low",
+      "topics": [
+        "cyber",
+        "fraud"
+      ],
+      "summary": "Signed alongside a shorter, higher-level National Cyber Strategy. It is aimed at law enforcement and fraud ecosystems, not at agency IT operations.",
+      "forYou": "Awareness only. Nothing here lands on an IT Ops queue at DFC.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [
+        {
+          "label": "Lexology summary",
+          "url": "https://www.lexology.com/library/detail.aspx?g=99070b52-7aa9-4585-9ed3-9431889ba24d"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-13800": {
+      "relevance": "medium",
+      "topics": [
+        "cyber",
+        "risk-management",
+        "modernization"
+      ],
+      "summary": "Makes agency heads accountable for cyber risk, requires the NIST Cybersecurity Framework, and pushes shared IT services and modernization.",
+      "forYou": "The reason your risk reports are written in NIST CSF terms. Nothing new is owed.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-13800:csf",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Keep risk reporting aligned to NIST CSF (now version 2.0).",
+          "cite": "Sec. 1(c)",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-13833": {
+      "relevance": "high",
+      "topics": [
+        "governance",
+        "procurement",
+        "budget"
+      ],
+      "summary": "Strengthens FITARA: the CIO reports to the agency head, has a significant role in IT budget, workforce and acquisition decisions, and must review IT contracts.",
+      "forYou": "This is the backbone of OMB M-26-10, which now has CIOs approving IT purchases and reporting IT contracts to OMB every month. Your contract actions route through the CIO because of this order.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-13833:cio-route",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Route every IT contract action (new award, option, modification) through CIO review. Build the lead time into your contract calendar.",
+          "cite": "Sec. 3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per contract action",
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-m-26-10"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-13556": {
+      "relevance": "high",
+      "topics": [
+        "records",
+        "data-handling"
+      ],
+      "summary": "Establishes the CUI program, now implemented at 32 CFR Part 2002. Agencies must mark, safeguard and disseminate CUI only on authorized systems.",
+      "forYou": "Read this before you use the Internal Guidance page. This site runs on a personal Cloudflare account, and a password doesn't make it an authorized system. Titles, dates, links and your own words only — nothing marked CUI, and nothing that should have been.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-13556:no-cui",
+          "tier": "must",
+          "lens": "employee",
+          "text": "Do not enter CUI, PII, or non-public agency content into this site. Store titles, dates, intranet links and your own summaries only.",
+          "cite": "32 CFR 2002.14",
+          "due": null,
+          "dueNote": null,
+          "recurring": "always",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-13873": {
+      "relevance": "low",
+      "topics": [
+        "supply-chain"
+      ],
+      "summary": "Lets Commerce prohibit ICT transactions involving foreign adversaries. It is implemented through Commerce ICTS rules, not agency directives.",
+      "forYou": "Awareness only. It feeds the SCRM checks your acquisition team already runs.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14158": {
+      "relevance": "high",
+      "topics": [
+        "doge",
+        "data-access",
+        "modernization"
+      ],
+      "summary": "Renames USDS as the U.S. DOGE Service, creates a temporary organization inside it (which ended July 4, 2026), requires each agency to stand up a DOGE Team of at least four people, and launches a Software Modernization Initiative. Agency heads must give USDS full and prompt access to all unclassified agency records, software systems and IT systems, to the extent the law allows.",
+      "forYou": "When access requests come from the DOGE Team, OIT executes them. Handle them like any privileged access: written approval from the agency head or CIO designee, least privilege, named accounts, logging, and an ISA or Privacy Act review where the system needs one. Keep a record. If anyone later asks who had access to what, the answer comes out of your account logs.",
+      "status": "in-effect",
+      "statusNote": "USDS (the U.S. DOGE Service) continues. The temporary organization terminated July 4, 2026 under §3(b).",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14158:access",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Provision USDS/DOGE Team access to unclassified records, software and IT systems when the agency head directs it. Use documented approvals, least privilege, logging and periodic review.",
+          "cite": "Sec. 4(b)",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per request",
+          "verify": false
+        },
+        {
+          "id": "eo-14158:modernization",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Support the Software Modernization Initiative (interoperability, data integrity, data synchronization) when the DOGE Team or USDS asks.",
+          "cite": "Sec. 4(a)",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        },
+        {
+          "id": "eo-14158:team",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Know who is on DFC's DOGE Team (at least four employees) and who in leadership approves their requests.",
+          "cite": "Sec. 3(c)",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14243",
+        "eo-14222",
+        "eo-14210"
+      ],
+      "sources": [
+        {
+          "label": "White House text",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/01/establishing-and-implementing-the-presidents-department-of-government-efficiency/"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14243": {
+      "relevance": "medium",
+      "topics": [
+        "data-access",
+        "data-sharing"
+      ],
+      "summary": "Directs agency heads to ensure that designated federal officials have full and prompt access to unclassified agency records, data, software systems and IT systems for detecting waste, fraud and abuse, and to rescind or modify guidance that blocks intra- and inter-agency data sharing, to the extent the law allows.",
+      "forYou": "Same playbook as EO 14158, but the requests may come from officials outside the DOGE Team and may involve bulk data movement. Insist on written designation, a documented legal basis (Privacy Act/SORN, ISA), and logging. That protects you as much as the data.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14243:access",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Fulfil designated officials' access and data-sharing requests with written authorization, a documented legal basis and logging.",
+          "cite": "Sec. 3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per request",
+          "verify": true
+        },
+        {
+          "id": "eo-14243:policy",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Flag OIT-owned policies or ISAs that restrict internal data sharing, if leadership runs a review under this order.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14158",
+        "omb-m-26-10"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14222": {
+      "relevance": "high",
+      "topics": [
+        "contracts",
+        "procurement",
+        "doge",
+        "budget"
+      ],
+      "summary": "Requires a central system for recording a written justification for each payment under covered contracts and grants, a review of existing contracts and grants (within 30 days) to terminate or modify them, a 30-day freeze on agency credit cards, justification for non-essential travel, and a real-property disposition review.",
+      "forYou": "Your contractor staff (29 people across several contracts) are paid through covered contracts. Expect every invoice to need a short written justification in the agency's payment-justification system, and every option or recompete to face termination-or-justify scrutiny. Keep a one-paragraph mission justification on hand for each contract and labor category.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14222:payment-justification",
+          "tier": "must",
+          "lens": "ops",
+          "text": "Supply a brief written justification for payments under OIT contracts in DFC's payment-justification system, per DFC's implementation.",
+          "cite": "Sec. 3(a)",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per invoice",
+          "verify": true
+        },
+        {
+          "id": "eo-14222:contract-review",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Keep a current justification for each OIT contract: mission need, labor categories, cost and what breaks if it is cut. You will be asked again.",
+          "cite": "Sec. 3(b)",
+          "due": null,
+          "dueNote": "Initial review was due within 30 days (Mar 28, 2025)",
+          "recurring": "per review cycle",
+          "verify": false
+        },
+        {
+          "id": "eo-14222:travel-cards",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Purchase-card and travel use needs written justification, as DFC implements it.",
+          "cite": "Sec. 3(d)–(e)",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14158",
+        "eo-14240",
+        "omb-m-26-10"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14240": {
+      "relevance": "medium",
+      "topics": [
+        "procurement",
+        "contracts"
+      ],
+      "summary": "Moves government-wide procurement of common goods and services to GSA and has OMB designate GSA as executive agent for all government-wide acquisition contracts (GWACs) for IT. Agencies propose which common-goods buying they can hand to GSA.",
+      "forYou": "Your recompetes and new IT buys are more likely to land on GSA vehicles, and on GSA's timeline. Talk to DFC procurement at least two quarters ahead of any recompete, and ask whether the vehicle you've been using is still the default.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14240:plan",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "For each OIT contract expiring in the next 12–18 months, confirm the acquisition path (GSA vehicle versus agency vehicle) with DFC procurement.",
+          "cite": "Secs. 2–3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per recompete",
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14271",
+        "eo-14275",
+        "omb-m-26-10"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14271": {
+      "relevance": "medium",
+      "topics": [
+        "procurement",
+        "contracts"
+      ],
+      "summary": "Sets a preference for commercial products and services. Any solicitation for a non-commercial product or service needs a written justification approved by agency acquisition leadership, and contracting officers had to review open solicitations.",
+      "forYou": "Custom development or bespoke O&M services now need a written 'why not commercial?' Expect it on your next services recompete if the SOW reads as custom.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14271:justify",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "When a requirement is non-commercial (custom development, bespoke O&M), draft the commercial-alternatives justification with the CO before the solicitation goes out.",
+          "cite": "Sec. 3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per acquisition",
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14240",
+        "eo-14275"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14275": {
+      "relevance": "low",
+      "topics": [
+        "procurement"
+      ],
+      "summary": "Orders a rewrite of the FAR so that only statutory requirements and essential provisions remain (the 'Revolutionary FAR Overhaul'). FAR parts have been reissued in phases.",
+      "forYou": "Your COR duties and contract clauses shift as FAR parts are reissued. Ask your CO which revised FAR parts apply before you write any new SOW or PWS.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14275:far-parts",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Before writing a new SOW or PWS, ask the CO which revised FAR parts and agency deviations apply.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per acquisition",
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14240",
+        "eo-14271"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14173": {
+      "relevance": "medium",
+      "topics": [
+        "contracts",
+        "dei"
+      ],
+      "summary": "Revokes EO 11246 (affirmative action for federal contractors) and requires new contracts and modifications to include a term in which the contractor certifies it runs no programs promoting DEI that violate federal anti-discrimination law, and agrees that compliance is material for False Claims Act purposes.",
+      "forYou": "Your CO adds the certification clause on new awards, options and modifications. Expect your contractor leads to ask questions. Send them to the CO; COR guidance isn't the place to interpret the clause.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [
+          "eo-11246"
+        ],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14173:clause",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Expect the certification clause on OIT contract actions. Route contractor questions to the CO.",
+          "cite": "Sec. 3(b)(iv)",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per contract action",
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14398",
+        "eo-14151"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14398": {
+      "relevance": "low",
+      "topics": [
+        "contracts",
+        "dei"
+      ],
+      "summary": "A follow-on to EO 14173 on federal contractor DEI practices. The details haven't been checked against the primary text. The nightly sync pulls the Federal Register abstract.",
+      "forYou": "Contract-clause awareness only. Your CO owns implementation.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [
+        "eo-14173"
+      ],
+      "sources": [
+        {
+          "label": "Foley Hoag tracker",
+          "url": "https://foleyhoag.com/federal-actions/"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14179": {
+      "relevance": "medium",
+      "topics": [
+        "ai"
+      ],
+      "summary": "Replaces the Biden AI framework (EO 14110, revoked by EO 14148) with a pro-innovation posture and directs OMB to revise its AI use and acquisition memos. Those became M-25-21 and M-25-22 (April 3, 2025).",
+      "forYou": "The operative rules for any AI tool OIT runs or buys are in M-25-21 (use, inventory, high-impact practices) and M-25-22 (acquisition), plus M-26-04 for LLMs.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [
+        "omb-m-25-21",
+        "omb-m-25-22",
+        "eo-14148",
+        "eo-14110"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14319": {
+      "relevance": "medium",
+      "topics": [
+        "ai",
+        "procurement"
+      ],
+      "summary": "Requires agencies to procure only large language models that follow two 'Unbiased AI Principles' (truth-seeking and ideological neutrality). OMB implemented it in M-26-04.",
+      "forYou": "If OIT buys, renews or exercises an option on any LLM product (copilots, chat assistants, LLM features in platforms you already license), the contract needs the M-26-04 terms. Check with the CO before the next option date.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14319:llm-contracts",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "List every OIT contract that delivers LLM capability. Confirm with the CO that M-26-04 terms are in place before the next option.",
+          "cite": "Sec. 4 / M-26-04",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per option",
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-m-26-04"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14148": {
+      "relevance": "low",
+      "topics": [
+        "lineage"
+      ],
+      "summary": "Revokes dozens of prior executive orders, including EO 14110 on AI.",
+      "forYou": "Useful for lineage. If an internal policy cites a revoked EO for its authority, the policy needs a new citation.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [
+          "eo-14110"
+        ],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14148:citations",
+          "tier": "know",
+          "lens": "ops",
+          "text": "When OIT policies are next reviewed, replace citations to revoked EOs.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "at policy review",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14110": {
+      "relevance": "low",
+      "topics": [
+        "ai",
+        "lineage"
+      ],
+      "summary": "Biden-era AI framework, revoked January 20, 2025.",
+      "forYou": "Historical. Listed so citations to it resolve.",
+      "status": "revoked",
+      "statusNote": "Revoked by EO 14148 (Jan 20, 2025).",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [
+          "eo-14148"
+        ],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-13960": {
+      "relevance": "medium",
+      "topics": [
+        "ai",
+        "inventory"
+      ],
+      "summary": "Sets principles for federal AI use and requires annual agency AI use-case inventories, which M-25-21 continues.",
+      "forYou": "Every AI tool OIT runs ends up in the annual AI use-case inventory. Keep a list.",
+      "status": "in-effect",
+      "statusNote": "Believed to remain in effect (not revoked by EO 14148). Confirm before citing.",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-13960:inventory",
+          "tier": "feed",
+          "lens": "ops",
+          "text": "Report AI tools and features OIT operates to the CAIO for the annual AI use-case inventory.",
+          "cite": "Sec. 5",
+          "due": null,
+          "dueNote": null,
+          "recurring": "annually",
+          "verify": true
+        }
+      ],
+      "related": [
+        "omb-m-25-21"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14210": {
+      "relevance": "high",
+      "topics": [
+        "workforce",
+        "rif",
+        "hiring"
+      ],
+      "summary": "Orders agencies to prepare large-scale reductions in force (RIFs) and reorganizations (Agency RIF and Reorganization Plans, ARRPs), limits hiring to roughly one hire per four departures, and gives the DOGE Team a role in hiring decisions.",
+      "forYou": "Two hats. As a manager, the ARRP data calls asked about your positions and functions, and hiring now runs through EO 14356's committee. As an employee, RIF authority is live: the Supreme Court stayed the injunction against ARRP-based RIFs in July 2025.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [
+        {
+          "case": "Trump v. AFGE (ARRP RIFs)",
+          "court": "U.S. Supreme Court",
+          "status": "Injunction stayed July 8, 2025. RIFs may proceed.",
+          "url": null
+        }
+      ],
+      "actions": [
+        {
+          "id": "eo-14210:arrp",
+          "tier": "feed",
+          "lens": "manager",
+          "text": "Keep OIT's position-by-position mission justifications current. ARRP-style data calls recur.",
+          "cite": "Sec. 3(c)",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per data call",
+          "verify": false
+        },
+        {
+          "id": "eo-14210:rif-rights",
+          "tier": "know",
+          "lens": "employee",
+          "text": "Know your RIF retention standing (tenure group, veterans' preference, performance credit) and where your competitive area is drawn.",
+          "cite": "5 CFR 351",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "omb-opm-2025-02-26-arrp",
+        "eo-14356",
+        "eo-14158"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14356": {
+      "relevance": "high",
+      "topics": [
+        "hiring",
+        "workforce"
+      ],
+      "summary": "Replaces the hiring freeze with a gate. Each agency stands up a Strategic Hiring Committee (deputy head, chief of staff and others) that must approve creating or filling every vacancy, keeps annual staffing plans with quarterly updates, and hires under the May 29, 2025 Merit Hiring Plan. Earlier freeze exemptions stay in place unless OPM withdraws them.",
+      "forYou": "Every federal backfill or new position in OIT now needs committee approval tied to mission and administration priorities. With three direct reports and two second-line, a single departure is a big share of your team. Have the justification written before you need it.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [
+          "pm-2025-01-20-hiring-freeze"
+        ],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14356:committee",
+          "tier": "must",
+          "lens": "manager",
+          "text": "Submit a Strategic Hiring Committee request (mission need, priority alignment, cost) for any OIT federal vacancy you want to create or fill.",
+          "cite": "Sec. 2",
+          "due": null,
+          "dueNote": null,
+          "recurring": "per vacancy",
+          "verify": true
+        },
+        {
+          "id": "eo-14356:staffing-plan",
+          "tier": "feed",
+          "lens": "manager",
+          "text": "Supply OIT's input to the annual staffing plan and quarterly updates (positions, projected departures, critical skills).",
+          "cite": "Sec. 3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "quarterly",
+          "verify": true
+        },
+        {
+          "id": "eo-14356:pre-write",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Pre-write justifications for your three direct-report positions now, so a departure doesn't start from zero.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "opm-2025-11-05-eo14356",
+        "opm-2025-05-29-merit-hiring-plan",
+        "pm-2025-01-20-hiring-freeze",
+        "eo-14170"
+      ],
+      "sources": [
+        {
+          "label": "White House text",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/10/ensuring-continued-accountability-in-federal-hiring/"
+        },
+        {
+          "label": "OPM guidance (Nov 5, 2025)",
+          "url": "https://www.opm.gov/chcoc/latest-memos/guidance-on-executive-order-14356-ensuring-continued-accountability-in-federal-hiring.pdf"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "pm-2025-01-20-hiring-freeze": {
+      "relevance": "low",
+      "topics": [
+        "hiring"
+      ],
+      "summary": "Froze federal civilian hiring on January 20, 2025. It was extended during 2025 and then replaced by EO 14356's Strategic Hiring Committee process.",
+      "forYou": "Historical. Hiring now runs through EO 14356. Earlier freeze exemptions survive unless OPM withdraws them.",
+      "status": "superseded",
+      "statusNote": "Replaced by EO 14356 (Oct 15, 2025).",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": [
+          "eo-14356"
+        ]
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [
+        "eo-14356"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "pm-2025-01-20-return-to-in-person-work": {
+      "relevance": "high",
+      "topics": [
+        "rto",
+        "workforce",
+        "telework"
+      ],
+      "summary": "Directs department and agency heads to end remote work and have employees work in person at their duty stations full time, with exemptions department and agency heads consider necessary (disability, military spouse, other compelling reasons).",
+      "forYou": "Your own schedule and your three feds' are governed by this plus DFC's implementing policy. Your 29 contractor staff are not covered; their place of performance comes from their contracts, so any change goes through the CO, not this memo. With a bargaining unit, check whether DFC's CBA telework terms still apply. That depends on EO 14251 (see that entry).",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "pm-2025-01-20-return-to-in-person-work:own",
+          "tier": "know",
+          "lens": "employee",
+          "text": "Confirm your own duty station and any approved exemption in writing.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        },
+        {
+          "id": "pm-2025-01-20-return-to-in-person-work:staff",
+          "tier": "must",
+          "lens": "manager",
+          "text": "Make sure each direct report's telework agreement or exemption matches DFC's current RTO policy, and document any approved exceptions.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "on policy change",
+          "verify": false
+        },
+        {
+          "id": "pm-2025-01-20-return-to-in-person-work:contractors",
+          "tier": "know",
+          "lens": "ops",
+          "text": "Contractor on-site requirements come from the contract's place-of-performance terms. Route any change through the CO.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14251",
+        "opm-rto-guidance"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14170": {
+      "relevance": "medium",
+      "topics": [
+        "hiring"
+      ],
+      "summary": "Orders a Merit Hiring Plan. OPM issued it May 29, 2025: technical assessments, subject-matter-expert qualification reviews, short essay questions on commitment to the Constitution and efficiency, and less reliance on self-assessment questionnaires.",
+      "forYou": "When the committee approves a vacancy, plan for SME assessments (your staff may be the SMEs) and a longer timeline.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14170:sme",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Line up subject-matter experts from OIT for technical assessments on approved vacancies.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per vacancy",
+          "verify": false
+        }
+      ],
+      "related": [
+        "opm-2025-05-29-merit-hiring-plan",
+        "eo-14356"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14171": {
+      "relevance": "high",
+      "topics": [
+        "workforce",
+        "schedule-pc",
+        "employee-rights"
+      ],
+      "summary": "Reinstates the 2020 Schedule F order as 'Schedule Policy/Career' (Schedule P/C) for career positions of a confidential, policy-determining, policy-making or policy-advocating character. OPM's final rule was published in February 2026 and took effect about 30 days later. EO 14410 (June 3, 2026) then moved positions into the schedule.",
+      "forYou": "This is mostly an employee-lens item. Find out whether your position, or any of your direct reports', was moved. In Schedule P/C, adverse-action procedures differ and MSPB appeal rights for adverse actions don't apply.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [
+        {
+          "case": "Union challenges to Schedule Policy/Career",
+          "court": "Federal district courts",
+          "status": "Litigation pending. Current status not verified from this sandbox.",
+          "url": null
+        }
+      ],
+      "actions": [
+        {
+          "id": "eo-14171:sf50",
+          "tier": "must",
+          "lens": "employee",
+          "text": "Check your SF-50 for a personnel action effective June 3, 2026 moving your position into Schedule Policy/Career.",
+          "cite": "EO 14410 / OPM memo of June 8, 2026",
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14171:reports",
+          "tier": "know",
+          "lens": "manager",
+          "text": "Find out whether any of your direct reports' positions were moved, and what that changes in how you handle performance and conduct.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14410",
+        "opm-2026-02-05-schedule-pc",
+        "opm-2026-06-08-schedule-pc-eo"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14410": {
+      "relevance": "high",
+      "topics": [
+        "workforce",
+        "schedule-pc",
+        "employee-rights"
+      ],
+      "summary": "Places positions into Schedule Policy/Career. OPM's June 8, 2026 memo told agencies to process SF-50s effective June 3, 2026 within seven days.",
+      "forYou": "The order that actually moved people. Check your SF-50.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14410:sf50",
+          "tier": "must",
+          "lens": "employee",
+          "text": "Confirm whether an SF-50 effective June 3, 2026 moved your position. If so, read OPM's Schedule P/C FAQ on what changes for you.",
+          "cite": "OPM memo of June 8, 2026",
+          "due": "2026-06-10",
+          "dueNote": "Agencies had 7 days to process SF-50s",
+          "recurring": null,
+          "verify": true
+        }
+      ],
+      "related": [
+        "eo-14171",
+        "opm-2026-06-08-schedule-pc-eo"
+      ],
+      "sources": [
+        {
+          "label": "White House PDF",
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/eo-14410.pdf"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14251": {
+      "relevance": "high",
+      "topics": [
+        "labor-relations",
+        "workforce"
+      ],
+      "summary": "Uses the national-security exclusion in 5 U.S.C. 7103(b) to remove more than 40 agencies and subdivisions from collective bargaining under the Federal Service Labor-Management Relations Statute. EO 14343 (August 28, 2025) added more.",
+      "forYou": "You supervise bargaining-unit staff, so this is the question that decides which rules you manage under. If DFC or OIT is excluded, the CBA's telework, performance and scheduling articles no longer bind you. If not, they do, and RTO and performance changes may need notice and bargaining. A web search turned up nothing either way for DFC. Get the answer in writing from DFC Employee/Labor Relations.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [
+          "eo-14343"
+        ],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [
+        {
+          "case": "NTEU v. Trump",
+          "court": "D.D.C. / D.C. Cir.",
+          "status": "Preliminary injunction (Apr 2025) stayed by the D.C. Circuit (May 2025).",
+          "url": null
+        },
+        {
+          "case": "AFGE v. Trump",
+          "court": "N.D. Cal. / 9th Cir.",
+          "status": "Preliminary injunction (June 2025) stayed by the 9th Circuit (2025). Order being enforced.",
+          "url": null
+        },
+        {
+          "case": "Protecting America's Workforce Act",
+          "court": "Congress",
+          "status": "Passed the House Dec 11, 2025. Senate outcome not verified.",
+          "url": null
+        }
+      ],
+      "actions": [
+        {
+          "id": "eo-14251:coverage",
+          "tier": "must",
+          "lens": "manager",
+          "text": "Get written confirmation from DFC Employee/Labor Relations on whether DFC/OIT is excluded under EO 14251 or EO 14343, and therefore whether the CBA still governs your bargaining-unit staff.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": null,
+          "verify": true
+        },
+        {
+          "id": "eo-14251:changes",
+          "tier": "know",
+          "lens": "manager",
+          "text": "If DFC is NOT excluded: route changes to working conditions (RTO, schedules, performance standards) through Labor Relations for notice and bargaining before you implement.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per change",
+          "verify": false
+        }
+      ],
+      "related": [
+        "eo-14343",
+        "opm-eo14251-faq",
+        "pm-2025-01-20-return-to-in-person-work"
+      ],
+      "sources": [
+        {
+          "label": "White House text",
+          "url": "https://www.whitehouse.gov/presidential-actions/2025/03/exclusions-from-federal-labor-management-relations-programs/"
+        },
+        {
+          "label": "OPM FAQ (PDF)",
+          "url": "https://content.govdelivery.com/attachments/USOPM/2025/07/11/file_attachments/3321309/FAQs%20for%20EO14251%20Exclusions%20from%20Federal%20Labor-Management%204-22-2025.pdf"
+        }
+      ],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14343": {
+      "relevance": "medium",
+      "topics": [
+        "labor-relations"
+      ],
+      "summary": "Extends EO 14251's exclusions to more agencies and subdivisions (for example, the National Weather Service).",
+      "forYou": "Part of the same coverage question as EO 14251. Check both lists for DFC.",
+      "status": "in-effect",
+      "statusNote": "EO number from secondary sources. Confirm against the Federal Register.",
+      "lineage": {
+        "amends": [
+          "eo-14251"
+        ],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [
+        "eo-14251"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14284": {
+      "relevance": "medium",
+      "topics": [
+        "workforce",
+        "performance"
+      ],
+      "summary": "Makes finishing probation an affirmative decision. Before a probationary or trial period ends, the agency must certify that keeping the employee advances the public interest. Without certification, employment ends.",
+      "forYou": "For any new federal hire you supervise, you'll be asked to recommend certification before the probationary period ends. Put each hire's probation end date on your calendar the day they start.",
+      "status": "in-effect",
+      "statusNote": "EO number recalled, not verified. The sync will confirm.",
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14284:certify",
+          "tier": "must",
+          "lens": "manager",
+          "text": "Track probationary end dates for new OIT federal hires and submit your certification recommendation before each one.",
+          "cite": null,
+          "due": null,
+          "dueNote": null,
+          "recurring": "per new hire",
+          "verify": true
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14151": {
+      "relevance": "low",
+      "topics": [
+        "dei",
+        "contracts"
+      ],
+      "summary": "Terminates DEI offices, positions, plans, performance requirements and DEI-related contracts across agencies.",
+      "forYou": "Awareness. Already implemented. Mainly matters if an OIT contract or performance element still carries DEI language.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [
+        "eo-14173"
+      ],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14168": {
+      "relevance": "low",
+      "topics": [
+        "web-content",
+        "forms"
+      ],
+      "summary": "Directs agencies to use 'sex' rather than 'gender' in policies, forms and systems, and to remove content promoting gender ideology. OPM set a January 31, 2025 deadline for website and communications changes.",
+      "forYou": "Implemented early in 2025. Relevant if OIT owns forms, identity schemas or web content that still collect or display 'gender'.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [
+        {
+          "id": "eo-14168:fields",
+          "tier": "know",
+          "lens": "ops",
+          "text": "When systems are touched, check that data fields and forms OIT owns match the order (sex, not gender).",
+          "cite": "Sec. 3",
+          "due": null,
+          "dueNote": null,
+          "recurring": "at system change",
+          "verify": false
+        }
+      ],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14247": {
+      "relevance": "low",
+      "topics": [
+        "payments"
+      ],
+      "summary": "Phases out paper checks for federal disbursements (from September 30, 2025) and pushes receipts to electronic methods.",
+      "forYou": "Only relevant if OIT runs or hosts DFC payment or collections interfaces. Finance owns it.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14215": {
+      "relevance": "low",
+      "topics": [
+        "governance"
+      ],
+      "summary": "Brings independent regulatory agencies under OIRA review and presidential supervision.",
+      "forYou": "Not an IT Ops item.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-14332": {
+      "relevance": "low",
+      "topics": [
+        "grants"
+      ],
+      "summary": "Requires senior-appointee review of discretionary grant funding announcements and awards.",
+      "forYou": "Not an IT Ops item.",
+      "status": "in-effect",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-13694": {
+      "relevance": "low",
+      "topics": [
+        "sanctions",
+        "cyber"
+      ],
+      "summary": "Cyber sanctions authority. EO 14306 narrowed it to foreign persons.",
+      "forYou": "Not an IT Ops item.",
+      "status": "amended",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [
+          "eo-14306"
+        ],
+        "revokes": [],
+        "revokedBy": [],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    },
+    "eo-11246": {
+      "relevance": "low",
+      "topics": [
+        "contracts",
+        "lineage"
+      ],
+      "summary": "Federal contractor affirmative-action order, revoked January 21, 2025.",
+      "forYou": "Historical. Listed so citations resolve.",
+      "status": "revoked",
+      "statusNote": null,
+      "lineage": {
+        "amends": [],
+        "amendedBy": [],
+        "revokes": [],
+        "revokedBy": [
+          "eo-14173"
+        ],
+        "supersedes": [],
+        "supersededBy": []
+      },
+      "litigation": [],
+      "actions": [],
+      "related": [],
+      "sources": [],
+      "author": "claude-draft",
+      "reviewed": false,
+      "updated": "2026-11-11"
+    }
+  }
+}

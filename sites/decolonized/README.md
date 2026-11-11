@@ -3,8 +3,7 @@
 A world-history explorer for kids roughly ages 5–10. What your ancestors built,
 who tried to take the credit, and who fought to keep it.
 
-Live at the GitHub Pages URL for this repo, and intended for
-`decolonized.therealdadburgers.com`.
+Served at `decolonized.therealdadburgers.com` by Cloudflare.
 
 ---
 
@@ -153,25 +152,17 @@ audience is impatient. Change `MODEL` in `worker/src/index.js` to adjust.
 This site lives in `sites/decolonized/` of the multi-site repo; run every
 command below from this folder.
 
-Two workflows build it:
+`.github/workflows/decolonized-cloudflare.yml` builds it and deploys it as a
+**Cloudflare Worker with static assets** (`wrangler.json`) on every push that
+touches this folder, once the `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID` repository secrets exist. The first deploy creates the
+`decolonized.therealdadburgers.com` DNS record and certificate. If a
+`decolonized` record already exists in Cloudflare DNS (say, an old CNAME to
+GitHub Pages), delete it first, or the deploy will refuse to take the
+hostname.
 
-- `.github/workflows/deploy.yml` publishes to **GitHub Pages** (the current
-  home). The build uses a relative asset base, so the same output works at the
-  Pages project path and at the root of a custom domain.
-- `.github/workflows/decolonized-cloudflare.yml` deploys the same build as a
-  **Cloudflare Worker with static assets** (`wrangler.json`), once the
-  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets exist.
-
-### Moving to Cloudflare
-
-1. Let the Cloudflare workflow deploy once (it serves on `workers.dev` first).
-2. In Cloudflare DNS, delete the `decolonized` CNAME that points at GitHub Pages.
-3. Add `"routes": [{ "pattern": "decolonized.therealdadburgers.com", "custom_domain": true }]`
-   to `wrangler.json` and push. Cloudflare creates the record and certificate.
-4. Delete `.github/workflows/deploy.yml` and remove the custom domain under
-   Settings → Pages.
-
-The chat worker's `ALLOWED_ORIGINS` doesn't change; the origin stays the same.
+The build uses a relative asset base, so the same output also works under a
+subpath.
 
 ## Layout
 

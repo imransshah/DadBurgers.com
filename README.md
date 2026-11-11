@@ -16,8 +16,9 @@ Each site has its own GitHub Actions workflow that builds it and runs
 
 - `.github/workflows/eo.yml`: nightly data sync + build + deploy for Order of Operations
 - `.github/workflows/decolonized-cloudflare.yml`: build + deploy for Decolonized
-- `.github/workflows/deploy.yml`: the older GitHub Pages deploy for Decolonized. Keep it until
-  `decolonized.therealdadburgers.com` points at Cloudflare, then delete it.
+
+(There used to be a GitHub Pages workflow for Decolonized. Pages was never
+enabled on this repo, so every run failed. It's gone.)
 
 Deploys need two repository secrets, shared by every site:
 

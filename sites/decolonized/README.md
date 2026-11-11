@@ -124,7 +124,7 @@ It is a repository *variable*, not a secret — it is a public URL that ships in
 the bundle either way, and secrets are not readable at build time for a static
 site.
 
-**3. Re-run the deploy workflow** (Actions → Deploy to GitHub Pages → Run
+**3. Re-run the deploy workflow** (Actions → Decolonized → Cloudflare → Run
 workflow). The chat box switches itself on.
 
 For local development, copy `.env.example` to `.env.local` and set

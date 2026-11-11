@@ -1,12 +1,138 @@
 {
   "schema": 1,
   "seededAt": "2026-11-11",
-  "lastSync": null,
-  "lastSyncOk": null,
+  "lastSync": "2026-11-11T19:26:38.058Z",
+  "lastSyncOk": true,
   "lastError": null,
-  "sources": {},
+  "sources": {
+    "OMB memoranda": {
+      "ok": true,
+      "at": "2026-11-11T19:26:38.107Z",
+      "found": 47
+    },
+    "OPM CHCO memos": {
+      "ok": true,
+      "at": "2026-11-11T19:26:38.194Z",
+      "found": 21
+    },
+    "CISA directives": {
+      "ok": true,
+      "at": "2026-11-11T19:26:38.334Z",
+      "found": 2
+    },
+    "FedRAMP notices": {
+      "ok": true,
+      "at": "2026-11-11T19:26:38.377Z",
+      "found": 17
+    }
+  },
   "counts": {
-    "documents": 40,
+    "documents": 338,
     "guidance": 44
+  },
+  "titleMismatches": [],
+  "watchSeen": {
+    "OMB memoranda": [
+      "omb-m-27-01",
+      "omb-m-26-19",
+      "omb-m-26-18",
+      "omb-m-26-17",
+      "omb-m-26-16",
+      "omb-m-26-15",
+      "omb-m-26-14",
+      "omb-m-26-13",
+      "omb-m-26-12",
+      "omb-m-26-11",
+      "omb-m-26-10",
+      "omb-m-26-09",
+      "omb-m-26-08",
+      "omb-m-26-07",
+      "omb-m-26-06",
+      "omb-m-26-05",
+      "omb-m-26-04",
+      "omb-m-26-03",
+      "omb-m-26-02",
+      "omb-m-26-01",
+      "omb-m-25-36",
+      "omb-m-25-35",
+      "omb-m-25-34",
+      "omb-m-25-33",
+      "omb-m-25-32",
+      "omb-m-25-31",
+      "omb-m-25-30",
+      "omb-m-25-29",
+      "omb-m-25-28",
+      "omb-m-25-27",
+      "omb-m-25-26",
+      "omb-m-25-25",
+      "omb-m-25-24",
+      "omb-m-25-23",
+      "omb-m-25-22",
+      "omb-m-25-21",
+      "omb-m-25-20",
+      "omb-m-25-19",
+      "omb-m-25-18",
+      "omb-m-25-17",
+      "omb-m-25-16",
+      "omb-m-25-15",
+      "omb-m-25-14",
+      "omb-m-25-13",
+      "omb-m-25-12",
+      "omb-m-25-11",
+      "omb-m-25-10"
+    ],
+    "OPM CHCO memos": [
+      "opm-skip-to-page-navigation",
+      "opm-open-about-submenu",
+      "opm-open-policy-submenu",
+      "opm-open-compliance-submenu",
+      "opm-open-insurance-submenu",
+      "opm-open-retirement-submenu",
+      "opm-open-suitability-submenu",
+      "opm-open-agency-services-submenu",
+      "opm-open-news-submenu",
+      "opm-skip-to-main-content",
+      "opm-final-regulations-on-personnel-management-in-agencies-and-strategic-hu",
+      "opm-guidance-on-annual-employee-survey-data-submission-requirements-and-de",
+      "opm-issuance-of-final-rule-on-managing-senior-professional-performance",
+      "opm-request-for-information-special-rates-to-achieve-january-2027-pay-adju",
+      "opm-protections-against-retaliation-for-employees-who-report-misconduct-or",
+      "opm-revised-administrative-leave-regulations",
+      "opm-building-a-mission-ready-federal-workforce-through-strategic-recruitme",
+      "opm-guidance-on-time-to-hire-under-the-merit-hiring-plan",
+      "opm-delegation-of-opm-review-and-approval-authority-for-individual-cash-an",
+      "opm-fy-2026-standardized-distribution-of-rating-levels-and-fy-2026-perform",
+      "opm-control-panel"
+    ],
+    "CISA directives": [
+      "cisa-bod-26-04",
+      "cisa-bod-26-02"
+    ],
+    "FedRAMP notices": [
+      "fedramp-ntc-0017",
+      "fedramp-ntc-0016",
+      "fedramp-ntc-0015",
+      "fedramp-ntc-0014",
+      "fedramp-ntc-0013",
+      "fedramp-ntc-0012",
+      "fedramp-ntc-0011",
+      "fedramp-ntc-0010",
+      "fedramp-ntc-0009",
+      "fedramp-ntc-0008",
+      "fedramp-ntc-0007",
+      "fedramp-ntc-0006",
+      "fedramp-ntc-0005",
+      "fedramp-ntc-0004",
+      "fedramp-ntc-0003",
+      "fedramp-ntc-0002",
+      "fedramp-ntc-0001"
+    ]
+  },
+  "lastTriage": {
+    "at": "2026-11-11T19:26:38.789Z",
+    "rules": 36,
+    "drafted": 0,
+    "remaining": 262,
+    "failures": []
   }
 }

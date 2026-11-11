@@ -175,7 +175,8 @@ export default function Review() {
       {noneUnreviewed.length > 0 && (
         <Section title={`Marked "no relevance" · ${noneUnreviewed.length}`}>
           <p className="text-[13px] text-muted">
-            Auto-triaged as not touching IT Ops (tariffs, trade, proclamations-in-EO-clothing). Skim the{" "}
+            Triaged from the title alone as not touching IT Ops, your staff or you (tariffs, sanctions, energy, health, sports…).
+            Skim the{" "}
             <a className="link" href={href("orders", { rel: "none" })}>
               list
             </a>{" "}

@@ -80,7 +80,12 @@ export function VerifyFlag({ title = "Not yet checked against the primary source
 
 export function DraftBadge({ item, reviewed }) {
   if (reviewed) return <span className="chip bg-ok-soft text-ok border-ok/30">Reviewed</span>;
-  const label = item.author === "ai-triage" ? "AI draft" : item.author === "rule" ? "Auto-triaged" : "Draft";
+  const label =
+    item.author === "ai-triage"
+      ? "AI draft"
+      : item.author === "rule" || item.author === "title-scan"
+        ? "Triaged from title"
+        : "Draft";
   return (
     <span className="chip bg-surface-2 text-muted border-line" title="Analysis written by Claude; not yet reviewed by you.">
       {label} · unreviewed

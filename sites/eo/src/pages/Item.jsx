@@ -335,7 +335,9 @@ export default function Item({ id }) {
 
           {item.updated && (
             <p className="text-[12px] text-muted">
-              Analysis by {item.author === "claude-draft" ? "Claude (curated draft)" : item.author === "ai-triage" ? "nightly AI triage" : item.author}
+              Analysis by{" "}
+              {{ "claude-draft": "Claude (curated draft)", "ai-triage": "nightly AI triage", rule: "title rule", "title-scan": "title scan" }[item.author] ??
+                item.author}
               , {formatDate(item.updated)}.
             </p>
           )}

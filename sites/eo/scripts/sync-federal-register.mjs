@@ -108,7 +108,7 @@ async function main() {
       };
 
       if (!existing) {
-        const doc = { id, kind: isEO ? "eo" : "memo", number: isEO ? r.executive_order_number : null, ...fields, legacy: false, source: "federal-register", firstSeen: today };
+        const doc = { id, kind: isEO ? "eo" : "memo", number: isEO ? Number(r.executive_order_number) : null, ...fields, legacy: false, source: "federal-register", firstSeen: today };
         catalog.documents.push(doc);
         byId.set(id, doc);
         added++;

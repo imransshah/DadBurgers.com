@@ -198,6 +198,7 @@ mark { background: var(--gold-soft); color: inherit; border-radius: 2px; padding
 .crumbs { font-size: 13px; color: var(--faint); margin-bottom: 14px; }
 .entry-head h1 { font-size: 30px; font-weight: 600; margin: 10px 0 8px; }
 .lede { font-size: 17px; color: var(--muted); margin: 0 0 16px; }
+.redacted { margin: -6px 0 16px; padding: 8px 12px; border-radius: 8px; background: var(--gold-soft); color: var(--ink); }
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
 .entry-foot { margin-top: 32px; display: flex; flex-direction: column; gap: 22px; }
 .entry-foot h2 { font: 500 11.5px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 8px; }
@@ -229,12 +230,15 @@ mark { background: var(--gold-soft); color: inherit; border-radius: 2px; padding
 .deck { display: flex; flex-direction: column; gap: 12px; }
 .stage {
   position: relative; aspect-ratio: 16 / 9; width: 100%; background: var(--slide-bg); color: var(--slide-ink);
-  border-radius: var(--radius); overflow: hidden; display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius); overflow-y: auto; display: flex; align-items: safe center; justify-content: center;
   container-type: inline-size;
 }
 .stage.full { border-radius: 0; aspect-ratio: auto; height: 100vh; cursor: pointer; }
 .slide { width: 100%; padding: 6cqw 8cqw; font-size: 2.2cqw; line-height: 1.45; animation: slidein 0.18s ease-out; cursor: auto; }
 @keyframes slidein { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: none; } }
+.slide.dense { font-size: 1.55cqw; padding: 4cqw 6cqw; }
+.slide.dense h2 { font-size: 2.6cqw; }
+.slide.dense li { margin-bottom: 0.5cqw; }
 .slide h1 { font-size: 4.6cqw; font-weight: 600; margin-bottom: 1.4cqw; }
 .slide h2 { font-size: 3.4cqw; font-weight: 600; margin-bottom: 2cqw; padding-bottom: 1cqw; border-bottom: 0.25cqw solid var(--slide-accent); display: inline-block; }
 .slide p { margin: 0 0 1.2cqw; opacity: 0.9; }

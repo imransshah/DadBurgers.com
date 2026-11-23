@@ -40,6 +40,7 @@ const FORBIDDEN = [
 
 const errors = [];
 const err = (file, msg) => errors.push(`${file}: ${msg}`);
+const warn = (file, msg) => console.warn(`! ${file}: ${msg}`);
 
 marked.setOptions({ gfm: true });
 // External links open in a new tab; nothing else is rewritten.
@@ -107,7 +108,16 @@ function loadAuthored() {
       const id = meta.id ?? name.replace(/\.md$/, "");
       const t = meta.type ?? type;
 
-      for (const [re, label] of FORBIDDEN) if (re.test(raw)) err(rel, `blocked: looks like a ${label}. Remove it; this site is not an agency system.`);
+      // `markings: teaching-examples` is for reference material that explains
+      // marking formats (e.g. what a banner looks like). Marking hits become
+      // warnings for those files; SSN-shaped numbers stay a hard stop.
+      const teaching = meta.markings === "teaching-examples";
+      for (const [re, label] of FORBIDDEN) {
+        if (!re.test(raw)) continue;
+        if (teaching && label !== "SSN-shaped number") warn(rel, `contains ${label} text (allowed: markings: teaching-examples)`);
+        else err(rel, `blocked: looks like a ${label}. Remove it; this site is not an agency system.`);
+      }
+      if (meta.markings && !teaching) err(rel, 'markings must be "teaching-examples" if set');
       if (meta.handling !== "public") err(rel, 'handling must be "public" (attests: no CUI, PII or non-public agency text)');
       if (!ID_RE.test(id)) err(rel, `bad id "${id}"`);
       if (!taxonomy.types[t]) err(rel, `unknown type "${t}"`);
@@ -132,6 +142,7 @@ function loadAuthored() {
         updated: meta.updated instanceof Date ? meta.updated.toISOString().slice(0, 10) : (meta.updated ?? null),
         sources,
         related: meta.related ?? [],
+        redacted: meta.redacted ?? null,
         file: rel,
       };
       if (t === "slideshow") {

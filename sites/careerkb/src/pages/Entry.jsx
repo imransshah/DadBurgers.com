@@ -44,6 +44,11 @@ export default function Entry({ kb, id, query }) {
         </div>
         <h1>{entry.title}</h1>
         <p className="lede">{entry.summary}</p>
+        {entry.redacted && (
+          <p className="redacted small">
+            <b>Redacted edition.</b> {entry.redacted}
+          </p>
+        )}
         <div className="actions no-print">
           <button className={`btn ${pinned ? "on" : ""}`} onClick={() => togglePin(entry.id)} aria-pressed={pinned}>
             {pinned ? "★ Pinned" : "☆ Pin"}

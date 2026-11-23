@@ -8,7 +8,8 @@ export default function Slideshow({ entry, query }) {
   const slides = entry.slides;
   const n = slides.length;
   const idx = Math.min(Math.max((parseInt(query.s, 10) || 1) - 1, 0), n - 1);
-  const [notes, setNotes] = useState(false);
+  const hasNotes = slides.some((s) => s.notes);
+  const [notes, setNotes] = useState(hasNotes);
   const [full, setFull] = useState(false);
   const stage = useRef(null);
 
@@ -47,7 +48,7 @@ export default function Slideshow({ entry, query }) {
   return (
     <div className="deck">
       <div className={`stage ${full ? "full" : ""}`} ref={stage} onClick={(e) => full && e.target === e.currentTarget && go(idx + 1)}>
-        <div className="slide" key={idx} dangerouslySetInnerHTML={{ __html: slide.html }} />
+        <div className={`slide ${slide.html.length > 900 ? "dense" : ""}`} key={idx} dangerouslySetInnerHTML={{ __html: slide.html }} />
         <div className="deck-progress" aria-hidden="true">
           <span style={{ width: `${((idx + 1) / n) * 100}%` }} />
         </div>

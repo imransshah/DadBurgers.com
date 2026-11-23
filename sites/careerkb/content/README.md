@@ -25,6 +25,8 @@ sources:
     url: https://csrc.nist.gov/pubs/sp/800/37/r2/final
   - title: A source with no link yet shows a ⚑ Verify flag
 related: [zero-trust-briefing]                   # other entry ids (file names)
+markings: teaching-examples                      # optional: file explains marking formats; marking hits warn instead of fail
+redacted: "What was removed and under which rules" # optional: shown on the entry
 ---
 ```
 

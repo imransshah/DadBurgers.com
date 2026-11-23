@@ -81,7 +81,7 @@ export default function Search({ kb, query }) {
         ) : (
           <ul className="rows">
             {results.slice(0, shown).map((r) => (
-              <EntryRow key={r.entry.id} kb={kb} entry={r.entry} terms={r.terms} />
+              <EntryRow key={r.entry.id} kb={kb} entry={r.entry} terms={r.terms} q={q} />
             ))}
           </ul>
         )}

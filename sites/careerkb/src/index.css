@@ -93,7 +93,8 @@ mark { background: var(--gold-soft); color: inherit; border-radius: 2px; padding
 .topactions { display: flex; align-items: center; gap: 2px; }
 .topactions form { margin: 0; }
 .ghost.icon { display: inline-flex; padding: 8px; }
-.filters-toggle { display: none; }
+/* .btn (below) sets display too; the doubled class keeps this button mobile-only. */
+.btn.filters-toggle, .filters-toggle { display: none; }
 .ghost { background: none; border: 0; padding: 6px 10px; border-radius: 6px; color: var(--muted); font-size: 14px; }
 .ghost:hover { background: var(--surface-2); color: var(--ink); }
 .main { flex: 1; width: 100%; max-width: 1180px; margin: 0 auto; padding: 28px 24px 48px; }
@@ -270,7 +271,7 @@ mark { background: var(--gold-soft); color: inherit; border-radius: 2px; padding
 /* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 860px) {
   .search { grid-template-columns: 1fr; gap: 14px; }
-  .filters-toggle { display: inline-flex; justify-self: start; }
+  .btn.filters-toggle, .filters-toggle { display: inline-flex; justify-self: start; }
   .facets { position: static; display: none; grid-template-columns: 1fr 1fr; gap: 16px; }
   .facets.open { display: grid; }
   .facets .facet:last-child { grid-column: 1 / -1; }

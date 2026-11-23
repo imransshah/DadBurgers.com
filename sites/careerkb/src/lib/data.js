@@ -28,13 +28,16 @@ function prepare(kb) {
   const index = new MiniSearch({
     idField: "id",
     fields: ["title", "tags", "summary", "text", "domainLabel"],
-    storeFields: ["id"],
+    storeFields: ["id", "boost"],
     extractField: (doc, f) => (f === "tags" ? doc.tags.join(" ") : f === "domainLabel" ? kb.taxonomy.domains[doc.domain]?.label : doc[f]),
     searchOptions: {
       boost: { title: 4, tags: 3, summary: 2, domainLabel: 1.5 },
       prefix: true,
       fuzzy: (term) => (term.length > 3 ? 0.2 : false),
       combineWith: "AND",
+      // Mandates carry a relevance-based boost (scripts/build-content.mjs):
+      // irrelevant or unanalysed orders stay findable but rank lower.
+      boostDocument: (_id, _term, stored) => stored?.boost ?? 1,
     },
   });
   index.addAll(kb.entries);
@@ -105,4 +108,43 @@ export function highlight(text, terms) {
   if (!terms?.length) return esc;
   const re = new RegExp(`\\b(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "gi");
   return esc.replace(re, "<mark>$1</mark>");
+}
+
+const STOP = new Set(["the", "and", "for", "with", "from", "that", "this", "your", "you", "what", "how", "about", "into", "on", "of", "to", "in", "a", "an", "is", "are", "be", "or", "by", "at", "as", "it"]);
+
+/**
+ * Entries related to a piece of text (an entry's title and tags, say), from
+ * one side of the KB: origin "eo" for mandates, "kb" for authored content.
+ * OR-matching on the meaningful words, best first. Mandates judged irrelevant
+ * to you are left out unless includeNone is set.
+ */
+export function related(kb, text, { origin, limit = 5, exclude = [], includeNone = false, minScore = 2 } = {}) {
+  const words = String(text ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 2 && !STOP.has(w));
+  if (!words.length) return [];
+  const skip = new Set(exclude);
+  return kb.index
+    .search([...new Set(words)].join(" "), {
+      combineWith: "OR",
+      fuzzy: false,
+      filter: (r) => {
+        const e = kb.byId.get(r.id);
+        if (!e || skip.has(e.id) || (origin && e.origin !== origin)) return false;
+        if (!includeNone && e.fed && ["none", "untriaged"].includes(e.fed.relevance)) return false;
+        return true;
+      },
+    })
+    .filter((r) => r.score >= minScore)
+    .slice(0, limit)
+    .map((r) => ({ entry: kb.byId.get(r.id), score: r.score, terms: r.terms }));
+}
+
+/** Where an entry opens: Mandates items in their section, everything else in the KB viewer. */
+export function entryHref(entry, query) {
+  if (entry.link) return entry.link;
+  const q = query && Object.keys(query).length ? `?${new URLSearchParams(query)}` : "";
+  return `#/e/${entry.id}${q}`;
 }

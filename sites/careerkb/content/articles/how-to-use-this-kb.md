@@ -19,7 +19,13 @@ handling: public
 
 - **Desk cards** are one-page references. Use **Print** for a paper copy.
 - **Slideshows**: <kbd>←</kbd> <kbd>→</kbd> to move, <kbd>F</kbd> for full screen, <kbd>N</kbd> for speaker notes.
-- **References** are imported from Order of Operations and link back to it.
+- **Mandates** (executive orders, OMB/OPM memos, CISA directives, FedRAMP and NIST items) open in the Mandates section, with what each asks of you and by when.
+
+## Federal context
+
+- Every search shows the **federal context**: the mandates that match, with your next action and deadline.
+- **Ask** writes an answer from the top results, framed for a federal IT leader (authorities, who owns what, your deadlines), and cites what it used. It's a draft; check the sources.
+- Desk cards, slideshows and articles list the **federal requirements that touch this**. Each mandate lists the desk cards and decks that explain it.
 
 ## Adding content
 

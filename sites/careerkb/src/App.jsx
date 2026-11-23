@@ -5,11 +5,12 @@ import { toggleTheme } from "./lib/prefs.js";
 import Home from "./pages/Home.jsx";
 import Search from "./pages/Search.jsx";
 import Entry from "./pages/Entry.jsx";
+import Mandates from "./mandates/Mandates.jsx";
 
 const NAV = [
   { label: "Desk cards", q: { type: "desk-card" } },
   { label: "Slideshows", q: { type: "slideshow" } },
-  { label: "References", q: { type: "reference" } },
+  { label: "Mandates", path: "mandates" },
   { label: "Browse all", q: {} },
 ];
 
@@ -56,16 +57,18 @@ export default function App() {
             key={page === "search" ? route.query.q ?? "" : "x"}
             defaultValue={page === "search" ? route.query.q ?? "" : ""}
             type="search"
-            placeholder="Search desk cards, slides, references…"
+            placeholder="Search desk cards, slides, mandates…"
             aria-label="Search"
           />
           <kbd aria-hidden="true">/</kbd>
         </form>
         <nav className="topnav">
           {NAV.map((n) => {
-            const active = page === "search" && (route.query.type ?? "") === (n.q.type ?? "") && !route.query.q;
+            const active = n.path
+              ? page === n.path
+              : page === "search" && (route.query.type ?? "") === (n.q.type ?? "") && !route.query.q;
             return (
-              <a key={n.label} href={href("search", n.q)} aria-current={active ? "page" : undefined}>
+              <a key={n.label} href={n.path ? href(n.path) : href("search", n.q)} aria-current={active ? "page" : undefined}>
                 {n.label}
               </a>
             );
@@ -91,6 +94,8 @@ export default function App() {
           <div className="notice bad">Couldn't load the knowledge base: {String(error.message ?? error)}</div>
         ) : !kb ? (
           <div className="loading">Loading…</div>
+        ) : page === "mandates" ? (
+          <Mandates route={{ path: route.path.slice(1), query: route.query }} />
         ) : page === "search" ? (
           <Search kb={kb} query={route.query} />
         ) : page === "e" && route.path[1] ? (

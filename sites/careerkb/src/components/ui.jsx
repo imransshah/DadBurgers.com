@@ -1,5 +1,5 @@
 import { href } from "../lib/route.js";
-import { highlight } from "../lib/data.js";
+import { entryHref, highlight } from "../lib/data.js";
 
 const TYPE_ICON = { "desk-card": "▤", slideshow: "▶", article: "¶", reference: "§" };
 
@@ -33,7 +33,7 @@ export function EntryRow({ kb, entry, terms, q }) {
   const s = firstSlide(entry, q);
   return (
     <li className="row">
-      <a href={href(`e/${entry.id}`, s ? { s: String(s) } : undefined)} className="row-link">
+      <a href={entryHref(entry, s ? { s: String(s) } : undefined)} className="row-link">
         <div className="row-meta">
           <TypeBadge kb={kb} type={entry.type} />
           <span className="muted">{kb.taxonomy.domains[entry.domain]?.label}</span>
@@ -58,7 +58,7 @@ export function EntryRow({ kb, entry, terms, q }) {
 
 export function EntryTile({ kb, entry }) {
   return (
-    <a className="tile" href={href(`e/${entry.id}`)}>
+    <a className="tile" href={entryHref(entry)}>
       <div className="row-meta">
         <TypeBadge kb={kb} type={entry.type} />
         <StatusBadge status={entry.status} />

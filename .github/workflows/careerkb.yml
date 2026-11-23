@@ -1,15 +1,21 @@
 name: Career KB (careerkb.therealdadburgers.com)
 
-# Validates content, builds, and deploys the Career KB worker. Also rebuilds
-# when Order of Operations data changes, since its guidance and analysed
-# documents are imported as references.
+# Nightly: pull new presidential documents and guidance into the Mandates data,
+# draft analysis, commit it, then validate, build (the search index includes
+# every mandate) and deploy. Pushes that touch the site run the same build and
+# deploy; pull requests only validate and build.
 #
-# Repository secrets:
+# Repository secrets (Settings → Secrets and variables → Actions → Secrets):
 #   CLOUDFLARE_API_TOKEN     required to deploy (shared with the other sites)
 #   CLOUDFLARE_ACCOUNT_ID    required to deploy
 #   CAREERKB_SITE_PASSWORD   required — the site stays locked (503) without it
+#   ANTHROPIC_API_KEY        optional — nightly AI drafts of new mandates, and the Ask feature
+#   CAREERKB_DIGEST_TO       optional — your verified Email Routing address for the Monday digest
+# Repository variables (… → Variables):
+#   CAREERKB_DIGEST_ENABLED  "true" once Email Routing is on for the domain
+#   CAREERKB_TRIAGE_LIMIT    optional — max AI drafts per run (default 40)
 #
-# Does nothing but build and validate until CLOUDFLARE_API_TOKEN exists.
+# GitHub runs `schedule` only from the default branch.
 
 on:
   push:
@@ -18,16 +24,22 @@ on:
       - "claude/**"
     paths:
       - "sites/careerkb/**"
-      - "sites/eo/public/data/**"
       - ".github/workflows/careerkb.yml"
   pull_request:
     paths:
       - "sites/careerkb/**"
       - ".github/workflows/careerkb.yml"
+  schedule:
+    - cron: "17 8 * * *" # ~3–4 AM Eastern
   workflow_dispatch:
+    inputs:
+      triage_limit:
+        description: "Max mandates to AI-draft this run"
+        required: false
+        default: "40"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: careerkb-${{ github.ref }}
@@ -38,14 +50,15 @@ defaults:
     working-directory: sites/careerkb
 
 jobs:
-  build-deploy:
+  sync:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    env:
-      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - uses: actions/setup-node@v4
         with:
@@ -55,22 +68,84 @@ jobs:
 
       - run: npm ci
 
-      - name: Validate content (schema + no CUI/PII markings)
+      - name: Federal Register sync
+        run: node mandates/scripts/sync-federal-register.mjs
+
+      - name: Watch OMB / OPM / CISA / FedRAMP
+        run: node mandates/scripts/watch-guidance.mjs
+
+      - name: Triage new mandates
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TRIAGE_LIMIT: ${{ github.event.inputs.triage_limit || vars.CAREERKB_TRIAGE_LIMIT || '40' }}
+        run: node mandates/scripts/triage.mjs
+
+      - name: Validate mandates data
+        run: node mandates/scripts/validate-data.mjs
+
+      - name: Commit data
+        id: commit
+        run: |
+          git config user.name "careerkb-sync[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mandates/data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "data: sync mandates ($(date -u +%Y-%m-%d))"
+            for i in 1 2 3 4; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+              sleep $((2 ** i))
+            done
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  build-deploy:
+    needs: sync
+    if: ${{ !cancelled() && (needs.sync.result == 'success' || needs.sync.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    env:
+      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.sync.outputs.sha || github.sha }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sites/careerkb/package-lock.json
+
+      - run: npm ci
+
+      - name: Validate content (schema, no CUI/PII markings) and mandates data
         run: npm run validate
 
       - run: npm run build
 
-      # Only deploy from pushes, never from pull_request runs.
+      - name: Enable digest email binding
+        if: env.HAS_CF == 'true' && github.event_name != 'pull_request' && vars.CAREERKB_DIGEST_ENABLED == 'true'
+        run: node mandates/scripts/enable-digest.mjs
+
+      # Secrets ride along with the deploy (one version, no window without
+      # them). Never from pull_request runs.
       - name: Deploy worker
         if: env.HAS_CF == 'true' && github.event_name != 'pull_request'
         env:
           CAREERKB_SITE_PASSWORD: ${{ secrets.CAREERKB_SITE_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CAREERKB_DIGEST_TO: ${{ secrets.CAREERKB_DIGEST_TO }}
         run: |
           [ -n "$CAREERKB_SITE_PASSWORD" ] || echo "::warning::CAREERKB_SITE_PASSWORD is not set — the site will stay locked."
           SECRETS="$RUNNER_TEMP/careerkb-secrets.json"
           node -e '
             const s = {};
             if (process.env.CAREERKB_SITE_PASSWORD) s.SITE_PASSWORD = process.env.CAREERKB_SITE_PASSWORD;
+            if (process.env.ANTHROPIC_API_KEY) s.ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+            if (process.env.CAREERKB_DIGEST_TO) s.DIGEST_TO = process.env.CAREERKB_DIGEST_TO;
             require("fs").writeFileSync(process.argv[1], JSON.stringify(s), { mode: 0o600 });
           ' "$SECRETS"
           npx wrangler deploy --secrets-file "$SECRETS"

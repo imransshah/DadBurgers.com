@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * Compiles content/**.md (+ Order of Operations data) into public/data/kb.json.
+ * Compiles content/**.md (+ the Mandates data in mandates/data/) into
+ * public/data/kb.json, and copies the Mandates JSON to public/data/mandates/
+ * for the Mandates section of the app.
  *
  *   node scripts/build-content.mjs           build
  *   node scripts/build-content.mjs --check   validate only (CI), no write
@@ -17,8 +19,9 @@ import { marked } from "marked";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = path.join(ROOT, "content");
 const OUT = path.join(ROOT, "public", "data", "kb.json");
-const EO_DATA = path.join(ROOT, "..", "eo", "public", "data");
-const EO_SITE = "https://eo.therealdadburgers.com";
+const EO_DATA = path.join(ROOT, "mandates", "data");
+const EO_OUT = path.join(ROOT, "public", "data", "mandates");
+const EO_FILES = ["catalog", "analysis", "guidance", "inbox", "meta", "profile"];
 const CHECK = process.argv.includes("--check");
 
 const taxonomy = JSON.parse(fs.readFileSync(path.join(CONTENT, "taxonomy.json"), "utf8"));
@@ -160,63 +163,65 @@ function loadAuthored() {
   return out;
 }
 
-// Order of Operations: guidance items and analysed presidential documents
-// (relevance above "none") become read-only references linking back.
+// Mandates: every presidential document and guidance item becomes a searchable
+// entry that opens in the Mandates section (#/mandates/item/<id>). Nothing is
+// dropped: documents judged irrelevant (or not yet analysed) stay findable but
+// rank lower via `boost`. `fed` carries what the federal-context panels show.
+const RELEVANCE_BOOST = { high: 1.35, medium: 1.15, low: 0.8, none: 0.35, untriaged: 0.55 };
+
 function loadEo() {
   const read = (f) => {
     try {
-      return JSON.parse(fs.readFileSync(path.join(EO_DATA, f), "utf8"));
+      return JSON.parse(fs.readFileSync(path.join(EO_DATA, `${f}.json`), "utf8"));
     } catch {
       return null;
     }
   };
-  const catalog = read("catalog.json");
-  const analysis = read("analysis.json");
-  const guidance = read("guidance.json");
+  const catalog = read("catalog");
+  const analysis = read("analysis");
+  const guidance = read("guidance");
   if (!catalog || !analysis || !guidance) {
-    console.warn("! Order of Operations data not found; skipping import");
+    err("mandates/data", "Mandates data not found or unreadable");
     return [];
   }
-  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-  const TIER = { must: "Must do", feed: "Feed", know: "Know" };
-  const render = (a, link) => {
-    let h = `<p>${esc(a.summary)}</p>`;
-    if (a.forYou) h += `<h2>For you</h2><p>${esc(a.forYou)}</p>`;
-    if (a.actions?.length)
-      h += `<h2>Actions</h2><ul>${a.actions.map((x) => `<li><strong>${TIER[x.tier] ?? x.tier}:</strong> ${esc(x.text)}</li>`).join("")}</ul>`;
-    if (a.statusNote) h += `<h2>Status</h2><p>${esc(a.statusNote)}</p>`;
-    h += `<p><a href="${link}" target="_blank" rel="noopener noreferrer">Open in Order of Operations ↗</a></p>`;
-    return h;
-  };
   const text = (a) => [a.summary, a.forYou, ...(a.actions ?? []).map((x) => x.text), a.statusNote].filter(Boolean).join(" ");
+  const fed = (label, a) => ({
+    label,
+    relevance: a?.relevance ?? "untriaged",
+    status: a?.status ?? "in-effect",
+    forYou: a?.forYou ?? null,
+    actions: (a?.actions ?? []).map(({ id, tier, lens, text, due, dueNote, recurring, verify }) => ({ id, tier, lens, text, due, dueNote, recurring, verify })),
+  });
   const out = [];
 
   for (const d of catalog.documents) {
     const a = analysis.items[d.id];
-    if (!a || !a.relevance || a.relevance === "none") continue;
-    const link = `${EO_SITE}/#/item/${encodeURIComponent(d.id)}`;
-    const label = d.kind === "eo" && d.number ? `EO ${d.number}` : null;
+    const rel = a?.relevance ?? "untriaged";
+    const label = d.kind === "eo" && d.number ? `EO ${d.number}` : "Presidential memorandum";
     out.push({
       id: `eo-${d.id}`.replace(/^eo-eo-/, "eo-"),
+      eoId: d.id,
       type: "reference",
       origin: "eo",
-      title: label ? `${label}: ${d.title}` : d.title,
+      title: d.kind === "eo" && d.number ? `EO ${d.number}: ${d.title}` : d.title,
       domain: "mandates",
-      tags: [...(a.topics ?? []), d.kind === "eo" ? "executive-order" : "memorandum", `relevance-${a.relevance}`],
-      summary: a.summary,
-      status: a.reviewed ? "reviewed" : "draft",
-      updated: a.updated ?? d.signed ?? null,
-      sources: [{ title: d.citation ? `${d.citation}` : "Federal Register", url: d.htmlUrl ?? null }],
+      tags: [...(a?.topics ?? []), d.kind === "eo" ? "executive-order" : "memorandum", `relevance-${rel}`],
+      summary: a?.summary ?? d.abstract ?? "Not analysed yet.",
+      status: a?.reviewed ? "reviewed" : "draft",
+      updated: a?.updated ?? d.signed ?? null,
+      sources: [{ title: d.citation ?? "Federal Register", url: d.htmlUrl ?? null }],
       related: [],
-      link,
-      html: render(a, link),
-      text: text(a),
+      link: `#/mandates/item/${encodeURIComponent(d.id)}`,
+      boost: RELEVANCE_BOOST[rel] ?? 1,
+      fed: fed(label, a),
+      text: a ? text(a) : (d.abstract ?? ""),
     });
   }
   for (const g of guidance.items) {
-    const link = `${EO_SITE}/#/item/${encodeURIComponent(g.id)}`;
+    const label = g.number ?? g.issuer;
     out.push({
       id: `eo-${g.id}`,
+      eoId: g.id,
       type: "reference",
       origin: "eo",
       title: g.number ? `${g.issuer} ${g.number}: ${g.title}` : `${g.issuer}: ${g.title}`,
@@ -227,10 +232,16 @@ function loadEo() {
       updated: g.updated ?? g.date ?? null,
       sources: [{ title: g.number ? `${g.issuer} ${g.number}` : g.issuer, url: g.url ?? null }],
       related: [],
-      link,
-      html: render(g, link),
+      link: `#/mandates/item/${encodeURIComponent(g.id)}`,
+      boost: (RELEVANCE_BOOST[g.relevance] ?? 1) * (["rescinded", "superseded", "revoked"].includes(g.status) ? 0.6 : 1),
+      fed: fed(label, g),
       text: text(g),
     });
+  }
+
+  if (!CHECK) {
+    fs.mkdirSync(EO_OUT, { recursive: true });
+    for (const f of EO_FILES) fs.copyFileSync(path.join(EO_DATA, `${f}.json`), path.join(EO_OUT, `${f}.json`));
   }
   return out;
 }

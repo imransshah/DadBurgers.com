@@ -6,8 +6,11 @@ Cloudflare.
 | Site | Folder | Address | What it is |
 | --- | --- | --- | --- |
 | Decolonized History | [`sites/decolonized`](sites/decolonized) | `decolonized.therealdadburgers.com` | World-history explorer for kids |
-| Order of Operations | [`sites/eo`](sites/eo) | `eo.therealdadburgers.com` (password) | Executive orders and implementing guidance, read for a federal IT Operations Director |
-| Career KB | [`sites/careerkb`](sites/careerkb) | `careerkb.therealdadburgers.com` (password) | Searchable desk cards, slideshows and references for a federal IT Director / Deputy CIO |
+| Career KB | [`sites/careerkb`](sites/careerkb) | `careerkb.therealdadburgers.com` (password) | Searchable desk cards, slideshows and the **Mandates** section (executive orders, OMB/OPM/CISA guidance, your actions and deadlines) for a federal IT leader |
+
+Order of Operations, the executive-order tracker that used to be planned for
+`eo.therealdadburgers.com`, now lives inside Career KB as its Mandates section.
+It was never deployed on its own, so there is nothing to retire.
 
 ## How hosting works
 
@@ -15,9 +18,8 @@ Each site is a Vite build served by a Cloudflare Worker with static assets.
 Each site has its own GitHub Actions workflow that builds it and runs
 `wrangler deploy` from that site's folder:
 
-- `.github/workflows/eo.yml`: nightly data sync + build + deploy for Order of Operations
+- `.github/workflows/careerkb.yml`: nightly Mandates sync, content validation, build + deploy for Career KB
 - `.github/workflows/decolonized-cloudflare.yml`: build + deploy for Decolonized
-- `.github/workflows/careerkb.yml`: content validation + build + deploy for Career KB
 
 (There used to be a GitHub Pages workflow for Decolonized. Pages was never
 enabled on this repo, so every run failed. It's gone.)

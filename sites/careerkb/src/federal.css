@@ -1,0 +1,51 @@
+/* Federal layer panels (src/components/Federal.jsx), in Career KB's visual language. */
+
+.fed-panel, .ask-panel {
+  border: 1px solid var(--line); border-left: 3px solid var(--t-ref); border-radius: var(--radius);
+  background: var(--surface); padding: 14px 16px; margin: 0 0 18px;
+}
+.ask-panel { border-left-color: var(--accent); }
+.fed-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.fed-head h2, .ask-idle h2 { font-size: 15px; }
+.fed-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fed-item { padding-top: 10px; border-top: 1px solid var(--line); }
+.fed-item:first-child { padding-top: 0; border-top: 0; }
+.fed-title { display: flex; gap: 8px; align-items: baseline; color: var(--ink); font-weight: 600; }
+.fed-label { font: 500 12.5px var(--mono); color: var(--t-ref); white-space: nowrap; }
+.fed-meta { display: flex; gap: 6px; align-items: center; margin: 3px 0 0; flex-wrap: wrap; }
+.fed-rel, .fed-status {
+  font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px;
+  border-radius: 4px; background: var(--surface-2); color: var(--muted);
+}
+.fed-rel.r-high { background: var(--accent); color: var(--accent-ink); }
+.fed-rel.r-medium { background: var(--accent-soft); color: var(--accent); }
+.fed-status { background: var(--must-soft); color: var(--must); }
+.fed-foryou { margin: 5px 0 0; font-size: 14px; color: var(--muted); -webkit-line-clamp: 2; }
+.fed-next { margin: 6px 0 0; font-size: 14px; }
+.fed-tier {
+  font: 500 10.5px var(--mono); text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 4px;
+}
+.fed-tier.t-must { background: var(--must-soft); color: var(--must); }
+.fed-tier.t-feed { background: var(--feed-soft); color: var(--feed); }
+.fed-tier.t-know { background: var(--know-soft); color: var(--know); }
+.fed-due { font: 12px var(--mono); color: var(--muted); white-space: nowrap; }
+.fed-due.soon { color: var(--feed); font-weight: 500; }
+.fed-due.over { color: var(--must); font-weight: 500; }
+
+.ask-idle { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.ask-idle p { margin: 4px 0 0; }
+.ask-answer { font-size: 15px; }
+.ask-answer h3 { font-size: 15px; margin: 14px 0 4px; }
+.ask-answer p { margin: 0 0 10px; }
+.ask-answer ul, .ask-answer ol { margin: 0 0 10px; padding-left: 20px; }
+.ask-answer .cite { font: 500 11.5px var(--mono); text-decoration: none; vertical-align: 1px; }
+.ask-foot { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.ask-foot .sources { margin: 0 0 6px; padding-left: 20px; }
+
+@media (max-width: 640px) {
+  .ask-idle { flex-direction: column; align-items: stretch; }
+  .fed-title { flex-direction: column; gap: 2px; }
+}
+@media print {
+  .fed-panel, .ask-panel { display: none; }
+}

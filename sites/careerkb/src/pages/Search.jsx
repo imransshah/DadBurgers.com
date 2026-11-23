@@ -2,9 +2,10 @@ import { useMemo, useState } from "react";
 import { search } from "../lib/data.js";
 import { setQuery } from "../lib/route.js";
 import { EntryRow } from "../components/ui.jsx";
+import { AskPanel, FederalContext } from "../components/Federal.jsx";
 
 const PAGE = 40;
-const ORIGIN_LABEL = { kb: "Written for you", eo: "Order of Operations" };
+const ORIGIN_LABEL = { kb: "Written for you", eo: "Mandates" };
 
 export default function Search({ kb, query }) {
   const { q = "", type = "", domain = "", tag = "", origin = "" } = query;
@@ -74,6 +75,8 @@ export default function Search({ kb, query }) {
             </div>
           )}
         </div>
+        {q && !type && !origin && <FederalContext results={results} q={q} />}
+        {q && <AskPanel key={q} results={results} q={q} />}
         {results.length === 0 ? (
           <div className="empty">
             Nothing matches. Try fewer words{active.length ? " or clear a filter" : ""}.

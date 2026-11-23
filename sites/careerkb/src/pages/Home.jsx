@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { href } from "../lib/route.js";
 import { recent, usePins } from "../lib/prefs.js";
 import { EntryTile } from "../components/ui.jsx";
+import { DueSoon } from "../components/Federal.jsx";
 
 export default function Home({ kb }) {
   const [pins] = usePins();
@@ -49,6 +50,8 @@ export default function Home({ kb }) {
           ))}
         </div>
       </section>
+
+      <DueSoon kb={kb} />
 
       {pinned.length > 0 && (
         <Section title="Pinned">

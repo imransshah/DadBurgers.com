@@ -3,10 +3,16 @@ import { href } from "../lib/route.js";
 import { recordVisit, usePins } from "../lib/prefs.js";
 import { EntryTile, StatusBadge, TypeBadge } from "../components/ui.jsx";
 import Slideshow from "../components/Slideshow.jsx";
+import { RequirementsPanel } from "../components/Federal.jsx";
 
 export default function Entry({ kb, id, query }) {
   const entry = kb.byId.get(id);
   const [pins, togglePin] = usePins();
+
+  // Mandates open in their own section; old #/e/eo-… links still work.
+  useEffect(() => {
+    if (entry?.link) window.location.replace(entry.link);
+  }, [entry]);
 
   useEffect(() => {
     if (entry) {
@@ -58,11 +64,6 @@ export default function Entry({ kb, id, query }) {
               Print
             </button>
           )}
-          {entry.link && (
-            <a className="btn" href={entry.link} target="_blank" rel="noopener noreferrer">
-              Order of Operations ↗
-            </a>
-          )}
         </div>
       </header>
 
@@ -71,6 +72,8 @@ export default function Entry({ kb, id, query }) {
       ) : (
         <div className={`prose ${entry.type === "desk-card" ? "card" : ""}`} dangerouslySetInnerHTML={{ __html: entry.html }} />
       )}
+
+      {entry.origin === "kb" && <RequirementsPanel kb={kb} entry={entry} />}
 
       <footer className="entry-foot">
         {entry.sources.length > 0 && (

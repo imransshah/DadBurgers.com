@@ -1,29 +1,29 @@
 {
   "schema": 1,
   "seededAt": "2026-11-11",
-  "lastSync": "2026-11-11T19:29:31.326Z",
+  "lastSync": "2026-11-23T22:01:26.705Z",
   "lastSyncOk": true,
   "lastError": null,
   "sources": {
     "OMB memoranda": {
       "ok": true,
-      "at": "2026-11-11T19:29:31.392Z",
+      "at": "2026-11-23T22:01:26.748Z",
       "found": 47
     },
     "OPM CHCO memos": {
       "ok": true,
-      "at": "2026-11-11T19:29:31.481Z",
+      "at": "2026-11-23T22:01:26.899Z",
       "found": 21
     },
     "CISA directives": {
       "ok": true,
-      "at": "2026-11-11T19:29:31.608Z",
+      "at": "2026-11-23T22:01:27.020Z",
       "found": 2
     },
     "FedRAMP notices": {
       "ok": true,
-      "at": "2026-11-11T19:29:31.675Z",
-      "found": 17
+      "at": "2026-11-23T22:01:27.137Z",
+      "found": 19
     }
   },
   "counts": {
@@ -102,7 +102,11 @@
       "opm-guidance-on-time-to-hire-under-the-merit-hiring-plan",
       "opm-delegation-of-opm-review-and-approval-authority-for-individual-cash-an",
       "opm-fy-2026-standardized-distribution-of-rating-levels-and-fy-2026-perform",
-      "opm-control-panel"
+      "opm-control-panel",
+      "opm-implementing-the-revised-reduction-in-force-regulations-updated-workfo",
+      "opm-modernizing-federal-classification-and-qualification-standards-around",
+      "opm-issuance-of-competency-based-classification-standards-for-administrati",
+      "opm-issuance-of-the-super-intelligence-assisted-position-review-toolkit"
     ],
     "CISA directives": [
       "cisa-bod-26-04",
@@ -125,11 +129,13 @@
       "fedramp-ntc-0004",
       "fedramp-ntc-0003",
       "fedramp-ntc-0002",
-      "fedramp-ntc-0001"
+      "fedramp-ntc-0001",
+      "fedramp-ntc-0019",
+      "fedramp-ntc-0018"
     ]
   },
   "lastTriage": {
-    "at": "2026-11-11T19:29:32.197Z",
+    "at": "2026-11-23T22:01:27.612Z",
     "rules": 0,
     "drafted": 0,
     "remaining": 39,

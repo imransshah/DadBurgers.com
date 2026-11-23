@@ -2,6 +2,54 @@
   "schema": 1,
   "items": [
     {
+      "id": "fedramp-ntc-0018",
+      "source": "FedRAMP",
+      "number": "NTC-0018",
+      "title": "0018",
+      "url": "https://www.fedramp.gov/notices/0018",
+      "foundAt": "2026-11-23T22:01:27.137Z"
+    },
+    {
+      "id": "fedramp-ntc-0019",
+      "source": "FedRAMP",
+      "number": "NTC-0019",
+      "title": "0019",
+      "url": "https://www.fedramp.gov/notices/0019",
+      "foundAt": "2026-11-23T22:01:27.137Z"
+    },
+    {
+      "id": "opm-issuance-of-the-super-intelligence-assisted-position-review-toolkit",
+      "source": "OPM/CHCO",
+      "number": null,
+      "title": "Issuance of the Super Intelligence-Assisted Position Review Toolkit",
+      "url": "https://www.opm.gov/chcoc/latest-memos/issuance-of-the-si-assisted-position-review-toolkit.pdf",
+      "foundAt": "2026-11-23T22:01:26.899Z"
+    },
+    {
+      "id": "opm-issuance-of-competency-based-classification-standards-for-administrati",
+      "source": "OPM/CHCO",
+      "number": null,
+      "title": "Issuance of Competency Based Classification Standards for Administrative Occupational Series",
+      "url": "https://www.opm.gov/chcoc/latest-memos/issuance-of-competency-based-classification-standards-for-administrative-occupational-series.pdf",
+      "foundAt": "2026-11-23T22:01:26.899Z"
+    },
+    {
+      "id": "opm-modernizing-federal-classification-and-qualification-standards-around",
+      "source": "OPM/CHCO",
+      "number": null,
+      "title": "Modernizing Federal Classification and Qualification Standards Around Skills (Reclassification and Requalification Initiative)",
+      "url": "https://www.opm.gov/chcoc/latest-memos/modernizing-federal-classification-and-qualification-standards-around-skills.pdf",
+      "foundAt": "2026-11-23T22:01:26.899Z"
+    },
+    {
+      "id": "opm-implementing-the-revised-reduction-in-force-regulations-updated-workfo",
+      "source": "OPM/CHCO",
+      "number": null,
+      "title": "Implementing the Revised Reduction in Force Regulations: Updated Workforce Reshaping Handbook",
+      "url": "https://www.opm.gov/chcoc/latest-memos/implementing-the-revised-reduction-in-force-regulations-updated-workforce-reshaping-handbook.pdf",
+      "foundAt": "2026-11-23T22:01:26.899Z"
+    },
+    {
       "id": "omb-m-26-02",
       "source": "OMB",
       "number": "M-26-02",

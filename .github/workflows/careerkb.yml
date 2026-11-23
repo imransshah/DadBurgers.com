@@ -1,0 +1,81 @@
+name: Career KB (careerkb.therealdadburgers.com)
+
+# Validates content, builds, and deploys the Career KB worker. Also rebuilds
+# when Order of Operations data changes, since its guidance and analysed
+# documents are imported as references.
+#
+# Repository secrets:
+#   CLOUDFLARE_API_TOKEN     required to deploy (shared with the other sites)
+#   CLOUDFLARE_ACCOUNT_ID    required to deploy
+#   CAREERKB_SITE_PASSWORD   required — the site stays locked (503) without it
+#
+# Does nothing but build and validate until CLOUDFLARE_API_TOKEN exists.
+
+on:
+  push:
+    branches:
+      - main
+      - "claude/**"
+    paths:
+      - "sites/careerkb/**"
+      - "sites/eo/public/data/**"
+      - ".github/workflows/careerkb.yml"
+  pull_request:
+    paths:
+      - "sites/careerkb/**"
+      - ".github/workflows/careerkb.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: careerkb-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: sites/careerkb
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sites/careerkb/package-lock.json
+
+      - run: npm ci
+
+      - name: Validate content (schema + no CUI/PII markings)
+        run: npm run validate
+
+      - run: npm run build
+
+      # Only deploy from pushes, never from pull_request runs.
+      - name: Deploy worker
+        if: env.HAS_CF == 'true' && github.event_name != 'pull_request'
+        env:
+          CAREERKB_SITE_PASSWORD: ${{ secrets.CAREERKB_SITE_PASSWORD }}
+        run: |
+          [ -n "$CAREERKB_SITE_PASSWORD" ] || echo "::warning::CAREERKB_SITE_PASSWORD is not set — the site will stay locked."
+          SECRETS="$RUNNER_TEMP/careerkb-secrets.json"
+          node -e '
+            const s = {};
+            if (process.env.CAREERKB_SITE_PASSWORD) s.SITE_PASSWORD = process.env.CAREERKB_SITE_PASSWORD;
+            require("fs").writeFileSync(process.argv[1], JSON.stringify(s), { mode: 0o600 });
+          ' "$SECRETS"
+          npx wrangler deploy --secrets-file "$SECRETS"
+          rm -f "$SECRETS"
+
+      - name: Skipped deploy
+        if: env.HAS_CF != 'true'
+        run: echo "::notice::CLOUDFLARE_API_TOKEN is not set — built and validated, but did not deploy."

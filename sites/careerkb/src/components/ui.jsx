@@ -1,7 +1,7 @@
 import { href } from "../lib/route.js";
 import { entryHref, highlight } from "../lib/data.js";
 
-const TYPE_ICON = { "desk-card": "▤", slideshow: "▶", article: "¶", reference: "§" };
+const TYPE_ICON = { "desk-card": "▤", slideshow: "▶", article: "¶", reference: "§", "training-note": "✎" };
 
 export function TypeBadge({ kb, type }) {
   return (

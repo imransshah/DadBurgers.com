@@ -1,28 +1,28 @@
 {
   "schema": 1,
   "seededAt": "2026-11-11",
-  "lastSync": "2026-11-24T01:26:02.660Z",
+  "lastSync": "2026-11-24T01:39:34.311Z",
   "lastSyncOk": true,
   "lastError": null,
   "sources": {
     "OMB memoranda": {
       "ok": true,
-      "at": "2026-11-24T01:26:02.694Z",
+      "at": "2026-11-24T01:39:34.351Z",
       "found": 47
     },
     "OPM CHCO memos": {
       "ok": true,
-      "at": "2026-11-24T01:26:02.799Z",
+      "at": "2026-11-24T01:39:34.503Z",
       "found": 21
     },
     "CISA directives": {
       "ok": true,
-      "at": "2026-11-24T01:26:02.939Z",
+      "at": "2026-11-24T01:39:34.628Z",
       "found": 2
     },
     "FedRAMP notices": {
       "ok": true,
-      "at": "2026-11-24T01:26:03.016Z",
+      "at": "2026-11-24T01:39:34.853Z",
       "found": 19
     }
   },
@@ -135,7 +135,7 @@
     ]
   },
   "lastTriage": {
-    "at": "2026-11-24T01:26:03.320Z",
+    "at": "2026-11-24T01:39:35.333Z",
     "rules": 0,
     "drafted": 0,
     "remaining": 39,

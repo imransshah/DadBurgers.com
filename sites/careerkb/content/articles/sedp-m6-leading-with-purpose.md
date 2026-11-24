@@ -19,15 +19,15 @@ related: [sedp-m6-managing-government-it-efficiency, sedp-m6-crisis-management, 
 Secretary of Veterans Affairs Doug Collins, interviewed by an OPM host, relates lessons from military service to federal executive leadership. He stresses mission focus, prompt decisions, permission to fail paired with accountability, and data-driven improvement, using examples from VA.
 
 ## Key points
-- More than half a million veterans work in the federal government; Collins says military training emphasizes solving problems at the lowest level. [01:07] [03:08]
+- The host notes that more than half a million veterans work in the federal government; Collins says military training emphasizes solving problems at the lowest level. [01:07] [03:08]
 - He argues that asking why is underused in government and that executives should ask how to improve work, not only how to finish it. [04:10] [06:13]
 - On veterans' preference, he advises looking past the scoring line to the applicant's record: taskings, deployments and moves. [09:16] [10:17]
-- Leaders should know their own information threshold for decisions and avoid treating delay as prudence. [14:22] [19:28]
+- He says leaders should know their own information threshold for decisions and avoid treating delay as a badge of honor. [12:18] [14:22] [19:28]
 - He gives staff permission to try improvements and says leaders should absorb outside criticism on their behalf. [16:24] [22:31]
 - He separates honest errors (coach the execution) from deliberate noncompliance (consequences through proper process), and says ratings should not all be top level. [24:33] [25:34] [26:34]
 - VA examples: removing a redundant physician sign-off on community care referrals, and cutting the older-claims backlog once a measurement standard was set. [31:37] [32:38]
 - He advises asking to see the statute when a requirement is described as statutory, since many are policy or regulation leaders can change. [36:41]
-- Basic workforce data was hard to get at VA; a daily hospital metrics dashboard took three to four months to build. [37:41] [39:41]
+- Basic workforce data was hard to get at VA; a daily hospital metrics dashboard took three to four months to build. [37:41] [38:41] [39:41]
 
 ## Executive takeaways
 - Read the statutes behind your programs and distinguish them from policy you control. (ECQ1 Rule of Law & Founding Principles)

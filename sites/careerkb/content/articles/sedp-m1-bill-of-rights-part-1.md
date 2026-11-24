@@ -26,12 +26,12 @@ Charles Baldis, senior counsel at the Office of Special Counsel, explains where 
 - Baldis points to a July 2025 OPM memo on religious accommodation that encourages telework where appropriate, and to Groff v. DeJoy and Kennedy v. Bremerton as rulings for the employee where accommodation cost little. [06:18]
 - Indirect censorship is barred; regulation must be content-neutral in most cases and viewpoint-neutral in nearly all. [10:20]
 - Central Hudson (1980) sets the test for regulating advertising: a substantial interest, direct advancement and a reasonable fit. [12:21]
-- Employee speech (Pickering, 1968) turns on public concern, citizen vs. official-duty capacity, and a balancing of interests; contractors are covered too. [15:23]
-- Garcetti (2006) found a job-duty memo unprotected; Lane (2014) found citizen testimony protected. [17:29]
+- Employee speech (Pickering, 1968) turns on public concern, citizen vs. official-duty capacity, and a balancing of interests; independent contractors are covered too. [15:23]
+- Garcetti (2006) found a job-duty memo unprotected; Lane (2014) found citizen testimony protected. [16:28]
 
 ## Executive takeaways
-- Treat religious accommodation as a good-faith process with a documented outcome. (ECQ4 Leading People)
-- Before acting on anything an employee or contractor said, ask whether it was duty speech or citizen speech on a public concern, and involve counsel. (ECQ1 Rule of Law & Founding Principles)
+- Baldis advises good-faith negotiation with any employee who raises a religious concern, and recommends senior executives read the July 2025 OPM memo on accommodation. (ECQ4 Leading People)
+- Baldis draws the line on employee speech at whether it was part of the person's job duties or spoken as a private citizen on a matter of public concern. (ECQ1 Rule of Law & Founding Principles)
 
 ## References named
 - Articles of Confederation and Perpetual Union (1777); Bill of Rights, ratified 1791 — [01:11], [02:12]

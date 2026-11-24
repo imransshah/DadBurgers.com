@@ -31,9 +31,9 @@ Dr. Shaun Rieley interviews Dr. Ronald Pestritto, graduate dean at Hillsdale Col
 - Pestritto argues senior executives exercise part of the President's power, that agencies are statutory, and that no independent fourth branch has a constitutional basis. [36:51]
 
 ## Executive takeaways
-- Trace each significant action to a named authority: statute, delegation or presidential direction. (ECQ1 Rule of Law & Founding Principles)
+- The course asks executives to establish early where authority comes from, who else has a role and what limits apply; Pestritto places agency existence in statute and executive power in the President. (ECQ1 Rule of Law & Founding Principles)
 - The course's closing step: before a high-risk initiative advances, have counsel or policy staff map its touchpoints with Congress, the courts, states and individual rights. (ECQ1 Rule of Law & Founding Principles)
-- The course frames the goal as delivering results while keeping the process legitimate; checks that exist only on paper do not count. (ECQ5 Achieving Results)
+- The course frames the goal as delivering mission results while preserving the legitimacy of the process, and treats the Constitution as a guide before decisions, not only a legal backstop afterward. (ECQ5 Achieving Results)
 
 ## References named
 - U.S. Constitution: Preamble; Articles I–III vesting clauses; necessary and proper power; Article III cases or controversies; Article IV, Section 4 — [03:15]–[20:35]

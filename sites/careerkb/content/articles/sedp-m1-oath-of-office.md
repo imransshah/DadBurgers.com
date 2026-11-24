@@ -25,13 +25,13 @@ Matthew Mehan and Dr. Matthew Spalding of Hillsdale College's Graduate School of
 - Article VI places the oath clause right after the Supremacy Clause; the speakers argue the oath is what makes supremacy work. [15:30]
 - The first oath said only *support*; *defend* was added in 1862. Support means following the Constitution's terms; defend means active response to a serious threat. [24:42]
 - *True faith and allegiance* means inner intent matches outward conduct, even unobserved. [31:51]
-- *Without mental reservation* rules out secondary allegiance; officials must understand what they swear to. [38:58]
+- *Without mental reservation* rules out secondary allegiance; officials must understand what they swear to. [37:58]
 - When a directive conflicts with the oath, the speakers advise persuasion, then resignation, not acting as a judge or legislator from inside the executive branch. [41:02]
 - Executive power is vested in the President alone; career executives hold an office under it, and accountability runs through the President to the people. [48:12]
 
 ## Executive takeaways
 - Know the authority behind each office: duties come from the Constitution, statute and direction from above. (ECQ3 Merit & Competence)
-- Handle disagreement openly through persuasion, clarification or stepping aside. (ECQ4 Leading People)
+- When a directive appears to conflict with the oath, the speakers advise persuasion first, then clarification or resignation, not acting alone. (ECQ4 Leading People)
 - The course's closing exercise: state the governing authority and principles for a hard decision before debating preferences. (ECQ1 Rule of Law & Founding Principles)
 
 ## References named

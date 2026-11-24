@@ -25,18 +25,18 @@ EEOC Chair Andrea Lucas explains how the administration's civil rights executive
 
 ## Key points
 - Title VII bars disparate treatment based on race, color, religion, sex or national origin in any employment action; Lucas says it protects all groups equally and has no diversity exception [02:10]
-- She argues that a protected characteristic used even as one plus factor can make an action unlawful [04:12]
-- EO 14173 and EO 14151 direct OPM and OMB to end discriminatory DEI programs and preferences in government [06:15]
-- EO 14281 deprioritizes disparate-impact liability; EO 14168 directs sex-based terminology [08:17]
-- Her tests: swap the race or sex to see if a practice looks wrong; good motives do not cure a program limited to one group; a neutral program can become unlawful if the motive is group-based [11:20]
-- She recommends mentoring and leadership development open to all employees [14:24]
-- The ADA, Title VII (religion) and the Pregnant Workers Fairness Act require reasonable accommodation subject to undue hardship; many agencies lacked clear written policies [18:27]
-- Risk covers the full employment lifecycle, including recruitment outreach; she suggests fixing weak promotion processes with clear, neutral criteria [25:37]
+- She argues that a protected characteristic used even as one plus factor can make an action unlawful [05:14]
+- EO 14173 and EO 14151 direct OPM and OMB to end discriminatory DEI programs and preferences in government [07:16]
+- EO 14281 deprioritizes disparate-impact liability [07:16]; EO 14168 directs sex-based terminology [08:17]
+- Her tests: swap the race or sex to see if a practice looks wrong [11:20]; good motives do not cure a program limited to one group; a neutral program can become unlawful if the motive is group-based [12:22]
+- She recommends mentoring and leadership development open to all employees [15:25]
+- The ADA and Title VII (religion) require reasonable accommodation subject to undue hardship, and the Pregnant Workers Fairness Act often requires it [18:27]; many agencies lacked clear written policies [19:29]
+- Risk covers the full employment lifecycle, including recruitment outreach [23:34]; she suggests fixing weak promotion processes with clear, neutral criteria [25:37]
 - EEOC and DOJ published a one-page explainer and a roughly 10-page Q&A on DEI-related discrimination at work [28:38]
 
 ## Executive takeaways
-- Test programs and policies for even-handed treatment before approving them (ECQ1 Rule of Law & Founding Principles)
-- Use transparent, job-related criteria for selection, promotion and development (ECQ3 Merit & Competence)
+- Lucas's swap test checks whether a program or policy treats groups even-handedly (ECQ1 Rule of Law & Founding Principles)
+- Lucas recommends clear, neutral promotion criteria and development open to every employee at a level (ECQ3 Merit & Competence)
 - Publish clear accommodation procedures and forms so employees can find them when needed (ECQ4 Leading People)
 
 ## References named

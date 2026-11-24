@@ -14,13 +14,13 @@ related: [sedp-m1-oath-of-office, sedp-m1-understanding-the-constitution, sedp-m
 ---
 
 ## Overview
-Doug Hoelscher, a Senior Advisor at OPM, explains federalism as a working relationship between federal, state, local, tribal and territorial governments. He focuses on what career executives need to know to work across that boundary well.
+Doug Hoelscher, a Senior Advisor at OPM, explains federalism as a working relationship between federal, state, local, tribal and territorial governments. He focuses on what senior executives need to know to work across that boundary well.
 
 ## Key points
 - The Constitution protects reserved state powers, and courts and Congress have also given states delegated roles, such as water-quality and workplace-safety programs. [02:10]
 - Citizens care that problems get solved, not which level solves them; executives should know their own authorities, the states' authorities and how the funding connects. [04:14]
 - States keep primacy in areas such as occupational licensing, insurance and education. [07:19]
-- State officials act as program administrators, regulators, tax administrators, stakeholders and lobbyists, often at the same time. [11:21]
+- State officials act as program administrators, regulators, tax administrators, stakeholders and lobbyists, often at the same time. [09:20]
 - When policy or politics causes tension, Hoelscher advises bringing in the agency's appointed leaders early, and giving partners a clear answer even when it is no. [11:21]
 - He describes states as laboratories, citing Arizona's regulatory rollback and Idaho's sunset of its regulatory code. [13:23]
 - Disaster response follows the motto locally executed, state managed, federally supported; he says the partnership is weakest or strongest in a disaster, and failures show at the seams. [24:34]
@@ -28,11 +28,11 @@ Doug Hoelscher, a Senior Advisor at OPM, explains federalism as a working relati
 
 ## Executive takeaways
 - Identify the key external stakeholders for a program and build the relationship before a crisis; treat them as an early-warning network. (ECQ4 Leading People)
-- Be clear about who holds primacy on each decision and respect partners' authority, or the process goes off track. (ECQ1 Rule of Law & Founding Principles)
-- Reach yes or no faster, and manage expectations when demand exceeds resources. (ECQ5 Achieving Results)
+- Understand which level holds primacy and respect state and local officials' authority and role; otherwise, Hoelscher says, an effort can go sideways on process alone. (ECQ1 Rule of Law & Founding Principles)
+- Hoelscher says partners deserve an answer even when it is no, getting to yes or no on complex projects should take less time, and expectations must be aligned when demand exceeds resources. (ECQ5 Achieving Results)
 
 ## References named
 - No statute, executive order, regulation or case named.
-- Programs and examples cited: SNAP, Medicaid and Medicaid waivers, TANF, FEMA flood insurance, OSHA and EPA delegated programs — [06:17]–[09:20], [17:26]
+- Programs and examples cited: SNAP, Medicaid and Medicaid waivers, TANF, FEMA flood insurance, OSHA and EPA delegated programs — [02:10], [06:17]–[09:20], [17:26]
 - Arizona regulatory rollback (mid-2010s); Idaho regulatory code sunset — [13:23]
 - Hurricane Katrina; Dakota Access Pipeline permitting and ongoing litigation — [25:35], [32:47]

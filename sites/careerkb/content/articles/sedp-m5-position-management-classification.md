@@ -18,7 +18,7 @@ related: [sedp-m5-pay-flexibilities, sedp-m5-merit-system-principles-ppps, sedp-
 A short OPM session on four linked topics: organization design, position management, classification, and the General Schedule (GS) and Federal Wage System (FWS). The presenter treats staffing and structure as leadership decisions with lasting budget and fairness effects.
 
 ## Key points
-- Design principles: a clear purpose for every position, a balanced span of control, related functions grouped to avoid silos, and structures that can adapt without a rebuild. [02:10]
+- Design principles: a clear purpose for every position, a balanced span of control, and related functions grouped to avoid silos [02:10]. Structures should also be able to adapt without a rebuild. [03:13]
 - Position management aims for the right mix of positions, skills, and grades. Over-grading wastes money and creates inequities; under-grading drives turnover. [03:13]
 - Balanced supervisory ratios, regular checks for duties creeping beyond a position's scope, and good use of support roles keep higher-graded staff on mission-critical work. [04:15]
 - Classification sets title, series, and grade based solely on the work performed, under the Classification Act of 1949 and OPM standards. [05:17]
@@ -31,7 +31,7 @@ A short OPM session on four linked topics: organization design, position managem
 ## Executive takeaways
 - Each grade approval is a multi-year payroll commitment; position management belongs in budget and staffing plans. (ECQ2 Driving Efficiency)
 - Classifying on the work, not the person, supports equal pay for equal work and keeps decisions defensible. (ECQ3 Merit & Competence)
-- Pay-system knowledge informs in-house versus contractor choices and budget forecasts for IT and operations functions. (ECQ2 Driving Efficiency)
+- The presenter says understanding the GS and FWS informs when to use in-house staff versus contractors, how to forecast budgets, and how to handle recruitment challenges. (ECQ2 Driving Efficiency)
 
 ## References named
 - Classification Act of 1949 — the law that grounds federal position classification — [05:17]

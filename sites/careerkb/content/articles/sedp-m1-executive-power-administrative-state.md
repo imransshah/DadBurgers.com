@@ -19,20 +19,20 @@ related: [sedp-m1-oath-of-office, sedp-m1-understanding-the-constitution, sedp-m
 ---
 
 ## Overview
-Dr. Shaun Rieley and Dr. Brad Watson of Hillsdale College's Washington, DC campus discuss Article II executive power and how the administrative state has changed the presidency. Watson closes with his view of accountability for career executives.
+Dr. Shaun Rieley and Dr. Brad Watson of Hillsdale College's Washington, DC campus discuss Article II executive power and how the administrative state has changed the presidency. Watson closes with his view of accountability for all federal employees, especially senior ones.
 
 ## Key points
 - Article II vests *the executive power* in the President without Article I's limit to listed powers; Watson calls it open-textured because the executive must meet emergencies. [01:08]
 - Watson argues vesting implies removal at will, and that insulation from removal means insulation from accountability to the people. [04:12]
-- Federalist 70 ties energy in the executive to unity, which supports both speed and clear responsibility. [11:22]
+- Federalist 70 ties energy in the executive to unity: lodging the power in one person promotes energy as well as responsibility and accountability. [11:22]
 - Wilson and FDR are presented as founders of the administrative state, with New Deal and Great Society programs as versions 1.0 and 2.0. [16:33]
 - Removal cases: Myers (1926) protected presidential removal; Humphrey's Executor (1935) allowed insulation for independent regulators; Morrison v. Olson (1988) upheld the Independent Counsel Act over Justice Scalia's dissent. [24:41]
 - Watson argues the framers were departmentalists and that rulings bind the parties pending appeal, not the whole nation through one district judge. [29:48]
 
 ## Executive takeaways
-- Watson's closing point: accountability applies to all federal employees, and executives should follow presidential guidance within the bounds of law. (ECQ1 Rule of Law & Founding Principles)
-- The course's practical step: add an authority-and-constraints section to each major action, covering what authorizes it, what limits apply and where judgment is required. (ECQ1 Rule of Law & Founding Principles)
-- Documented authority lets teams implement priorities faster with less risk. (ECQ5 Achieving Results)
+- Watson's closing point: accountability applies to all federal employees, and within the bounds of law, executives should be attentive to the popular will as expressed in the President's guidance and directives. (ECQ1 Rule of Law & Founding Principles)
+- The course's practical step: add an authority-and-constraints section to one major action being prepared, covering what authorizes it, what limits apply and where judgment is required. (ECQ1 Rule of Law & Founding Principles)
+- The course says that when authority and constraints are visible, teams act with more confidence, avoid preventable risk and explain decisions more clearly. (ECQ5 Achieving Results)
 
 ## References named
 - U.S. Constitution, Article II, Section 1 — [01:08]

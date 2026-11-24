@@ -23,18 +23,18 @@ George Nesterczuk, a senior advisor at the U.S. Department of State who helped b
 ## Key points
 - The CSRA replaced the rigid supergrade system with performance-linked pay, agency-head authority to reassign executives, and agency ERBs and PRBs. OPM-run QRBs assess executive, not technical, qualifications. [04:06]
 - Conversion was voluntary; bonuses, a fallback to GS-15 and a 120-day period after a new administration eased it. About 800 of roughly 8,000 executives stayed out. [10:09]
-- In the old system four uniform elements carried a 5% minimum, so results could be 80% of a rating. The new elements can be tailored and reweighted. [16:14]
+- In the old system four uniform elements carried a 5% minimum, so results could weigh up to 80% of a rating. The new elements can be tailored and reweighted. [15:13]
 - The host says over 90% of executives were recently rated 4 or 5 and the administration aims for about 30%. [30:25]
-- Quarterly reviews and a common fiscal-year cycle give earlier feedback; plans are living documents. [22:19]
+- A common fiscal-year cycle simplifies management from OPM's standpoint [20:16]. Quarterly reviews take executive time but give earlier feedback and keep adjustable plans in step with shifting priorities. [21:18]
 - Per the speaker, statute makes an unsuccessful rating a basis for removal and repeated inadequate performance over three years a mandatory removal. [25:22]
 - PRBs are majority career, and members are published in the Federal Register before they act. [28:23]
 - New elements cover program statutes, merit-based selection, holding others accountable (extended to GS-14/15 managers) and efficiency, weighted at least 15% and up to 20–25%. [32:28]
-- Executives draft their own plans from supervisor guidance and the strategic plan, using SMART objectives that fit the rating period. [39:37]
+- Supervisors start from the strategic plan and presidential and White House statements on the department [36:34]; executives draft their own plans from that guidance [37:34], using SMART objectives that fit the rating period. [39:37]
 
 ## Executive takeaways
-- IT and operations portfolios are resource-heavy; the efficiency element may carry more than the minimum weight. (ECQ2 Driving Efficiency)
-- Differentiate ratings among subordinate managers and support them with evidence. (ECQ4 Leading People)
-- Tie each plan objective to a strategic plan goal and revisit it each quarter. (ECQ5 Achieving Results)
+- The efficiency element covers how executives and their subordinates use budget, staff, travel and conferences; the speaker says it carries at least 15% and can rise to 20–25% in resource-intensive organizations. (ECQ2 Driving Efficiency)
+- The speaker says leaders who don't distinguish good from poor performers lose credibility with the good ones, who take up the slack. (ECQ4 Leading People)
+- The speaker describes plans built from the strategic plan and White House statements, written as SMART objectives and revisited quarterly as priorities shift. (ECQ5 Achieving Results)
 
 ## References named
 - Civil Service Reform Act — created the SES — [02:02]

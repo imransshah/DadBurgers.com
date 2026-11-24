@@ -21,23 +21,23 @@ Noah Peters, senior advisor to the OPM Director, explains the revised Executive 
 
 ## Key points
 - A day-one presidential memorandum called for rebalancing the SES around fidelity to the Constitution; the speaker describes the SES role as essential but limited. [02:02]
-- The 1997 ECQs were last updated in 2006. The rule-of-law ECQ is new, business acumen splits into driving efficiency and merit and competence, and leading change and building coalitions are de-emphasized. [09:08]
+- The ECQs, first issued in 1997 [01:01], were last updated in 2006 [04:04]. The rule-of-law ECQ is new [05:04], elements of business acumen carry into driving efficiency and merit and competence [08:08], and leading change and building coalitions are de-emphasized. [09:08]
 - Rule of law: knowledge of the American system of government and agency statutes, commitment to the rule of law, and civic-mindedness. [21:23]
-- Driving efficiency: fiscal responsibility with quantifiable ROI, managing resources, and leveraging technology, with AI used only where it serves the mission and attention to security and privacy. [27:29]
+- Driving efficiency: fiscal responsibility with quantifiable ROI [27:29], managing resources, and leveraging technology, with AI used only where it serves the mission and attention to security and privacy. [30:32]–[32:34]
 - Merit and competence: technical skill, root-cause problem solving, and agility and resilience. [34:35]
-- Leading people: accountability (including job-related hiring assessments and acting on performance or conduct problems), developing others, room for measured mistakes, and executive judgment about sign-off and information sharing. [40:41]
-- Achieving results: operational mindset, innovation that removes unnecessary requirements, and strategic thinking. Goals should cascade from the PMA, strategic plan, performance plan and CBJ. [55:55]
+- Leading people: accountability (including job-related hiring assessments and acting on performance or conduct problems), developing others, an environment where people are not afraid of mistakes but avoid uncalculated risks [41:41], and executive judgment about sign-off and information sharing. [43:42]
+- Achieving results: operational mindset, innovation that removes unnecessary requirements, and strategic thinking [51:50]–[53:51]. Goals should be taken from the PMA, strategic plan, performance plan and CBJ. [55:55]
 - ECQs describe behavior; performance plan elements measure results against the same themes. [58:56]
 
 ## Executive takeaways
-- Build a quantified ROI case before asking for staff or contracts; self-service and automation are the first options the speaker names. (ECQ2 Driving Efficiency)
-- Know the statutes that create and govern the agency and its programs. (ECQ1 Rule of Law & Founding Principles)
-- Use 360 assessments and stretch assignments to build a record for the structured interview. (ECQ3 Merit & Competence)
-- End meetings with owners and next steps; the speaker treats another meeting as a warning sign. (ECQ5 Achieving Results)
+- Before asking for more staff, the speaker says to look at workflows, technology and how easily the public can find information, and to show a quantifiable return on investment; he applies the same scrutiny to every contract. (ECQ2 Driving Efficiency)
+- Know the statutes that create the agency and its legal landscape; the speaker says this matters especially for executives who are not lawyers. (ECQ1 Rule of Law & Founding Principles)
+- The speaker recommends an objective leadership assessment such as a 360, and taking on bigger projects, so candidates have a record of accomplishment for the structured interview. (ECQ3 Merit & Competence)
+- The speaker says every meeting should produce actionable next steps; if the next step is another meeting, something may be wrong. (ECQ5 Achieving Results)
 
 ## References named
 - Presidential memorandum, Restoring Accountability for Career Senior Executives — day one — [02:02]
-- Original ECQs (1997) and the 2006 update — [04:04]
+- Original ECQs (1997) and the 2006 update — [01:01], [04:04]
 - President's Management Agenda, strategic plan, performance plan, CBJ — goal sources — [09:08]
 - Pendleton Act and Civil Service Reform Act — cited by the host as the merit basis — [33:34]
 - OPM 360 leadership assessment — development tool — [12:12]

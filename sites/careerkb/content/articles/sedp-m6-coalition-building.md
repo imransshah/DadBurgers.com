@@ -14,18 +14,18 @@ related: [sedp-m6-managing-government-it-efficiency, sedp-m6-crisis-management, 
 ---
 
 ## Overview
-Meg Kilgannon, Director of Strategic Partnerships at the Department of Education, talks with an OPM host who is a career senior executive about coalition building. They cover listening and focus within coalitions, formal structures such as interagency agreements, the SES role in continuity across administrations, and warning signs of misalignment.
+Meg Kilgannon, Director of Strategic Partnerships at the Department of Education, talks with a host who is a career senior executive about coalition building. They cover listening and focus within coalitions, formal structures such as interagency agreements, the SES role in continuity across administrations, and warning signs of misalignment.
 
 ## Key points
 - The host notes that senior executives must coordinate with peers who each lead their own organizations; Kilgannon frames people as the means by which policy is carried out. [01:01] [03:04]
-- Members who do not prevail will still support the mission if they feel their view was considered; problems are easier to manage early than late. [05:06]
-- Hosting stakeholders inside the department costs little and can turn them into advocates. [07:08]
-- Kilgannon describes a coalition on gender identity policy that drew together groups with sharp disagreements on other issues; she credits its results to staying on the single shared issue. [09:10]
-- Personal conversations outside meetings often reveal more common ground than expected. [12:14]
-- Education is transferring functions to other departments through interagency agreements. That has required sharing stakeholder lists, making introductions, and checking for mission creep; the host adds jurisdiction, statute and budget flow as design factors. [15:17] [17:19]
-- Specialized notification requirements can surface late; include overlooked parties as soon as they are identified. [18:20] [19:21]
-- Career SES keep lines open to stakeholders who oppose an administration, and political appointees rely on them to convey its goals faithfully. [21:22] [24:23]
-- Warning signs include members publicly undermining the effort or using inclusion to pursue a different agenda. [27:25]
+- Kilgannon says members who do not prevail will often still support the mission if they feel their view was considered; problems are easier to manage early than late. [05:06]
+- She says hosting stakeholders inside the department is easy to do and can turn them into advocates. [07:08]
+- Kilgannon describes a coalition on gender identity policy that drew together groups with sharp disagreements on other issues; she credits its results to staying on the single shared issue. [08:09] [09:10]
+- She says personal conversations outside meetings often reveal more common ground than expected. [12:14]
+- Education is transferring functions to other departments through interagency agreements. That has required sharing stakeholder lists and making introductions; Kilgannon advises checking whether a vehicle still fits and whether mission creep has set in, and the host adds jurisdiction, statute and budget flow as design factors. [13:15] [15:17] [16:18] [17:19]
+- Kilgannon cites specialized notification requirements in the Bureau of Indian Education transfer to Interior; she says to include overlooked parties as soon as they are identified. [18:20] [19:21]
+- Kilgannon says career SES keep lines open to stakeholders who oppose an administration, and political appointees rely on them to convey its goals faithfully. Coalitions often change between administrations, but relationships can be maintained. [21:22] [22:22] [24:23]
+- Her warning signs include members running down the administration on social media or using inclusion to pursue a different agenda. [26:25] [27:25]
 
 ## Executive takeaways
 - Build agreement among peers by letting each party be heard before a decision. (ECQ4 Leading People)

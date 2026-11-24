@@ -17,19 +17,19 @@ related: [sedp-m6-managing-government-it-efficiency, sedp-m6-crisis-management, 
 Ellen Heier, Senior Advisor at OPM, interviews Greg Zerzan, Acting Solicitor at the U.S. Department of the Interior, on how career executives communicate and collaborate under scrutiny. The recurring theme is that trust, built on accuracy, underlies every audience.
 
 ## Key points
-- Career executives serve political appointees, colleagues within and across agencies, and the public, which expects clarity on policies and rules. [02:02]
+- Career executives serve political appointees, colleagues within and across agencies, and the public [02:02]; the public expects clarity on policies and rules. [03:03]
 - He cites advice that senior leaders "need to be told that information necessary for good decision making," no more and no less. [03:03]
 - Tough news goes to political leadership as options, each lawful and consistent with regulations, with the decision left to them. [05:06]
 - Accuracy enables trust, and trust lost with senior leadership is hard to regain. [07:11]
 - Rebuilding trust involves candidly and respectfully correcting inaccurate information, holding people accountable, and treating errors as chances to improve. [08:12]
 - Many political appointees lack government experience, so plain language without acronyms helps build early trust. [11:22]
-- A business lesson applies: know the customer, know their needs, deliver the solution. Congress is one such customer, served while protecting executive branch equities. [12:23]
-- He likens the information revolution since 2000 to the printing press; AI-generated content raises the stakes for government credibility with the public. [15:30]
+- A business lesson applies: know the customer, know their needs, deliver the solution [12:23]. Congress is one such customer, served while protecting executive branch equities. [14:28]
+- He likens the information revolution since 2000 to the printing press [15:30]; AI-generated content raises the stakes for government credibility with the public. [16:33]
 - His closing mantra is to remember what the civil service defends, citing Lincoln on a free republic. [17:34]
 
 ## Executive takeaways
 - Present unwelcome news as lawful options and leave policy decisions to political leadership. (ECQ1 Rule of Law & Founding Principles)
-- Correct errors candidly, hold staff accountable, and keep the working relationship intact. (ECQ4 Leading People)
+- Call out inaccurate information respectfully, hold people accountable, and treat a mistake as a chance to improve rather than the end of the relationship. (ECQ4 Leading People)
 - Treat leadership, Congress, partner agencies and the public as customers whose needs are identified and met. (ECQ5 Achieving Results)
 
 ## References named

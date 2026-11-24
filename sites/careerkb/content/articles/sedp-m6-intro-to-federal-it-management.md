@@ -20,13 +20,13 @@ Two federal CIOs, Karen Ashmore (OPM, acting) and David Shive (GSA), compare les
 ## Key points
 - Shive's guiding principle is citizen outcomes: each piece of work should connect to a public result. [04:11]
 - He says large IT failures now stem from poor organizational change management and loss of sustained stakeholder buy-in, not from technology. Ashmore treats business leaders saying "this is an IT project" as a warning sign. [05:14] [06:16]
-- The System for Award Management replaced per-agency award systems. A ten-vendor build struggled until the government became the single directing voice; Shive reports annual cost falling from $2.2B to about $160M. [09:20]
-- Shive says CIOs should see themselves as government executives first and speak the language of the business. [11:24]
-- Mapping every performance-plan element to the agency mission, plus peer recognition, is credited with high EVS scores and 6–7% attrition at GSA IT. [16:35] [18:35]
+- The System for Award Management replaced per-agency award systems. A ten-vendor build struggled until the government became the single directing voice; Shive reports annual cost falling from $2.2B to about $160M. [08:18] [09:20]
+- Shive says the administration wants CIOs to see themselves as government executives first; he stresses speaking the language of the business and encourages his team to do the same. [11:24] [13:27]
+- Shive credits mapping every performance-plan element to the agency mission, plus peer recognition, with high EVS scores and 6–7% attrition at GSA IT. [16:35] [18:35]
 - Modernization should include current staff. GSA uses OKRs that reserve about 20% of time for innovation and holds open demo sessions with senior leaders. [20:40] [22:42] [23:43]
-- Training should be shared one-to-many after each course; details are described as the most valuable experiential training. [24:45] [27:48]
-- Consolidating fragmented acquisition yields single data and stronger buying power. [30:53]
-- Ashmore asks for deliverables in one to three months rather than three-year plans; Shive says continuous iteration absorbs priority changes and evens out budgets. [32:54] [34:56]
+- Shive says training should be shared one-to-many after each course; he calls experiential training the most valuable and details a great way to get it. [24:45] [27:48]
+- Shive says consolidating fragmented acquisition yields single data and stronger buying power. [30:53]
+- Ashmore asks for deliverables in one to three months rather than three-year plans; Shive says continuous iteration absorbs priority changes and evens out budgets. [32:54] [33:55] [34:56]
 
 ## Executive takeaways
 - Treat stakeholder buy-in and change readiness as the main delivery risks, and be willing to pause and reset. (ECQ5 Achieving Results)

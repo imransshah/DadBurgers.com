@@ -18,23 +18,23 @@ related: [sedp-m4-ses-performance-management, sedp-m4-ecqs-in-practice, sedp-m4-
 ---
 
 ## Overview
-Lauren Stalker, Deputy Associate Director for Performance and Personnel Management at OMB, presents the federal performance framework as a set of management tools. The speaker argues that statute defines what agencies must do, not how, and that reporting built up around these laws should be re-scoped toward outcomes.
+Lauren Stalker, Deputy Associate Director for Performance and Personnel Management at OMB, presents the federal performance framework as a set of management tools. The speaker argues that statute tells agencies some of what to do, not how, and that reporting built up around these laws should be re-scoped toward outcomes.
 
 ## Key points
 - Ground rules: tools serve results; goals align to administration and agency-leader priorities; work backward from the outcome; use trusted data; plain language over jargon. [02:10]
-- Four-year agency strategic plans can be top-down, bottom-up or hybrid, each with trade-offs; consultation with Congress and key stakeholders is required. [04:12]
+- Four-year agency strategic plans can be top-down, bottom-up or hybrid, each with trade-offs; consultation with Congress and key stakeholders is required. [05:16]
 - "If everything is a priority, then nothing gets priority attention and funding" (Stalker). Goal statements state what, by when, and the measure. [06:19]
-- Agency priority goals run two years with named officials and quarterly reviews; CAP goals carry the President's Management Agenda across agencies and reset every four years. [07:22]
-- Cascading goals into individual performance plans is often skipped; new SES guidance requires alignment to the PMA and strategic plans. [09:24]
+- Agency priority goals run two years with named officials and quarterly reviews [08:23]; CAP goals carry the President's Management Agenda across agencies and reset every four years. [12:30]
+- Cascading goals into individual performance plans is often skipped; new SES guidance requires alignment to the PMA and strategic plans. [10:25]
 - Progress is tracked with milestones (dated actions) and metrics (counts toward a target), linked to the end outcome rather than outputs alone. [14:33]
 - Data-driven reviews need scheduled meetings, defined attendees and working governance; format varies with leadership style and data. [15:37]
-- Named accountable officials, public transparency and layered individual accountability reinforce results. [17:40]
-- Program evaluation tests whether a program works, so agencies can scale it or change it. [22:49]
+- Named accountable officials, public transparency and layered individual accountability reinforce results. [18:41]
+- Program evaluation tests whether a program works, so agencies can scale it or change it. [23:49]
 
 ## Executive takeaways
-- Outcome goals with baselines, owners and review cadence are the core evidence of results. (ECQ5 Achieving Results)
-- Separating statutory requirements from accumulated process frees effort for mission work. (ECQ2 Driving Efficiency)
-- In IT and operations, output counts (tickets, forms digitized) need a paired user-outcome measure. (ECQ5 Achieving Results)
+- The speaker presents clear goal statements, named accountable officials and regular data-driven reviews as core routines for achieving results. (ECQ5 Achieving Results)
+- The speaker urges re-scoping the process and reports built up around statutes toward outcomes, not reporting for its own sake. (ECQ2 Driving Efficiency)
+- Output counts, such as forms digitized, need a paired measure of the end outcome, such as the time and effort for a farmer to get a loan. (ECQ5 Achieving Results)
 
 ## References named
 - GPRA Modernization Act of 2010 — strategic plans, priority goals, quarterly reviews; captions garble it as GIPRAA/GIPRA (corrected) — [06:19]

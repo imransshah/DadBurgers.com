@@ -19,17 +19,17 @@ Karen Ashmore, acting CIO at OPM, interviews Amy Gleason, Administrator of the U
 
 ## Key points
 - The U.S. Digital Service was created in 2014 after the Healthcare.gov launch failed to scale; in January 2025 it became the U.S. DOGE Service, with agency-embedded teams plus a central surge team. [03:11]
-- The CMS Health Tech Ecosystem used an RFI, working groups and 6- and 12-month milestones rather than new regulation; voluntary industry pledges grew from 60 to 650. [06:13]
+- The CMS Health Tech Ecosystem began from the finding that technology and regulation existed but did not work together; it used an RFI, working groups and 6- and 12-month milestones, and voluntary industry pledges grew from 60 to 650. [06:13]
 - Common failure patterns: optimizing for compliance over results, weak problem definition, not reusing existing solutions, outsourcing strategic requirements to contractors, and long fixed plans. [09:17]
-- A discovery sprint (about two weeks, multidisciplinary, including procurement) should precede a project and end in a recommendation. One accountable owner and frequent working demos follow; Gleason's shorthand is "demos not memos." [15:25]
+- A discovery sprint (about two weeks, multidisciplinary, possibly including procurement) should start a new project and end in a recommendation. One accountable owner and regular working demos follow; the USDS shorthand is "demos not memos." [15:25], [16:25]
 - Red/green status charts report status but give little feedback; late-found mistakes are the most costly. [17:26]
-- Core, strategic functions should be managed in-house and augmented by contractors; non-strategic tools can be mostly contracted with an agency touch point. Agencies default to building too often. [23:36]
-- The service's hiring uses subject matter expert resume review, two technical interviews with work samples, an emotional-intelligence interview, and a leadership group decision. [25:37]
+- Core, strategic functions should be managed in-house and augmented by contractors; non-strategic tools can be mostly contracted with an agency touch point. Gleason says agencies default to building too often. [23:36], [24:36]
+- The service's hiring uses subject matter expert resume review, a work-sample assessment and two technical interviews, an emotional-intelligence interview, and a leadership group decision. [25:37]–[28:42]
 - CMS examples: provider enrollment was brought in-house as a core, fraud-relevant function; a COBOL-based claims system with several failed rebuilds is moving to a commercial product led by internal experts. [29:42]
-- To overcome resistance, present a short report with financial impact, run a roughly one-month proof of concept, and build in phases before systems fail. [32:45]
+- To overcome resistance, Gleason suggests a short discovery report with financial impact, a roughly one-month proof of concept, then phased builds; she also urges acting before systems fail. [32:45], [34:49]
 
 ## Executive takeaways
-- Buy commercial tools before building, and fund small proofs of concept before large contracts. (ECQ2 Driving Efficiency)
+- Look at off-the-shelf tools before building, and fund small proofs of concept before large contracts. (ECQ2 Driving Efficiency)
 - Use iterative delivery and early testing to surface problems while they are still cheap to fix. (ECQ5 Achieving Results)
 - Base technical hiring on expert review and work samples. (ECQ3 Merit & Competence)
 - Keep federal technical staff in charge of strategic requirements when contractors deliver the work. (ECQ5 Achieving Results)

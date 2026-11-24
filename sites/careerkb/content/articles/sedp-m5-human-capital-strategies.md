@@ -19,18 +19,18 @@ Colleen Heller-Stein (spelling as captioned), Executive Director of the Chief Hu
 
 ## Key points
 - Executives learn administration priorities from early executive orders, strategic planning engagement with career executives, and the President's Management Agenda. [01:09]
-- Norris describes executives as translators who should shorten the communication chain. Planning, performance and assessment run continuously, much like overlapping budget cycles. [02:10]
+- Norris describes executives as translators who should shorten the communication chain [02:10]. Planning, performance and assessment run continuously, much like overlapping budget cycles. [03:12]
 - HR uses strategic goals to identify needed skills and mission-critical occupations, then monitors those occupations for knowledge, skills and resource gaps. [06:17]
 - The period between budget submission and enactment is the time to plan reshaping and staffing so HR is ready at the start of the fiscal year. [07:19]
 - Position management, including de-layering, accurate classification and clear career paths, is the executive's main lever on structure. [09:20]
 - Linking each performance plan critical element to a specific organizational goal, done systemically, produces data on how many people support each goal. [12:23]
-- Succession planning targets critical roles that are only one person deep. Norris says it is not preselection; inviting a qualified pool to apply is encouraged. [16:27]
-- Assessment relies on quarterly reviews, strategic objective annual reviews and an organizational health framework of resiliency, capacity and performance. Automated monitoring can flag attrition outside a healthy range. [18:28]
+- Succession planning starts by identifying the roles most critical to results and checking for a pool of people who have, or could develop, the needed skills. Norris says a critical role that is only one deep worries him most [16:27]. He says succession planning is not preselection; inviting a qualified pool to apply is encouraged. [17:27]
+- Assessment relies on quarterly reviews, strategic objective annual reviews and an organizational health framework of resiliency, capacity and performance [18:28]. Automated monitoring can flag attrition outside a healthy range. [19:30]
 - Norris urges data standards, a shared data dictionary and enterprise systems over stovepiped ones. [22:33]
 
 ## Executive takeaways
-- Translate agency priorities into results the workforce can see in daily work and individual performance plans. (ECQ5 Achieving Results)
-- Use position management and common data standards to remove structural and data inefficiencies. (ECQ2 Driving Efficiency)
+- Translate administration priorities into results the workforce can see in daily work and individual performance plans. (ECQ5 Achieving Results)
+- Use position management to keep structure sound, and push for common data standards and enterprise systems so workforce data can inform decisions. (ECQ2 Driving Efficiency)
 - Build succession pools for critical roles through development and details, without preselection. (ECQ3 Merit & Competence)
 
 ## References named

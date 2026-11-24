@@ -20,21 +20,21 @@ Rebecca Ayers, a Deputy Associate Director at OPM, reviews executive-branch pay 
 ## Key points
 - SES pay runs from 120% of GS-15 step 1 to EX-III, or EX-II for agencies with a certified appraisal system. [02:11]
 - GS locality pay is capped at EX-IV; FWS pay follows local prevailing rates; some agencies, such as financial regulators under FIRREA, have independent pay authority. [04:17]
-- Recruitment incentives require a difficult-to-fill finding and a service agreement of up to 4 years, at up to 25% of basic pay per year of service. Relocation incentives apply to moves of at least 50 miles. [07:23]
+- Recruitment incentives require a difficult-to-fill finding and a service agreement of up to 4 years, at up to 25% of basic pay per year of service [07:23]. Relocation incentives apply to current employees moving at least 50 miles and are typically approved case by case. [09:28]
 - Retention incentives require unusually high or unique qualifications or a special need, plus a likelihood of leaving; caps are 25% individually and 10% for groups. [10:30]
-- Agencies approve the 3Rs within normal limits without OPM; the payments are not basic pay; retention incentives need at least annual review. [12:34]
-- Student loan repayment, separate from Education's Public Service Loan Forgiveness, allows up to $10,000 per year and $60,000 total with a 3-year service agreement. [16:42]
-- Superior-qualifications pay setting (up to step 10) needs written justification and costs more than a recruitment incentive. [17:42]
+- Agencies approve the 3Rs within normal limits without OPM [12:34]. The payments are not basic pay, and retention incentives need at least annual review. [13:36]
+- Student loan repayment is separate from Education's Public Service Loan Forgiveness [14:38]. It allows up to $10,000 per year and $60,000 total with a 3-year service agreement. [16:42]
+- Superior-qualifications pay setting (up to step 10) needs three items documented in writing and costs more than a recruitment incentive. [18:44]
 - Critical pay covers rare expertise and requires OPM approval with OMB consultation; the speaker says it is most common for senior medical and technology roles. [21:50]
 - The 3Rs cannot be combined with each other but can pair with other flexibilities. [22:51]
 
 ## Executive takeaways
-- Use the least costly flexibility that closes the gap and coordinate costs with the CFO. (ECQ2 Driving Efficiency)
-- Hard-to-fill technology roles are a common case for incentives, special rates, and, rarely, critical pay. (ECQ4 Leading People)
+- The speaker recommends trying the 3Rs first, since they are not basic pay and cost less than raising pay, and partnering with the CFO's team on cost. (ECQ2 Driving Efficiency)
+- The 3Rs and student loan repayment serve both recruiting and retention, and service credit for leave helps recruit experienced new hires. The speaker says critical pay most often goes to high-level medical or technology positions. (ECQ4 Leading People)
 - Track each flexibility's use and results over time. (ECQ2 Driving Efficiency)
 
 ## References named
-- Financial Institutions Reform, Recovery, and Enforcement Act of 1989 (FIRREA) — independent pay authority for some financial regulators — [04:17]
+- Financial Institutions Reform, Recovery, and Enforcement Act of 1989 (FIRREA) — independent pay authority for some financial regulators — [05:18]
 - Congressional Research Service publication, February 2025 — student loan debt figures; title not given ⚑ verify — [15:42]
 - Department of Education Public Service Loan Forgiveness — a separate program — [14:38]
 - OPM annual report to Congress on federal student loan repayment — [17:42]

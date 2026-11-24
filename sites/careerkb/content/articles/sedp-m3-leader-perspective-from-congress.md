@@ -17,18 +17,18 @@ related: [sedp-m3-hatch-act, sedp-m3-policymaking-process, sedp-m3-rulemaking-an
 OPM Director Scott Kupor (captioned as Scott Cooper) interviews Senator Joni Ernst on what senior executives can learn from a legislator's view. Topics are fiscal stewardship, accountability and performance ratings, and working with members of Congress and their staff.
 
 ## Key points
-- Ernst's Squeal Awards, rooted in her county auditor experience, highlight spending she views as wasteful; she says call-outs should come with solutions. [02:08]
+- Ernst's Squeal Awards, rooted in her county auditor experience [03:10], highlight spending she views as wasteful; she says call-outs should come with solutions. [04:12]
 - Kupor says stewardship is about efficiency and better service, not only cuts. [04:12]
-- Ernst cited research projects and a pandemic-era timekeeping fraud case as examples of misuse. [05:14]
-- Her test for executives: would the public agree this is a good use of money (transparency), and are bad actors addressed and strong performers rewarded (accountability)? [08:22]
+- Ernst cited research projects she views as wasteful [05:14] and a pandemic-era employee who billed 26 hours a day across two agencies. [07:19]
+- Her test for executives: would the public agree this is a good use of money (transparency), and are bad actors addressed and strong performers rewarded (accountability)? [09:23]
 - Kupor says about 0.3% of employees are rated below expectations yearly, and high ratings are too common to differentiate. [10:24]
-- Ernst cites Army rating limits on the top block as a model for honest differentiation, paired with an expectation that top performers develop others. [11:25]
-- For working with Congress: timely, responsive communication, face-to-face meetings, and relationships with staff. [14:31]
+- Ernst cites Army rating limits on the top block as a model for honest differentiation [12:28], paired with an expectation that top performers develop others. [13:30]
+- For working with Congress: timely, responsive communication [14:31], face-to-face meetings, and relationships with staff. [15:34]
 
 ## Executive takeaways
-- Apply a public-transparency test to spending decisions, including IT renewals and subscriptions. (ECQ2 Driving Efficiency)
-- Ratings and awards should distinguish levels of performance. (ECQ3 Merit & Competence)
-- Develop strong performers into leaders of others. (ECQ4 Leading People)
+- Ernst's test for spending is whether the public would agree it is a good use of taxpayer dollars; she says stewardship should be part of everything executives do. (ECQ2 Driving Efficiency)
+- Both speakers argue ratings and awards should distinguish levels of performance. (ECQ3 Merit & Competence)
+- Ernst expects top performers to develop other leaders rather than cut others down. (ECQ4 Leading People)
 - Timely, personal contact with congressional staff builds working relationships. (ECQ4 Leading People)
 
 ## References named

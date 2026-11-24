@@ -31,7 +31,7 @@ Charles Baldis, senior counsel at the Office of Special Counsel, finishes the to
 
 ## Executive takeaways
 - The course's practical step: add one rights checkpoint to the review of a policy, form, inspection protocol, data practice or public-facing workflow. (ECQ1 Rule of Law & Founding Principles)
-- Rights review at design avoids litigation and rework later. (ECQ2 Driving Efficiency)
+- The course warns that when rights review happens only in response to litigation, complaints or controversy, leaders lose the chance to design better processes from the start. (ECQ2 Driving Efficiency)
 
 ## References named
 - Second Amendment; DOJ Civil Rights Division treating it as a civil right — [01:11]
@@ -39,6 +39,6 @@ Charles Baldis, senior counsel at the Office of Special Counsel, finishes the to
 - Fifth Amendment (grand jury, double jeopardy, self-incrimination, due process, takings); Fourteenth Amendment due process — [05:15]–[08:21]
 - 2021 case on a California farm union-access rule — not named ⚑ verify — [10:24]
 - Sixth Amendment Confrontation Clause; Federal Rules of Evidence — [12:26]
-- SEC v. Jarkesy (caption spelling corrected); year not stated — [13:27]
+- Seventh Amendment; SEC v. Jarkesy (caption spelling corrected); year not stated — [12:26], [13:27]
 - Eighth Amendment; Gregg v. Georgia (1970s) — [15:33]
 - Ninth and Tenth Amendments; Commerce Clause; tax and spending clause; Fourteenth Amendment, Section 5; anti-commandeering cases — [16:35]–[19:39]

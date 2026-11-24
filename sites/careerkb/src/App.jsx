@@ -10,6 +10,7 @@ import Mandates from "./mandates/Mandates.jsx";
 const NAV = [
   { label: "Desk cards", q: { type: "desk-card" } },
   { label: "Slideshows", q: { type: "slideshow" } },
+  { label: "Training", q: { type: "training-note" } },
   { label: "Mandates", path: "mandates" },
   { label: "Browse all", q: {} },
 ];

@@ -49,6 +49,10 @@
     "reference": {
       "label": "Mandate",
       "plural": "Mandates & guidance"
+    },
+    "training-note": {
+      "label": "Training note",
+      "plural": "Training notes"
     }
   }
 }

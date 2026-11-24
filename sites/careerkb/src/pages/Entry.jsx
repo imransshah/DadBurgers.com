@@ -52,7 +52,10 @@ export default function Entry({ kb, id, query }) {
         <p className="lede">{entry.summary}</p>
         {entry.redacted && (
           <p className="redacted small">
-            <b>Redacted edition.</b> {entry.redacted}
+            <b>Redacted edition.</b> {entry.redacted}{" "}
+            <a href={`/originals/${entry.id}.pdf`} target="_blank" rel="noopener" className="no-print">
+              Open original (email check) ↗
+            </a>
           </p>
         )}
         <div className="actions no-print">

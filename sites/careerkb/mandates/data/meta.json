@@ -1,33 +1,33 @@
 {
   "schema": 1,
   "seededAt": "2026-11-11",
-  "lastSync": "2026-11-24T13:38:08.113Z",
+  "lastSync": "2026-11-26T04:15:52.884Z",
   "lastSyncOk": true,
   "lastError": null,
   "sources": {
     "OMB memoranda": {
       "ok": true,
-      "at": "2026-11-24T13:38:08.155Z",
+      "at": "2026-11-26T04:15:52.930Z",
       "found": 47
     },
     "OPM CHCO memos": {
       "ok": true,
-      "at": "2026-11-24T13:38:08.252Z",
+      "at": "2026-11-26T04:15:53.040Z",
       "found": 21
     },
     "CISA directives": {
       "ok": true,
-      "at": "2026-11-24T13:38:08.295Z",
+      "at": "2026-11-26T04:15:53.205Z",
       "found": 2
     },
     "FedRAMP notices": {
       "ok": true,
-      "at": "2026-11-24T13:38:08.342Z",
+      "at": "2026-11-26T04:15:53.330Z",
       "found": 19
     }
   },
   "counts": {
-    "documents": 338,
+    "documents": 339,
     "guidance": 44
   },
   "titleMismatches": [],
@@ -106,7 +106,8 @@
       "opm-implementing-the-revised-reduction-in-force-regulations-updated-workfo",
       "opm-modernizing-federal-classification-and-qualification-standards-around",
       "opm-issuance-of-competency-based-classification-standards-for-administrati",
-      "opm-issuance-of-the-super-intelligence-assisted-position-review-toolkit"
+      "opm-issuance-of-the-super-intelligence-assisted-position-review-toolkit",
+      "opm-fy-2028-2029-biennial-review-of-executive-allocations"
     ],
     "CISA directives": [
       "cisa-bod-26-04",
@@ -135,10 +136,10 @@
     ]
   },
   "lastTriage": {
-    "at": "2026-11-24T13:38:08.827Z",
+    "at": "2026-11-26T04:15:53.870Z",
     "rules": 0,
     "drafted": 0,
-    "remaining": 39,
+    "remaining": 40,
     "failures": []
   }
 }

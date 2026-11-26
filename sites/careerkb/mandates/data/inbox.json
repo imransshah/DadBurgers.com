@@ -2,6 +2,14 @@
   "schema": 1,
   "items": [
     {
+      "id": "opm-fy-2028-2029-biennial-review-of-executive-allocations",
+      "source": "OPM/CHCO",
+      "number": null,
+      "title": "FY 2028–2029 Biennial Review of Executive Allocations",
+      "url": "https://www.opm.gov/chcoc/latest-memos/fy-2028-2029-biennial-review-of-executive-allocations.pdf",
+      "foundAt": "2026-11-26T04:15:53.040Z"
+    },
+    {
       "id": "fedramp-ntc-0018",
       "source": "FedRAMP",
       "number": "NTC-0018",

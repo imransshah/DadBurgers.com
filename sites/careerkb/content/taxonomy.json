@@ -46,6 +46,10 @@
       "label": "Article",
       "plural": "Articles"
     },
+    "book-note": {
+      "label": "Book notes",
+      "plural": "Book notes"
+    },
     "reference": {
       "label": "Mandate",
       "plural": "Mandates & guidance"

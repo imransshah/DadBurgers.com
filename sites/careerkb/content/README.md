@@ -6,6 +6,7 @@ One Markdown file per entry. The folder sets the type.
 desk-cards/   one-page references
 slideshows/   decks: slides split by a line of `---`, speaker notes after a line of `???`
 articles/     longer notes
+                (set `type: book-note` in front matter for book notes)
 taxonomy.json domains and type labels
 ```
 

@@ -11,6 +11,7 @@ const NAV = [
   { label: "Desk cards", q: { type: "desk-card" } },
   { label: "Slideshows", q: { type: "slideshow" } },
   { label: "Mandates", path: "mandates" },
+  { label: "Make Your Bed", path: "e/make-your-bed" },
   { label: "Browse all", q: {} },
 ];
 
@@ -65,7 +66,7 @@ export default function App() {
         <nav className="topnav">
           {NAV.map((n) => {
             const active = n.path
-              ? page === n.path
+              ? route.path.join("/") === n.path || page === n.path
               : page === "search" && (route.query.type ?? "") === (n.q.type ?? "") && !route.query.q;
             return (
               <a key={n.label} href={n.path ? href(n.path) : href("search", n.q)} aria-current={active ? "page" : undefined}>

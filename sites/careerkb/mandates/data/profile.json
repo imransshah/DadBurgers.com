@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "agency": "Your agency (small civilian FCEB agency)",
+  "component": "the agency's IT office",
+  "role": "IT Operations Director",
+  "sector": "civilian",
+  "cfoActAgency": false,
+  "fceb": true,
+  "owns": [
+    "network",
+    "data center",
+    "cloud",
+    "help desk / end-user services",
+    "OT",
+    "telecom",
+    "IT contracts (COR)",
+    "FISMA systems"
+  ],
+  "supervises": {
+    "directFeds": "a few",
+    "secondLineFeds": "a few",
+    "contractorStaff": "a team of",
+    "contracts": "multiple"
+  },
+  "bargainingUnit": true,
+  "lenses": {
+    "ops": "IT Operations owner: systems, network, cloud, security operations, contracts",
+    "manager": "Supervisor of federal staff (direct and second-line) and COR over contractor staff",
+    "employee": "You personally, as a federal employee"
+  }
+}

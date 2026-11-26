@@ -1,0 +1,19 @@
+/*
+ * Stylesheet entry. Layer order, lowest to highest:
+ *   theme      Tailwind design tokens (CSS variables only)
+ *   kb         Career KB's own stylesheet (index.css), unchanged
+ *   oo-reset   minimal element reset scoped to the Mandates section (.oo)
+ *   components oo- prefixed components used by the Mandates section
+ *   utilities  Tailwind utilities, used by the Mandates section
+ * Tailwind's global preflight is deliberately not imported, so Career KB's
+ * existing pages render exactly as they did before the merge.
+ */
+@layer theme, kb, oo-reset, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "./index.css" layer(kb);
+@import "./federal.css" layer(kb);
+@import "./mandates/mandates.css";
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+
+@source "./";

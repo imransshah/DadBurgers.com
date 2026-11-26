@@ -1,0 +1,64 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "careerkb",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [
+    {
+      "pattern": "careerkb.therealdadburgers.com",
+      "custom_domain": true
+    }
+  ],
+  "workers_dev": false,
+  "kv_namespaces": [
+    {
+      "binding": "STATE",
+      "id": "ca0beacf90ee409d9e88e7aae1d413c4"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "LOGIN_LIMITER",
+      "namespace_id": "2101",
+      "simple": {
+        "limit": 8,
+        "period": 60
+      }
+    },
+    {
+      "name": "ASK_LIMITER",
+      "namespace_id": "2102",
+      "simple": {
+        "limit": 12,
+        "period": 60
+      }
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "23 11 * * 1"
+    ]
+  },
+  "vars": {
+    "SITE_URL": "https://careerkb.therealdadburgers.com",
+    "DIGEST_FROM": "digest@therealdadburgers.com"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "r2_buckets": [
+    {
+      "binding": "ORIGINALS",
+      "bucket_name": "careerkb-originals"
+    }
+  ]
+}

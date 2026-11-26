@@ -1,0 +1,61 @@
+name: Decolonized → Cloudflare
+
+# Builds the Decolonized site and deploys it as a static-assets Worker.
+# Does nothing until the CLOUDFLARE_API_TOKEN secret exists, so it is safe to
+# merge before Cloudflare is set up.
+
+on:
+  push:
+    branches:
+      - main
+      - "claude/**"
+    paths:
+      - "sites/decolonized/**"
+      - ".github/workflows/decolonized-cloudflare.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: decolonized-cloudflare
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: sites/decolonized
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sites/decolonized/package-lock.json
+
+      - run: npm ci
+
+      - name: Build
+        env:
+          VITE_CHAT_API_URL: ${{ vars.CHAT_API_URL }}
+        run: npm run build
+
+      - name: Deploy
+        if: env.HAS_CF == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: sites/decolonized
+          wranglerVersion: "4.160.1"
+          command: deploy
+
+      - name: Skipped deploy
+        if: env.HAS_CF != 'true'
+        run: echo "::notice::CLOUDFLARE_API_TOKEN is not set — built but did not deploy."

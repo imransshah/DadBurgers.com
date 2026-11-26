@@ -1,0 +1,58 @@
+{
+  "domains": {
+    "governance": {
+      "label": "Governance & Policy",
+      "blurb": "CIO authorities, OMB circulars, oversight, audits"
+    },
+    "cyber": {
+      "label": "Cybersecurity & Risk",
+      "blurb": "FISMA, RMF/ATO, zero trust, incident response"
+    },
+    "budget": {
+      "label": "Budget & Acquisition",
+      "blurb": "CPIC, A-11, TBM, contracts, COR duties"
+    },
+    "workforce": {
+      "label": "Workforce & HR",
+      "blurb": "Hiring, performance, telework, supervision"
+    },
+    "operations": {
+      "label": "Operations & Infrastructure",
+      "blurb": "Cloud, network, service management, continuity"
+    },
+    "data-ai": {
+      "label": "Data & AI",
+      "blurb": "Data governance, AI use, records"
+    },
+    "leadership": {
+      "label": "Leadership & Communication",
+      "blurb": "Briefings, stakeholder management, strategy"
+    },
+    "mandates": {
+      "label": "Presidential Actions & Guidance",
+      "blurb": "Executive orders, OMB/OPM memos, CISA directives — with your actions and deadlines"
+    }
+  },
+  "types": {
+    "desk-card": {
+      "label": "Desk card",
+      "plural": "Desk cards"
+    },
+    "slideshow": {
+      "label": "Slideshow",
+      "plural": "Slideshows"
+    },
+    "article": {
+      "label": "Article",
+      "plural": "Articles"
+    },
+    "book-note": {
+      "label": "Book notes",
+      "plural": "Book notes"
+    },
+    "reference": {
+      "label": "Mandate",
+      "plural": "Mandates & guidance"
+    }
+  }
+}

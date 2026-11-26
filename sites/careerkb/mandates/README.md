@@ -2,8 +2,7 @@
 
 The JSON behind Career KB's Mandates section and its search entries. Every
 item is read from one chair, set in `data/profile.json`: IT Operations
-Director, Office of Information Technology, U.S. International Development
-Finance Corporation (DFC). Each action is sorted by what it asks of that
+Director in a small civilian agency's IT office. Each action is sorted by what it asks of that
 person:
 
 - **Must do**: you own the deliverable.
@@ -48,7 +47,7 @@ FedRAMP notices ───────┘
   dates, and warns on references to documents not synced yet.
 
 Hand edits to `analysis.json` and `guidance.json` are safe. Keep action ids
-(`<item-id>:<key>`) stable: your statuses in Workers KV are keyed on them.
+(`<item-id>:<key>`) stable: Your statuses in Workers KV are keyed on them.
 
 ## Promoting an inbox memo
 

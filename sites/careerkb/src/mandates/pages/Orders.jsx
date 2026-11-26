@@ -42,7 +42,7 @@ export default function Orders({ query }) {
     <>
       <PageHeader eyebrow="Presidential documents" title="Executive orders & memoranda">
         {all.length} documents: every executive order and presidential memorandum since January 20, 2025 (once synced), plus older
-        orders IT still runs on. Relevance is judged for DFC OIT, not in general.
+        orders IT still runs on. Relevance is judged for your IT office, not in general.
       </PageHeader>
 
       <div className="mb-4 flex flex-col gap-2">

@@ -33,7 +33,7 @@
           "id": "omb-m-26-14:plan",
           "tier": "must",
           "lens": "ops",
-          "text": "Submit DFC's logging plan to OMB and CISA (CyberScope, using CISA's LRA plan template): source coverage, data flow, normalization, retention, integrity protections, access controls and validation.",
+          "text": "Submit your agency's logging plan to OMB and CISA (CyberScope, using CISA's LRA plan template): source coverage, data flow, normalization, retention, integrity protections, access controls and validation.",
           "cite": "M-26-14 / CISA LRA",
           "due": "2026-11-18",
           "dueNote": null,
@@ -186,13 +186,13 @@
         "cyber"
       ],
       "summary": "OMB's civilian playbook for EO 14412: a five-phase migration from 2026 through 2035, and an agency PQC Migration Plan to OMB and ONCD within about 120 days. The plan covers governance and named accountability, ownership and inventory, risk-based system prioritization and more (nine elements, per secondary sources).",
-      "forYou": "The plan was due about October 22, 2026, which may be past. Confirm DFC submitted it and what OIT committed to. The inventory and prioritization you supplied (or should have) become your multi-year PQC workload.",
+      "forYou": "The plan was due about October 22, 2026, which may be past. Confirm your agency submitted it and what your IT office committed to. The inventory and prioritization you supplied (or should have) become your multi-year PQC workload.",
       "actions": [
         {
           "id": "omb-m-26-15:plan",
           "tier": "must",
           "lens": "ops",
-          "text": "Confirm DFC submitted its PQC Migration Plan. If not, escalate. Get a copy of OIT's commitments.",
+          "text": "Confirm your agency submitted its PQC Migration Plan. If not, escalate. Get a copy of your IT office's commitments.",
           "cite": "M-26-15",
           "due": "2026-10-22",
           "dueNote": "~120 days after issuance",
@@ -214,7 +214,7 @@
           "id": "omb-m-26-15:phases",
           "tier": "know",
           "lens": "ops",
-          "text": "Map OIT systems to the five-phase schedule (through 2035), with HVAs and high-impact systems first per EO 14412's 2030/2031 dates.",
+          "text": "Map your IT office systems to the five-phase schedule (through 2035), with HVAs and high-impact systems first per EO 14412's 2030/2031 dates.",
           "cite": null,
           "due": null,
           "dueNote": null,
@@ -267,13 +267,13 @@
         "governance"
       ],
       "summary": "Tightens CIO control of IT spending. CIOs review and approve IT acquisitions and send OMB's Office of the Federal CIO monthly logs of IT contracts, with pricing and utilization data shared across agencies. Reporting began spring 2026 and ramps through October 2026.",
-      "forYou": "Every OIT contract action now has a CIO gate and a reporting trail. Your contract data (vehicle, labor categories, rates, utilization) feeds the monthly log, so keep it clean and current. Lead times for options and mods just grew.",
+      "forYou": "Every your IT office contract action now has a CIO gate and a reporting trail. Your contract data (vehicle, labor categories, rates, utilization) feeds the monthly log, so keep it clean and current. Lead times for options and mods just grew.",
       "actions": [
         {
           "id": "omb-m-26-10:approve",
           "tier": "feed",
           "lens": "ops",
-          "text": "Route every OIT IT acquisition action (new award, option, mod, renewal) for CIO approval before it goes to the CO.",
+          "text": "Route every IT acquisition action (new award, option, mod, renewal) for CIO approval before it goes to the CO.",
           "cite": "M-26-10",
           "due": null,
           "dueNote": null,
@@ -284,7 +284,7 @@
           "id": "omb-m-26-10:log",
           "tier": "feed",
           "lens": "ops",
-          "text": "Supply contract data (vehicle, CLINs/labor categories, rates, utilization) for DFC's monthly IT contract log to OMB.",
+          "text": "Supply contract data (vehicle, CLINs/labor categories, rates, utilization) for your agency's monthly IT contract log to OMB.",
           "cite": "M-26-10",
           "due": null,
           "dueNote": null,
@@ -337,13 +337,13 @@
         "procurement"
       ],
       "summary": "Rescinds the requirement that agencies collect CISA's 'Common Form' secure-software self-attestation from software producers. In its place, agencies take a risk-based approach to software and hardware security.",
-      "forYou": "Check whether DFC's acquisition templates and your intake checklist still require the Common Form. If they do, that's paperwork nobody requires anymore. Replace it with the agency's risk-based SCRM criteria.",
+      "forYou": "Check whether your agency's acquisition templates and your intake checklist still require the Common Form. If they do, that's paperwork nobody requires anymore. Replace it with the agency's risk-based SCRM criteria.",
       "actions": [
         {
           "id": "omb-m-26-05:templates",
           "tier": "feed",
           "lens": "ops",
-          "text": "Update OIT's software intake checklist: drop the mandatory Common Form and apply DFC's risk-based software/hardware criteria.",
+          "text": "Update your IT office's software intake checklist: drop the mandatory Common Form and apply your agency's risk-based software/hardware criteria.",
           "cite": "M-26-05",
           "due": null,
           "dueNote": null,
@@ -453,13 +453,13 @@
         "contracts"
       ],
       "summary": "Implements EO 14319. Agencies had to update procurement policies by March 11, 2026, apply the Unbiased AI Principles to new LLM orders, and modify existing LLM contracts 'to the extent practicable' before exercising options. Contract terms address vendor-funded decommissioning if a contract is terminated for noncompliance. The memo expires December 11, 2027.",
-      "forYou": "Any OIT contract that delivers LLM capability needs these terms before its next option. That includes LLM features bundled into platforms you already license, not just standalone chatbots.",
+      "forYou": "Any your IT office contract that delivers LLM capability needs these terms before its next option. That includes LLM features bundled into platforms you already license, not just standalone chatbots.",
       "actions": [
         {
           "id": "omb-m-26-04:options",
           "tier": "feed",
           "lens": "ops",
-          "text": "Before exercising an option on any OIT contract that includes LLM capability, confirm with the CO that M-26-04 terms are in the contract.",
+          "text": "Before exercising an option on any contract that includes LLM capability, confirm with the CO that M-26-04 terms are in the contract.",
           "cite": "M-26-04",
           "due": null,
           "dueNote": null,
@@ -505,14 +505,14 @@
         "governance",
         "inventory"
       ],
-      "summary": "Replaces M-24-10. Agencies keep a Chief AI Officer, publish AI compliance plans, maintain annual AI use-case inventories, and apply minimum risk practices to 'high-impact' AI. Some items, such as AI strategies, apply only to CFO Act agencies, and DFC isn't one.",
-      "forYou": "OIT runs the platforms where AI features appear. Keep a list of AI-enabled tools and features you operate, because it feeds the inventory, and flag anything that might be 'high-impact' to the CAIO early.",
+      "summary": "Replaces M-24-10. Agencies keep a Chief AI Officer, publish AI compliance plans, maintain annual AI use-case inventories, and apply minimum risk practices to 'high-impact' AI. Some items, such as AI strategies, apply only to CFO Act agencies, and your agency isn't one.",
+      "forYou": "Your IT office runs the platforms where AI features appear. Keep a list of AI-enabled tools and features you operate, because it feeds the inventory, and flag anything that might be 'high-impact' to the CAIO early.",
       "actions": [
         {
           "id": "omb-m-25-21:inventory",
           "tier": "feed",
           "lens": "ops",
-          "text": "Feed the annual AI use-case inventory with AI tools and features OIT operates.",
+          "text": "Feed the annual AI use-case inventory with AI tools and features your IT office operates.",
           "cite": null,
           "due": null,
           "dueNote": null,
@@ -562,7 +562,7 @@
         "procurement"
       ],
       "summary": "AI acquisition rules: protect government data and IP rights, avoid vendor lock-in, favor American AI, and include specific contract terms. It applies to contracts awarded or renewed after it took effect (about 180 days after issuance).",
-      "forYou": "Applies when OIT buys or renews AI capability. Bring the CO in early on data-rights and portability terms.",
+      "forYou": "Applies when your IT office buys or renews AI capability. Bring the CO in early on data-rights and portability terms.",
       "actions": [
         {
           "id": "omb-m-25-22:terms",
@@ -772,7 +772,7 @@
           "id": "omb-a-130:eol",
           "tier": "must",
           "lens": "ops",
-          "text": "Keep an end-of-life roadmap for OIT systems and components. A-130 requires unsupported components to be phased out.",
+          "text": "Keep an end-of-life roadmap for your IT office systems and components. A-130 requires unsupported components to be phased out.",
           "cite": null,
           "due": null,
           "dueNote": null,
@@ -835,13 +835,13 @@
         "continuity"
       ],
       "summary": "Reopening instructions after the October–November 2025 lapse in appropriations. M-26-06 (Jan 30, 2026) and M-26-07 (Feb 3, 2026) covered a second, shorter lapse.",
-      "forYou": "Two lapses in four months. Keep OIT's lapse plan ready: which IT staff are excepted, what must stay up, and which contractor work stops unless funded (your CORs need stop-work and resume language ready).",
+      "forYou": "Two lapses in four months. Keep your IT office's lapse plan ready: which IT staff are excepted, what must stay up, and which contractor work stops unless funded (your CORs need stop-work and resume language ready).",
       "actions": [
         {
           "id": "omb-m-26-01:lapse-plan",
           "tier": "must",
           "lens": "ops",
-          "text": "Keep OIT's lapse-in-appropriations plan current: excepted IT roles, must-run systems, contractor stop-work and resume steps.",
+          "text": "Keep your IT office's lapse-in-appropriations plan current: excepted IT roles, must-run systems, contractor stop-work and resume steps.",
           "cite": null,
           "due": null,
           "dueNote": null,
@@ -915,7 +915,7 @@
           "id": "omb-opm-2025-02-26-arrp:baseline",
           "tier": "know",
           "lens": "manager",
-          "text": "Keep a copy of what OIT submitted for the ARRP. It's the baseline for later reorganizations.",
+          "text": "Keep a copy of what your IT office submitted for the ARRP. It's the baseline for later reorganizations.",
           "cite": null,
           "due": null,
           "dueNote": null,
@@ -1034,13 +1034,13 @@
         "performance"
       ],
       "summary": "The final rule took effect about March 9, 2026. Agencies were to issue internal policies within 30 days (sources say April 8, 2026). The memo includes templates for hiring, pay, grievances, and performance-based and adverse actions for Schedule P/C employees, who lose MSPB adverse-action appeals.",
-      "forYou": "Read DFC's internal Schedule P/C policy. If you or a direct report was moved, it governs performance and conduct actions.",
+      "forYou": "Read your agency's internal Schedule P/C policy. If you or a direct report was moved, it governs performance and conduct actions.",
       "actions": [
         {
           "id": "opm-2026-02-05-schedule-pc:policy",
           "tier": "know",
           "lens": "employee",
-          "text": "Get DFC's internal Schedule P/C policy and keep a copy.",
+          "text": "Get your agency's internal Schedule P/C policy and keep a copy.",
           "cite": null,
           "due": "2026-04-08",
           "dueNote": "Agency deadline, not yours",
@@ -1119,7 +1119,7 @@
         "labor-relations"
       ],
       "summary": "OPM's questions and answers on how excluded agencies handle CBAs, dues and grievances.",
-      "forYou": "If DFC is excluded, this explains what happens to your CBA obligations.",
+      "forYou": "If your agency is excluded, this explains what happens to your CBA obligations.",
       "actions": [],
       "related": [],
       "sources": [],
@@ -1149,7 +1149,7 @@
         "telework"
       ],
       "summary": "OPM and OMB implementation guidance for the RTO memorandum, including exemptions and timelines.",
-      "forYou": "Explains the exemption categories DFC applies.",
+      "forYou": "Explains the exemption categories your agency applies.",
       "actions": [],
       "related": [],
       "sources": [],
@@ -1187,7 +1187,7 @@
           "id": "cisa-bod-26-04:policy",
           "tier": "must",
           "lens": "ops",
-          "text": "Confirm DFC's vulnerability-management policy was updated to BOD 26-04.",
+          "text": "Confirm your agency's vulnerability-management policy was updated to BOD 26-04.",
           "cite": null,
           "due": "2026-08-07",
           "dueNote": "Agency policy alignment",
@@ -1444,7 +1444,7 @@
         "configuration"
       ],
       "summary": "Requires secure configuration baselines (CISA SCuBA) for in-scope cloud tenants, starting with Microsoft 365. Inventory tenants, deploy SCuBA assessment tools with continuous reporting to CISA, and implement mandatory configurations. The initial deadlines ran February–June 2025, and new baselines carry their own timelines.",
-      "forYou": "If DFC runs M365 (or Google Workspace), your tenant configs are continuously graded by CISA. Drift from a mandatory baseline is a finding, so keep SCuBA results in your weekly ops review.",
+      "forYou": "If your agency runs M365 (or Google Workspace), your tenant configs are continuously graded by CISA. Drift from a mandatory baseline is a finding, so keep SCuBA results in your weekly ops review.",
       "actions": [
         {
           "id": "cisa-bod-25-01:tenants",
@@ -1600,7 +1600,7 @@
         "configuration"
       ],
       "summary": "DMARC at p=reject, STARTTLS, HTTPS with HSTS on all federal web services, and weak protocols and ciphers removed.",
-      "forYou": "Any new DFC domain or subdomain OIT stands up must meet this on day one.",
+      "forYou": "Any new your agency domain or subdomain your IT office stands up must meet this on day one.",
       "actions": [
         {
           "id": "cisa-bod-18-01:domains",
@@ -1667,13 +1667,13 @@
         "emergency"
       ],
       "summary": "Emergency directive on actively exploited Cisco SD-WAN flaws: inventory, patch, hunt and harden, then report evidence. It was updated later with more required actions.",
-      "forYou": "Applies only if DFC runs Cisco SD-WAN. If so, keep the evidence package. CISA follow-ups reference it.",
+      "forYou": "Applies only if your agency runs Cisco SD-WAN. If so, keep the evidence package. CISA follow-ups reference it.",
       "actions": [
         {
           "id": "cisa-ed-26-03:apply",
           "tier": "feed",
           "lens": "ops",
-          "text": "If DFC runs Cisco SD-WAN, confirm the ED 26-03 inventory, patch and evidence steps were completed, and keep the artifacts.",
+          "text": "If your agency runs Cisco SD-WAN, confirm the ED 26-03 inventory, patch and evidence steps were completed, and keep the artifacts.",
           "cite": null,
           "due": "2026-03-23",
           "dueNote": "Final evidence date per secondary sources",
@@ -1712,13 +1712,13 @@
         "emergency"
       ],
       "summary": "After a nation-state actor stole F5 BIG-IP source code, agencies had to inventory F5 devices, check for exposed management interfaces, patch in two tiers (Oct 22 and Oct 31, 2025), and disconnect unsupported F5 hardware.",
-      "forYou": "If DFC runs F5 BIG-IP, which is likely somewhere in your TLS path, this also feeds your TLS 1.3 and BOD 26-02 planning.",
+      "forYou": "If your agency runs F5 BIG-IP, which is likely somewhere in your TLS path, this also feeds your TLS 1.3 and BOD 26-02 planning.",
       "actions": [
         {
           "id": "cisa-ed-26-01:eos",
           "tier": "feed",
           "lens": "ops",
-          "text": "If DFC runs F5, confirm unsupported F5 hardware was removed and that the management plane isn't internet-exposed.",
+          "text": "If your agency runs F5, confirm unsupported F5 hardware was removed and that the management plane isn't internet-exposed.",
           "cite": null,
           "due": null,
           "dueNote": null,
@@ -1762,7 +1762,7 @@
           "id": "cisa-lra:template",
           "tier": "must",
           "lens": "ops",
-          "text": "Use the LRA plan template for DFC's November 18 logging plan.",
+          "text": "Use the LRA plan template for your agency's November 18 logging plan.",
           "cite": null,
           "due": "2026-11-18",
           "dueNote": null,

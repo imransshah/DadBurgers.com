@@ -28,7 +28,7 @@ export default function Internal() {
     <>
       <PageHeader
         eyebrow="Internal guidance"
-        title="DFC's own implementing guidance."
+        title="Your agency's own implementing guidance."
         actions={
           !form && (
             <button className="oo-btn oo-btn-primary" onClick={() => setForm(blank())}>
@@ -81,7 +81,7 @@ export default function Internal() {
 
       <Section title={`Saved · ${internal.length}`}>
         {internal.length === 0 ? (
-          <Empty>Nothing yet. Add the first DFC notice that implements an order you're tracking.</Empty>
+          <Empty>Nothing yet. Add the first agency notice that implements an order you're tracking.</Empty>
         ) : (
           <ul className="flex flex-col gap-2">
             {internal.map((e) => (
@@ -155,7 +155,7 @@ function Editor({ data, form, setForm, onSave, onCancel, saving, err }) {
     <div className="oo-card mb-8 px-4 py-4">
       <div className="grid gap-3 sm:grid-cols-2">
         <Field label="Title *" className="sm:col-span-2">
-          <input className="oo-input" value={form.title} onChange={set("title")} placeholder="e.g. OIT notice: logging plan inputs due" />
+          <input className="oo-input" value={form.title} onChange={set("title")} placeholder="e.g. IT office notice: logging plan inputs due" />
         </Field>
         <Field label="Issued by">
           <input className="oo-input" value={form.issuer} onChange={set("issuer")} placeholder="Office of the CIO, HR, OGC…" />

@@ -147,7 +147,7 @@ export default function Item({ id }) {
           )}
 
           {item.forYou && (
-            <Section title="For DFC OIT">
+            <Section title="For your IT office">
               <div className="max-w-3xl rounded-lg border-l-4 border-accent bg-accent-soft px-4 py-3 text-pretty">{item.forYou}</div>
             </Section>
           )}
@@ -228,7 +228,7 @@ export default function Item({ id }) {
                   rows={4}
                   value={noteDraft}
                   onChange={(e) => setNoteDraft(e.target.value)}
-                  placeholder="Your read, who owns it at DFC, what you've told your CIO…"
+                  placeholder="Your read, who owns it at your agency, what you've told your CIO…"
                   autoFocus
                 />
                 <div className="flex gap-2">
@@ -300,7 +300,7 @@ export default function Item({ id }) {
             <h2 className="oo-label mb-2">Internal guidance</h2>
             {linkedInternal.length === 0 ? (
               <p className="text-[13px] text-muted">
-                None linked. <a className="oo-link" href={href("internal", { link: item.id })}>Add DFC guidance</a>
+                None linked. <a className="oo-link" href={href("internal", { link: item.id })}>Add agency guidance</a>
               </p>
             ) : (
               <ul className="oo-card divide-y divide-line">

@@ -65,6 +65,21 @@ const SCHEMA = {
   },
 };
 
+// The data is committed to a public repo: never let the agency's name in.
+const AGENCY_RE = [
+  [/\bU\.S\. International Development Finance Corporation\b/g, "your agency"],
+  [/\bDFC(?:\/OIT| OIT)\b/g, "your IT office"],
+  [/\bDFC's\b/g, "your agency's"],
+  [/\bDFC\b/g, "your agency"],
+  [/\bOIT\b/g, "your IT office"],
+];
+function scrubAgency(v) {
+  if (typeof v === "string") return AGENCY_RE.reduce((s, [re, to]) => s.replace(re, to), v);
+  if (Array.isArray(v)) return v.map(scrubAgency);
+  if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, scrubAgency(x)]));
+  return v;
+}
+
 function systemPrompt(profile) {
   return `You triage U.S. presidential documents for one reader and draft a short analysis of what each one asks of them.
 
@@ -92,6 +107,7 @@ Most documents produce zero to three actions. Never invent obligations to fill t
 Writing:
 - summary: two to four plain sentences on what the document does. Concrete nouns. No adjectives about the policy.
 - forYou: one to three sentences on what it means for this reader specifically. Second person.
+- Never name the reader's agency or office. Say "your agency" or "your IT office". This text is published in a public repository.
 - Neutral and factual. This is a working tool, not commentary. No praise, criticism, or speculation about motives.
 - If the text is ambiguous about something that matters, say so in forYou rather than guessing.
 - topics: two to five short lowercase tags (e.g. "cyber", "procurement", "hiring", "ai", "trade").
@@ -225,7 +241,7 @@ async function main() {
     const client = new Anthropic();
     for (const d of queue.slice(0, LIMIT)) {
       try {
-        analysis.items[d.id] = await claudeTriage(client, profile, d);
+        analysis.items[d.id] = scrubAgency(await claudeTriage(client, profile, d));
         drafted++;
         console.log(`  ✓ ${d.id} → ${analysis.items[d.id].relevance}`);
         writeData("analysis", analysis); // save as we go; a later failure keeps earlier work

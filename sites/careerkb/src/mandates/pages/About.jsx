@@ -17,7 +17,7 @@ export default function About() {
         so a search for a concept surfaces the federal requirements that touch it.
       </PageHeader>
 
-      <Section title="Your profile (drives every 'For DFC OIT' note and every federal-framed answer)">
+      <Section title="Your profile (drives every 'For your IT office' note and every federal-framed answer)">
         <dl className="oo-card grid gap-x-6 gap-y-2 px-4 py-3 text-[14px] sm:grid-cols-2">
           <KV k="Agency" v={`${p.agency} — civilian, FCEB, ${p.cfoActAgency ? "CFO Act" : "not a CFO Act agency"}`} />
           <KV k="Component / role" v={`${p.component} · ${p.role}`} />

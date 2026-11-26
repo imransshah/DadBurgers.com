@@ -22,7 +22,13 @@ const analysis = readData("analysis");
 const guidance = readData("guidance");
 readData("inbox");
 readData("meta");
-readData("profile");
+const profile = readData("profile");
+
+// Public repo: the reader's agency is never named in analysis, guidance or profile.
+for (const [name, data] of [["analysis", analysis], ["guidance", guidance], ["profile", profile]]) {
+  const hit = JSON.stringify(data).match(/.{0,40}\b(DFC|OIT|International Development Finance Corporation)\b.{0,40}/);
+  if (hit) err(`${name}: names the agency ("${hit[0]}"); say "your agency" or "your IT office"`);
+}
 
 const ids = new Set();
 for (const d of catalog.documents) {

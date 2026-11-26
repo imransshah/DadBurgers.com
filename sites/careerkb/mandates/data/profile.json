@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "agency": "U.S. International Development Finance Corporation (DFC)",
-  "component": "Office of Information Technology (OIT)",
+  "agency": "Your agency (small civilian FCEB agency)",
+  "component": "the agency's IT office",
   "role": "IT Operations Director",
   "sector": "civilian",
   "cfoActAgency": false,
@@ -17,15 +17,15 @@
     "FISMA systems"
   ],
   "supervises": {
-    "directFeds": 3,
-    "secondLineFeds": 2,
-    "contractorStaff": 29,
+    "directFeds": "a few",
+    "secondLineFeds": "a few",
+    "contractorStaff": "a team of",
     "contracts": "multiple"
   },
   "bargainingUnit": true,
   "lenses": {
     "ops": "IT Operations owner: systems, network, cloud, security operations, contracts",
-    "manager": "Supervisor of federal staff (3 direct, 2 second-line) and COR over contractor staff",
+    "manager": "Supervisor of federal staff (direct and second-line) and COR over contractor staff",
     "employee": "You personally, as a federal employee"
   }
 }

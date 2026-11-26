@@ -61,7 +61,7 @@ export default function Brief({ id }) {
       )}
       {item.forYou && (
         <section className="mb-3">
-          <h2 className="oo-label mb-1">What it means for OIT</h2>
+          <h2 className="oo-label mb-1">What it means for your IT office</h2>
           <p className="text-[13px] leading-relaxed text-pretty">{item.forYou}</p>
         </section>
       )}
@@ -126,7 +126,7 @@ export default function Brief({ id }) {
       )}
 
       <footer className="mt-4 border-t border-line pt-2 text-[10.5px] text-muted">
-        {reviewed ? "Analysis reviewed." : "Draft analysis, not yet reviewed."} Personal working notes, not an official DFC
+        {reviewed ? "Analysis reviewed." : "Draft analysis, not yet reviewed."} Personal working notes, not an official agency
         position. Primary source: {item.url ?? "Federal Register"}
       </footer>
     </div>

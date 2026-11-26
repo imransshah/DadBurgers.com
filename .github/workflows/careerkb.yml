@@ -11,6 +11,7 @@ name: Career KB (careerkb.therealdadburgers.com)
 #   CAREERKB_SITE_PASSWORD   required — the site stays locked (503) without it
 #   ANTHROPIC_API_KEY        optional — nightly AI drafts of new mandates, and the Ask feature
 #   CAREERKB_DIGEST_TO       optional — your verified Email Routing address for the Monday digest
+#   CAREERKB_ACCESS_TEAM_DOMAIN, CAREERKB_ACCESS_AUD  required for /originals (Cloudflare Access); it stays locked without them
 # Repository variables (… → Variables):
 #   CAREERKB_DIGEST_ENABLED  "true" once Email Routing is on for the domain
 #   CAREERKB_TRIAGE_LIMIT    optional — max AI drafts per run (default 40)
@@ -138,6 +139,8 @@ jobs:
           CAREERKB_SITE_PASSWORD: ${{ secrets.CAREERKB_SITE_PASSWORD }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CAREERKB_DIGEST_TO: ${{ secrets.CAREERKB_DIGEST_TO }}
+          CAREERKB_ACCESS_TEAM_DOMAIN: ${{ secrets.CAREERKB_ACCESS_TEAM_DOMAIN }}
+          CAREERKB_ACCESS_AUD: ${{ secrets.CAREERKB_ACCESS_AUD }}
         run: |
           [ -n "$CAREERKB_SITE_PASSWORD" ] || echo "::warning::CAREERKB_SITE_PASSWORD is not set — the site will stay locked."
           SECRETS="$RUNNER_TEMP/careerkb-secrets.json"
@@ -146,6 +149,9 @@ jobs:
             if (process.env.CAREERKB_SITE_PASSWORD) s.SITE_PASSWORD = process.env.CAREERKB_SITE_PASSWORD;
             if (process.env.ANTHROPIC_API_KEY) s.ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
             if (process.env.CAREERKB_DIGEST_TO) s.DIGEST_TO = process.env.CAREERKB_DIGEST_TO;
+            // /originals stays locked (503) until both are set.
+            if (process.env.CAREERKB_ACCESS_TEAM_DOMAIN) s.ACCESS_TEAM_DOMAIN = process.env.CAREERKB_ACCESS_TEAM_DOMAIN;
+            if (process.env.CAREERKB_ACCESS_AUD) s.ACCESS_AUD = process.env.CAREERKB_ACCESS_AUD;
             require("fs").writeFileSync(process.argv[1], JSON.stringify(s), { mode: 0o600 });
           ' "$SECRETS"
           npx wrangler deploy --secrets-file "$SECRETS"

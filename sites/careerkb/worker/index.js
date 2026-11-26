@@ -11,6 +11,7 @@
  *   /api/visit        "new since your last visit" baseline
  *   /api/digest/…     preview or send the Monday digest
  *   /api/ask          federal-framed answer from search results (worker/ask.js)
+ *   /originals/…      unredacted PDFs from private R2; also needs Cloudflare Access (worker/originals.js)
  *   everything else   static build (dist/) via the ASSETS binding
  *   scheduled()       Monday digest email (worker/digest.js)
  *
@@ -19,11 +20,13 @@
  *   SITE_PASSWORD      required; without it the worker answers 503 (fails closed)
  *   ANTHROPIC_API_KEY  optional; switches on /api/ask
  *   DIGEST_TO          optional; your verified Email Routing destination address
+ *   ACCESS_TEAM_DOMAIN, ACCESS_AUD  required for /originals; without them it stays locked
  */
 
 import { checkPassword, clearCookie, hasSession, issueCookie, loginPage } from "./auth.js";
 import { buildDigest, sendDigest } from "./digest.js";
 import { handleAsk } from "./ask.js";
+import { handleOriginals } from "./originals.js";
 
 const PUBLIC_PATHS = new Set(["/favicon.svg", "/robots.txt"]);
 const MAX_BODY = 64 * 1024;
@@ -102,6 +105,16 @@ export default {
     if (!(await hasSession(request, env))) {
       if (path.startsWith("/data/") || path.startsWith("/api/")) return json({ error: "unauthorized" }, 401);
       return new Response(null, { status: 302, headers: { Location: `/login?next=${encodeURIComponent(path)}`, "Cache-Control": "no-store" } });
+    }
+
+    if (path === "/originals" || path.startsWith("/originals/")) {
+      const res = await handleOriginals(request, env, url);
+      const h = new Headers(res.headers);
+      h.set("X-Content-Type-Options", "nosniff");
+      h.set("X-Robots-Tag", "noindex, nofollow");
+      h.set("Referrer-Policy", "same-origin");
+      h.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+      return new Response(res.body, { status: res.status, headers: h });
     }
 
     if (path.startsWith("/api/")) {

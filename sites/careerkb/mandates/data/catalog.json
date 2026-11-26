@@ -2,6 +2,25 @@
   "schema": 1,
   "documents": [
     {
+      "id": "eo-14439",
+      "kind": "eo",
+      "number": 14439,
+      "title": "Protecting the Executive's Privileges and Enhancing Efficiencies in Federal Contracting",
+      "signed": "2026-11-20",
+      "published": "2026-11-25",
+      "citation": "91 FR 76627",
+      "frDoc": "2026-24114",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/25/2026-24114/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/pdf/2026-24114.pdf",
+      "abstract": null,
+      "notes": null,
+      "textUrl": "https://www.federalregister.gov/documents/full_text/text/2026/11/25/2026-24114.txt",
+      "president": "donald-trump",
+      "legacy": false,
+      "source": "federal-register",
+      "firstSeen": "2026-11-26"
+    },
+    {
       "id": "pm-2026-10-28-delegation-of-authority-under-section-8335-of-the-national-d",
       "kind": "memo",
       "number": null,
